@@ -1,0 +1,375 @@
+2025-10-14 08:25:27.947 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 08:25:28.009 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 08:25:28.128 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 08:25:33.036 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 08:25:36.249 +08:00 [INF] 正在验证用户: admin
+2025-10-14 08:25:36.251 +08:00 [INF] 输入的密码: admin123
+2025-10-14 08:25:36.253 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 08:25:36.254 +08:00 [INF] 密码验证结果: True
+2025-10-14 08:25:36.277 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 08:25:36.279 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 08:25:36.365 +08:00 [WRN] 查询结果为空
+2025-10-14 08:28:12.411 +08:00 [WRN] 查询结果为空
+2025-10-14 09:18:00.810 +08:00 [INF] 接收到的任务数据: TaskType=shipmentToOther, Source=PA001, Target=06A05, Priority=1, RequestCode=1760404678
+2025-10-14 09:19:44.080 +08:00 [WRN] 慢请求检测: GET /api/connectionstatus - 1104ms - 来自 ::1
+2025-10-14 09:19:46.914 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 129009ms - 来自 ::1
+2025-10-14 09:20:09.146 +08:00 [INF] 接收到的任务数据: TaskType=shipmentToOther, Source=PA001, Target=06A05, Priority=1, RequestCode=1760404809
+2025-10-14 09:21:19.076 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 74115ms - 来自 ::1
+2025-10-14 09:29:46.253 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 09:29:46.310 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 09:29:46.412 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 09:29:48.409 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 09:30:04.831 +08:00 [INF] 正在验证用户: admin
+2025-10-14 09:30:04.834 +08:00 [INF] 输入的密码: admin123
+2025-10-14 09:30:04.835 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 09:30:04.837 +08:00 [INF] 密码验证结果: True
+2025-10-14 09:30:04.858 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 09:30:04.860 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 09:30:04.928 +08:00 [WRN] 查询结果为空
+2025-10-14 09:32:23.058 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 09:32:23.120 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 09:32:23.210 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 09:32:24.966 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 09:32:41.487 +08:00 [INF] 正在验证用户: admin
+2025-10-14 09:32:41.489 +08:00 [INF] 输入的密码: admin123
+2025-10-14 09:32:41.491 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 09:32:41.494 +08:00 [INF] 密码验证结果: True
+2025-10-14 09:32:41.514 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 09:32:41.515 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 09:32:41.586 +08:00 [WRN] 查询结果为空
+2025-10-14 09:32:56.700 +08:00 [INF] 接收到的任务数据: TaskType=shipmentToOther, Source=PA001, Target=06A05, Priority=1, RequestCode=1760405576
+2025-10-14 09:33:25.639 +08:00 [INF] 检测到需要拆分的任务（类型1），起点: PA001
+2025-10-14 09:33:36.720 +08:00 [ERR] 任务拆分失败: BeginExecuteReader requires the command to have a transaction when the connection assigned to the command is in a pending local transaction.  The Transaction property of the command has not been initialized.
+System.InvalidOperationException: BeginExecuteReader requires the command to have a transaction when the connection assigned to the command is in a pending local transaction.  The Transaction property of the command has not been initialized.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 434
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType1Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1290
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 72
+2025-10-14 09:33:36.821 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 40192ms - 来自 ::1
+2025-10-14 09:36:04.141 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 09:36:04.201 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 09:36:04.304 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 09:36:06.511 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 09:36:10.966 +08:00 [INF] 正在验证用户: admin
+2025-10-14 09:36:10.968 +08:00 [INF] 输入的密码: admin123
+2025-10-14 09:36:10.970 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 09:36:10.972 +08:00 [INF] 密码验证结果: True
+2025-10-14 09:36:10.994 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 09:36:10.996 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 09:36:11.084 +08:00 [WRN] 查询结果为空
+2025-10-14 09:36:31.249 +08:00 [INF] 接收到的任务数据: TaskType=receiving, Source=PA001, Target=06B05, Priority=1, RequestCode=123123
+2025-10-14 09:36:43.628 +08:00 [INF] 检测到需要拆分的任务（类型1），起点: PA001
+2025-10-14 09:36:55.630 +08:00 [ERR] 任务拆分失败: 必须声明标量变量 "@NodeRemark"。
+Microsoft.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@NodeRemark"。
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType1Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1329
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 72
+ClientConnectionId:70d89471-e12e-4fe9-91d9-b105dd84b948
+Error Number:137,State:2,Class:15
+2025-10-14 09:36:55.727 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 24561ms - 来自 ::1
+2025-10-14 09:37:04.777 +08:00 [INF] 接收到的任务数据: TaskType=receiving, Source=PA001, Target=06B05, Priority=1, RequestCode=123123
+2025-10-14 09:37:11.700 +08:00 [INF] 检测到需要拆分的任务（类型1），起点: PA001
+2025-10-14 09:37:21.659 +08:00 [ERR] 任务拆分失败: 必须声明标量变量 "@NodeRemark"。
+Microsoft.Data.SqlClient.SqlException (0x80131904): 必须声明标量变量 "@NodeRemark"。
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalEndExecuteNonQuery(IAsyncResult asyncResult, Boolean isInternal, String endMethod)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   at Microsoft.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.ExecuteImplAsync(IDbConnection cnn, CommandDefinition command, Object param) in /_/Dapper/SqlMapper.Async.cs:line 662
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType1Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1329
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 72
+ClientConnectionId:70d89471-e12e-4fe9-91d9-b105dd84b948
+Error Number:137,State:2,Class:15
+2025-10-14 09:37:21.673 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 16898ms - 来自 ::1
+2025-10-14 09:38:46.154 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 09:38:46.210 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 09:38:46.329 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 09:38:48.060 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 09:38:55.977 +08:00 [INF] 正在验证用户: admin
+2025-10-14 09:38:55.979 +08:00 [INF] 输入的密码: admin123
+2025-10-14 09:38:55.980 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 09:38:55.982 +08:00 [INF] 密码验证结果: True
+2025-10-14 09:38:56.000 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 09:38:56.002 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 09:38:56.072 +08:00 [WRN] 查询结果为空
+2025-10-14 09:39:10.758 +08:00 [INF] 接收到的任务数据: TaskType=receiving, Source=PA001, Target=06B05, Priority=1, RequestCode=12312
+2025-10-14 09:39:19.393 +08:00 [INF] 检测到需要拆分的任务（类型1），起点: PA001
+2025-10-14 09:39:30.977 +08:00 [INF] 已锁定第一个任务起点储位: PA001
+2025-10-14 09:39:31.518 +08:00 [INF] 已锁定第一个任务终点储位: PC004
+2025-10-14 09:39:40.230 +08:00 [INF] 已锁定第二个任务起点储位: PD004
+2025-10-14 09:39:40.698 +08:00 [INF] 已锁定第二个任务终点储位: 07B01
+2025-10-14 09:39:42.161 +08:00 [INF] 任务拆分完成，分组ID: 1a516650-8acc-48d6-8fca-d427a2f1d527，第一个任务: 12312_1，第二个任务: 12312_2
+2025-10-14 09:39:54.219 +08:00 [INF] 任务拆分成功，原始任务: 12312，生成了 2 个子任务
+2025-10-14 09:39:57.579 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 46920ms - 来自 ::1
+2025-10-14 09:39:57.603 +08:00 [INF] 查询到任务数据: ID=151961, MaterialCode=3245345, MaterialQuantity=0, PalletNumber=345345
+2025-10-14 09:42:26.923 +08:00 [INF] 接收到的任务数据: TaskType=shipmentToOther, Source=PA041, Target=06B05, Priority=1, RequestCode=123123
+2025-10-14 09:42:33.134 +08:00 [INF] 检测到需要拆分的任务（类型1），起点: PA041
+2025-10-14 09:42:33.948 +08:00 [INF] 已锁定第一个任务起点储位: PA041
+2025-10-14 09:42:33.950 +08:00 [INF] 已锁定第一个任务终点储位: PC002
+2025-10-14 09:42:33.966 +08:00 [INF] 已锁定第二个任务起点储位: PD002
+2025-10-14 09:42:33.967 +08:00 [INF] 已锁定第二个任务终点储位: 06B32
+2025-10-14 09:42:33.968 +08:00 [INF] 任务拆分完成，分组ID: 16ae7957-bb7d-4e56-b85b-d71ad5b4ced4，第一个任务: 123123_1，第二个任务: 123123_2
+2025-10-14 09:42:43.521 +08:00 [INF] 任务拆分成功，原始任务: 123123，生成了 2 个子任务
+2025-10-14 09:42:45.556 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 18635ms - 来自 ::1
+2025-10-14 09:42:45.600 +08:00 [INF] 查询到任务数据: ID=151963, MaterialCode=sdfasdf, MaterialQuantity=0, PalletNumber=sdfsdf
+2025-10-14 09:46:24.923 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=06B05, Target=06A05, Priority=1, RequestCode=sdf
+2025-10-14 09:46:58.162 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06B05
+2025-10-14 09:47:40.346 +08:00 [ERR] 任务拆分失败: PA001-PA019、PA001-PA020、PA021-PA040、PA041-PA060范围内没有可用的空闲储位
+System.InvalidOperationException: PA001-PA019、PA001-PA020、PA021-PA040、PA041-PA060范围内没有可用的空闲储位
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType2Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1550
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 168
+2025-10-14 09:47:40.389 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 75471ms - 来自 ::1
+2025-10-14 09:50:08.995 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 09:50:09.056 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 09:50:09.134 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 09:50:10.754 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 09:50:12.251 +08:00 [INF] 正在验证用户: admin
+2025-10-14 09:50:12.253 +08:00 [INF] 输入的密码: admin123
+2025-10-14 09:50:12.255 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 09:50:12.257 +08:00 [INF] 密码验证结果: True
+2025-10-14 09:50:12.281 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 09:50:12.284 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 09:50:12.365 +08:00 [INF] 查询到任务数据: ID=151963, MaterialCode=sdfasdf, MaterialQuantity=0, PalletNumber=sdfsdf
+2025-10-14 09:50:35.994 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=06A05, Target=06C05, Priority=1, RequestCode=1111
+2025-10-14 09:50:44.940 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A05
+2025-10-14 09:51:28.746 +08:00 [INF] 已锁定任务起点储位: 06A05
+2025-10-14 09:51:29.029 +08:00 [INF] 已锁定三向车中转点储位: PD001
+2025-10-14 09:51:29.269 +08:00 [INF] 已锁定小地牛中转点储位: PC001
+2025-10-14 09:51:29.532 +08:00 [INF] 已锁定最终目标储位: PA053
+2025-10-14 09:51:30.804 +08:00 [INF] 任务拆分完成（类型2），分组ID: 91da763c-24f1-45bf-88ee-fb3e294e5644，第一个任务: 1111_1，第二个任务: 1111_2
+2025-10-14 09:51:34.396 +08:00 [WRN] 慢请求检测: GET /api/connectionstatus - 1372ms - 来自 ::1
+2025-10-14 09:51:41.488 +08:00 [INF] 任务拆分成功，原始任务: 1111，生成了 2 个子任务
+2025-10-14 09:51:43.413 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 67500ms - 来自 ::1
+2025-10-14 09:51:43.483 +08:00 [INF] 查询到任务数据: ID=151965, MaterialCode=1123123, MaterialQuantity=0, PalletNumber=asfasdf234234
+2025-10-14 09:52:20.345 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=06A06, Target=06A07, Priority=1, RequestCode=123123
+2025-10-14 09:52:24.433 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2025-10-14 09:52:24.484 +08:00 [ERR] 任务拆分失败: 三向车中转点 596 已被锁定，不可以进行任务
+System.ArgumentException: 三向车中转点 596 已被锁定，不可以进行任务
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType2Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1521
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 168
+2025-10-14 09:52:24.526 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 4182ms - 来自 ::1
+2025-10-14 09:52:45.836 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=06A06, Target=06A07, Priority=1, RequestCode=123123
+2025-10-14 09:52:48.323 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2025-10-14 09:52:48.368 +08:00 [ERR] 任务拆分失败: 三向车中转点 596 已被锁定，不可以进行任务
+System.ArgumentException: 三向车中转点 596 已被锁定，不可以进行任务
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType2Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1521
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 168
+2025-10-14 09:52:48.374 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 2538ms - 来自 ::1
+2025-10-14 09:52:52.297 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=06A06, Target=06A07, Priority=1, RequestCode=123123
+2025-10-14 09:52:59.075 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2025-10-14 09:53:27.586 +08:00 [ERR] 任务拆分失败: 三向车中转点 596 已被锁定，不可以进行任务
+System.ArgumentException: 三向车中转点 596 已被锁定，不可以进行任务
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType2Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1521
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 168
+2025-10-14 09:53:27.617 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 35322ms - 来自 ::1
+2025-10-14 09:53:44.657 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=06B08, Target=06A07, Priority=1, RequestCode=123123
+2025-10-14 09:53:47.071 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06B08
+2025-10-14 09:53:47.124 +08:00 [ERR] 任务拆分失败: 三向车中转点 596 已被锁定，不可以进行任务
+System.ArgumentException: 三向车中转点 596 已被锁定，不可以进行任务
+   at WarehouseManagementSystem.Service.RcsTaskService.SplitTaskType2Async(AddTaskRequest request, IDbConnection connection, IDbTransaction transaction) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 1521
+   at WarehouseManagementSystem.Service.RcsTaskService.AddTaskAsync(AddTaskRequest request) in E:\NDCProject\AG240101广州舒适刀片\任务管理\Service\RcsTaskService.cs:line 168
+2025-10-14 09:53:47.135 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 2477ms - 来自 ::1
+2025-10-14 09:53:56.506 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=06B08, Target=06A07, Priority=1, RequestCode=123123
+2025-10-14 09:54:04.153 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06B08
+2025-10-14 09:58:35.521 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 09:58:35.576 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 09:58:35.657 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 09:58:37.325 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 09:58:41.794 +08:00 [INF] 正在验证用户: admin
+2025-10-14 09:58:41.797 +08:00 [INF] 输入的密码: admin123
+2025-10-14 09:58:41.798 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 09:58:41.799 +08:00 [INF] 密码验证结果: True
+2025-10-14 09:58:41.815 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 09:58:41.816 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 09:58:41.887 +08:00 [INF] 查询到任务数据: ID=151965, MaterialCode=1123123, MaterialQuantity=0, PalletNumber=asfasdf234234
+2025-10-14 09:58:55.816 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=06A06, Target=06A07, Priority=1, RequestCode=123123
+2025-10-14 09:59:05.545 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2025-10-14 09:59:18.140 +08:00 [INF] 较慢请求: GET /api/connectionstatus - 585ms
+2025-10-14 09:59:38.759 +08:00 [INF] 已锁定任务起点储位: 06A06
+2025-10-14 09:59:39.084 +08:00 [INF] 已锁定三向车中转点储位: PD005
+2025-10-14 09:59:39.483 +08:00 [INF] 已锁定小地牛中转点储位: PC005
+2025-10-14 09:59:39.756 +08:00 [INF] 已锁定最终目标储位: PA052
+2025-10-14 09:59:40.660 +08:00 [INF] 任务拆分完成（类型2），分组ID: c397627d-6a74-406f-ae8c-20213258285b，第一个任务: 123123_1，第二个任务: 123123_2
+2025-10-14 09:59:42.115 +08:00 [INF] 任务拆分成功，原始任务: 123123，生成了 2 个子任务
+2025-10-14 09:59:42.118 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 46384ms - 来自 ::1
+2025-10-14 09:59:42.142 +08:00 [INF] 查询到任务数据: ID=151967, MaterialCode=, MaterialQuantity=0, PalletNumber=123123
+2025-10-14 10:00:18.792 +08:00 [INF] 接收到的任务数据: TaskType=shipment, Source=PD007, Target=06B05, Priority=1, RequestCode=1760407218
+2025-10-14 10:00:20.269 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 1478ms - 来自 ::1
+2025-10-14 10:00:51.826 +08:00 [INF] 接收到的任务数据: TaskType=manualTask, Source=15A01, Target=06C05, Priority=1, RequestCode=1760407251
+2025-10-14 10:00:53.771 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 15A01
+2025-10-14 10:00:53.799 +08:00 [INF] 已锁定任务起点储位: 15A01
+2025-10-14 10:00:53.801 +08:00 [INF] 已锁定三向车中转点储位: PD008
+2025-10-14 10:00:53.802 +08:00 [INF] 已锁定小地牛中转点储位: PC008
+2025-10-14 10:00:53.803 +08:00 [INF] 已锁定最终目标储位: PA022
+2025-10-14 10:00:53.805 +08:00 [INF] 任务拆分完成（类型2），分组ID: 4a5f4459-bed2-425a-98db-edaae3625d79，第一个任务: 1760407251_1，第二个任务: 1760407251_2
+2025-10-14 10:00:53.814 +08:00 [INF] 任务拆分成功，原始任务: 1760407251，生成了 2 个子任务
+2025-10-14 10:00:53.816 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 1990ms - 来自 ::1
+2025-10-14 10:00:53.837 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 10:13:48.901 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 10:13:48.960 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 10:13:49.049 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 10:13:50.840 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 10:13:52.248 +08:00 [INF] 正在验证用户: admin
+2025-10-14 10:13:52.250 +08:00 [INF] 输入的密码: admin123
+2025-10-14 10:13:52.251 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 10:13:52.254 +08:00 [INF] 密码验证结果: True
+2025-10-14 10:13:52.276 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 10:13:52.278 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 10:13:52.373 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 10:15:24.310 +08:00 [INF] 同步操作中转点: 71 -> 596, 锁定状态: false
+2025-10-14 10:15:28.323 +08:00 [WRN] 慢请求检测: POST /DisplayLocation/DeleteConfirmed/6816 - 35466ms - 来自 ::1
+2025-10-14 10:16:22.979 +08:00 [INF] 同步清空中转点物料: 71 -> 596
+2025-10-14 10:16:24.340 +08:00 [WRN] 慢请求检测: POST /DisplayLocation/DeleteConfirmed/6816 - 19206ms - 来自 ::1
+2025-10-14 11:15:38.756 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 11:15:38.811 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 11:15:38.946 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 11:15:42.226 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 11:15:43.662 +08:00 [INF] 正在验证用户: admin
+2025-10-14 11:15:43.664 +08:00 [INF] 输入的密码: admin123
+2025-10-14 11:15:43.666 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 11:15:43.668 +08:00 [INF] 密码验证结果: True
+2025-10-14 11:15:43.690 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 11:15:43.692 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 11:15:43.772 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:15:51.013 +08:00 [INF] 接收到取消任务请求，任务ID: 151969
+2025-10-14 11:15:51.027 +08:00 [INF] 任务 151969 已成功取消
+2025-10-14 11:15:51.030 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:15:53.645 +08:00 [INF] 接收到取消任务请求，任务ID: 151970
+2025-10-14 11:15:53.659 +08:00 [INF] 任务 151970 已成功取消
+2025-10-14 11:15:53.662 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:15:53.663 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:15:56.373 +08:00 [INF] 接收到取消任务请求，任务ID: 151967
+2025-10-14 11:15:56.388 +08:00 [INF] 任务 151967 已成功取消
+2025-10-14 11:15:56.389 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:15:58.084 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:16:00.273 +08:00 [INF] 接收到取消任务请求，任务ID: 151968
+2025-10-14 11:16:00.279 +08:00 [INF] 任务 151968 已成功取消
+2025-10-14 11:16:00.281 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:16:02.472 +08:00 [INF] 接收到取消任务请求，任务ID: 151965
+2025-10-14 11:16:02.486 +08:00 [INF] 任务 151965 已成功取消
+2025-10-14 11:16:02.487 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:16:02.488 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:16:04.796 +08:00 [INF] 接收到取消任务请求，任务ID: 151966
+2025-10-14 11:16:04.801 +08:00 [INF] 任务 151966 已成功取消
+2025-10-14 11:16:04.803 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:16:07.562 +08:00 [INF] 接收到取消任务请求，任务ID: 151963
+2025-10-14 11:16:07.578 +08:00 [INF] 任务 151963 已成功取消
+2025-10-14 11:16:07.578 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:16:07.580 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:16:10.177 +08:00 [INF] 接收到取消任务请求，任务ID: 151964
+2025-10-14 11:16:10.192 +08:00 [INF] 任务 151964 已成功取消
+2025-10-14 11:16:10.194 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:16:12.297 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:16:19.608 +08:00 [INF] 接收到取消任务请求，任务ID: 151961
+2025-10-14 11:16:19.613 +08:00 [INF] 任务 151961 已成功取消
+2025-10-14 11:16:19.615 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:16:20.621 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:16:35.148 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:16:36.055 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:17:33.200 +08:00 [INF] 接收到取消任务请求，任务ID: 151962
+2025-10-14 11:17:48.422 +08:00 [INF] 任务 151962 已成功取消
+2025-10-14 11:19:57.390 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 11:19:57.449 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 11:19:57.529 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 11:19:59.582 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 11:20:07.277 +08:00 [INF] 正在验证用户: admin
+2025-10-14 11:20:07.279 +08:00 [INF] 输入的密码: admin123
+2025-10-14 11:20:07.280 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 11:20:07.282 +08:00 [INF] 密码验证结果: True
+2025-10-14 11:20:07.304 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 11:20:07.305 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 11:20:07.397 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:20:25.267 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:20:43.827 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:20:49.855 +08:00 [INF] 接收到取消任务请求，任务ID: 151969
+2025-10-14 11:20:55.609 +08:00 [INF] 任务 151969 已成功取消
+2025-10-14 11:20:57.008 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:20:57.017 +08:00 [WRN] 慢请求检测: POST /Tasks/Cancel - 10140ms - 来自 ::1
+2025-10-14 11:21:00.449 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:00.701 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:08.428 +08:00 [INF] 接收到取消任务请求，任务ID: 151970
+2025-10-14 11:21:08.433 +08:00 [INF] 任务 151970 已成功取消
+2025-10-14 11:21:08.435 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:10.741 +08:00 [INF] 接收到取消任务请求，任务ID: 151967
+2025-10-14 11:21:10.756 +08:00 [INF] 任务 151967 已成功取消
+2025-10-14 11:21:10.758 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:11.731 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:13.187 +08:00 [INF] 接收到取消任务请求，任务ID: 151968
+2025-10-14 11:21:13.193 +08:00 [INF] 任务 151968 已成功取消
+2025-10-14 11:21:13.195 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:15.307 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:16.941 +08:00 [INF] 接收到取消任务请求，任务ID: 151965
+2025-10-14 11:21:16.956 +08:00 [INF] 任务 151965 已成功取消
+2025-10-14 11:21:16.957 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:19.204 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:21.232 +08:00 [INF] 接收到取消任务请求，任务ID: 151966
+2025-10-14 11:21:21.237 +08:00 [INF] 任务 151966 已成功取消
+2025-10-14 11:21:21.238 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:23.445 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:24.695 +08:00 [INF] 接收到取消任务请求，任务ID: 151963
+2025-10-14 11:21:24.700 +08:00 [INF] 任务 151963 已成功取消
+2025-10-14 11:21:24.701 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:26.768 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:28.533 +08:00 [INF] 接收到取消任务请求，任务ID: 151964
+2025-10-14 11:21:28.549 +08:00 [INF] 任务 151964 已成功取消
+2025-10-14 11:21:28.551 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:30.710 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:32.714 +08:00 [INF] 接收到取消任务请求，任务ID: 151961
+2025-10-14 11:21:32.729 +08:00 [INF] 任务 151961 已成功取消
+2025-10-14 11:21:32.730 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-14 11:21:34.988 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:21:37.305 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:36:52.821 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-14 11:36:52.873 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-14 11:36:52.952 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-14 11:36:54.361 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-14 11:37:00.167 +08:00 [INF] 正在验证用户: admin
+2025-10-14 11:37:00.169 +08:00 [INF] 输入的密码: admin123
+2025-10-14 11:37:00.170 +08:00 [INF] 数据库中的密码: admin123
+2025-10-14 11:37:00.171 +08:00 [INF] 密码验证结果: True
+2025-10-14 11:37:00.186 +08:00 [INF] 更新最后登录时间成功
+2025-10-14 11:37:00.188 +08:00 [INF] 用户 admin 登录成功
+2025-10-14 11:37:00.260 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:37:34.282 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:37:36.396 +08:00 [INF] 接收到取消任务请求，任务ID: 151969
+2025-10-14 11:38:04.844 +08:00 [INF] 拆分任务分组 4a5f4459-bed2-425a-98db-edaae3625d79 已成功取消，共取消 2 个任务
+2025-10-14 11:38:06.603 +08:00 [INF] 取消任务结果: 成功=True, 消息=拆分任务分组已成功取消，共取消 2 个任务
+2025-10-14 11:38:06.622 +08:00 [WRN] 慢请求检测: POST /Tasks/Cancel - 30236ms - 来自 ::1
+2025-10-14 11:38:10.772 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:38:26.911 +08:00 [INF] 接收到取消任务请求，任务ID: 151967
+2025-10-14 11:38:26.918 +08:00 [INF] 拆分任务分组 c397627d-6a74-406f-ae8c-20213258285b 已成功取消，共取消 2 个任务
+2025-10-14 11:38:26.920 +08:00 [INF] 取消任务结果: 成功=True, 消息=拆分任务分组已成功取消，共取消 2 个任务
+2025-10-14 11:38:29.234 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:38:30.965 +08:00 [INF] 接收到取消任务请求，任务ID: 151965
+2025-10-14 11:38:30.981 +08:00 [INF] 拆分任务分组 91da763c-24f1-45bf-88ee-fb3e294e5644 已成功取消，共取消 2 个任务
+2025-10-14 11:38:30.983 +08:00 [INF] 取消任务结果: 成功=True, 消息=拆分任务分组已成功取消，共取消 2 个任务
+2025-10-14 11:38:33.139 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:38:35.087 +08:00 [INF] 接收到取消任务请求，任务ID: 151963
+2025-10-14 11:38:35.104 +08:00 [INF] 拆分任务分组 16ae7957-bb7d-4e56-b85b-d71ad5b4ced4 已成功取消，共取消 2 个任务
+2025-10-14 11:38:35.105 +08:00 [INF] 取消任务结果: 成功=True, 消息=拆分任务分组已成功取消，共取消 2 个任务
+2025-10-14 11:38:37.271 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:38:46.156 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:38:48.093 +08:00 [INF] 接收到取消任务请求，任务ID: 151961
+2025-10-14 11:38:48.108 +08:00 [INF] 拆分任务分组 1a516650-8acc-48d6-8fca-d427a2f1d527 已成功取消，共取消 2 个任务
+2025-10-14 11:38:48.109 +08:00 [INF] 取消任务结果: 成功=True, 消息=拆分任务分组已成功取消，共取消 2 个任务
+2025-10-14 11:38:50.532 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-14 11:39:03.200 +08:00 [INF] 查询到任务数据: ID=151969, MaterialCode=, MaterialQuantity=0, PalletNumber=

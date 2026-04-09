@@ -1,0 +1,136 @@
+@model WarehouseManagementSystem.Models.RCS_UserTasks
+
+@{
+    ViewData["Title"] = "创建任务";
+}
+
+<div class="container-fluid">
+    <h2>创建任务</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div class="form-group">
+                    <label asp-for="taskType" class="control-label">任务类型</label>
+                    <select asp-for="taskType" class="form-control" asp-items="Html.GetEnumSelectList<RCS_UserTasks.TaskType>()">
+                        <option value="0">-- 请选择任务类型 --</option>
+                    </select>
+                    <span asp-validation-for="taskType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="taskStatus" class="control-label">任务状态</label>
+                    <select asp-for="taskStatus" class="form-control" asp-items="Html.GetEnumSelectList<TaskStatuEnum>()">
+                        <option value="">-- 请选择任务状态 --</option>
+                    </select>
+                    <span asp-validation-for="taskStatus" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="sourcePosition" class="control-label">起始点</label>
+                    <select asp-for="sourcePosition" class="form-control">
+                        <option value="">-- 请选择起始点 --</option>
+                        @foreach (var location in ViewBag.Locations)
+                        {
+                            <option value="@location.Name">@location.Name - @location.NodeRemark</option>
+                        }
+                    </select>
+                    <span asp-validation-for="sourcePosition" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="targetPosition" class="control-label">终点</label>
+                    <select asp-for="targetPosition" class="form-control">
+                        <option value="">-- 请选择终点 --</option>
+                        @foreach (var location in ViewBag.Locations)
+                        {
+                            <option value="@location.Name">@location.Name - @location.NodeRemark</option>
+                        }
+                    </select>
+                    <span asp-validation-for="targetPosition" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="priority" class="control-label">优先级</label>
+                    <input asp-for="priority" class="form-control" type="number" min="1" max="3" value="1" />
+                    <span asp-validation-for="priority" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="requestCode" class="control-label">请求编号</label>
+                    <input asp-for="requestCode" class="form-control" />
+                    <span asp-validation-for="requestCode" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MaterialCode" class="control-label">物料编码</label>
+                    <input asp-for="MaterialCode" class="form-control" />
+                    <span asp-validation-for="MaterialCode" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MaterialQuantity" class="control-label">物料数量</label>
+                    <input asp-for="MaterialQuantity" class="form-control" type="number" min="0" value="0" />
+                    <span asp-validation-for="MaterialQuantity" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="PalletNumber" class="control-label">卡板单号</label>
+                    <input asp-for="PalletNumber" class="form-control" />
+                    <span asp-validation-for="PalletNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SourceType" class="control-label">起始类型</label>
+                    <input asp-for="SourceType" class="form-control" />
+                    <span asp-validation-for="SourceType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="DestType" class="control-label">目标类型</label>
+                    <input asp-for="DestType" class="form-control" />
+                    <span asp-validation-for="DestType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ConfirmTime" class="control-label">确认时间</label>
+                    <input asp-for="ConfirmTime" class="form-control" type="datetime-local" />
+                    <span asp-validation-for="ConfirmTime" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="创建" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-secondary">返回列表</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function() {
+            // 当选择起始点后，禁用终点下拉框中相同的选项
+            $('#sourcePosition').change(function() {
+                var selectedSource = $(this).val();
+                $('#targetPosition option').prop('disabled', false);
+                if (selectedSource) {
+                    $('#targetPosition option[value="' + selectedSource + '"]').prop('disabled', true);
+                }
+            });
+
+            // 当选择终点后，禁用起始点下拉框中相同的选项
+            $('#targetPosition').change(function() {
+                var selectedTarget = $(this).val();
+                $('#sourcePosition option').prop('disabled', false);
+                if (selectedTarget) {
+                    $('#sourcePosition option[value="' + selectedTarget + '"]').prop('disabled', true);
+                }
+            });
+        });
+    </script>
+} 

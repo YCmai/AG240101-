@@ -1,0 +1,204 @@
+@using WarehouseManagementSystem.Models
+@model PagedResult<RCS_TaskCache>
+
+@{
+    ViewData["Title"] = "缓存任务管理";
+    var user = Context.Items["User"] as WarehouseManagementSystem.Models.User;
+}
+
+<div>
+    @Html.AntiForgeryToken()
+
+    <div>
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4>缓存任务列表</h4>
+            <div>
+                @if (user != null && (user.Role == UserRole.Admin))
+                {
+                    <button class="btn btn-danger" onclick="clearAllCachedTasks()">清空所有缓存任务</button>
+                }
+            </div>
+        </div>
+
+        <!-- 表格 -->
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>任务类型</th>
+                        <th>起始点</th>
+                        <th>终点</th>
+                        <th>物料编码</th>
+                        <th>物料数量</th>
+                        <th>卡板单号</th>
+                        <th>起始类型</th>
+                        <th>目标类型</th>
+                        <th>请求编号</th>
+                        <th>创建时间</th>
+                        <th>确认时间</th>
+                        <th>重试次数</th>
+                        <th>状态</th>
+                        <th>最后错误</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Items != null && Model.Items.Any())
+                    {
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr>
+                                <td>@item.TaskTypeDisplayName</td>
+                                <td>@item.SourcePosition</td>
+                                <td>@item.TargetPosition</td>
+                                <td>@(string.IsNullOrEmpty(item.MaterialCode) ? "-" : item.MaterialCode)</td>
+                                <td>@(item.MaterialQuantity > 0 ? item.MaterialQuantity.ToString() : "-")</td>
+                                <td>@(string.IsNullOrEmpty(item.PalletNumber) ? "-" : item.PalletNumber)</td>
+                                <td>@(string.IsNullOrEmpty(item.SourceType) ? "-" : item.SourceType)</td>
+                                <td>@(string.IsNullOrEmpty(item.DestType) ? "-" : item.DestType)</td>
+                                <td>@item.RequestCode</td>
+                                <td>@(item.CreateTime.ToString("yyyy-MM-dd HH:mm:ss"))</td>
+                                <td>@(item.ConfirmTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-")</td>
+                                <td>@item.RetryCount</td>
+                                <td>
+                                    @{
+                                        var statusClass = item.Status switch
+                                        {
+                                            0 => "badge bg-secondary",
+                                            1 => "badge bg-primary",
+                                            2 => "badge bg-success",
+                                            3 => "badge bg-danger",
+                                            _ => "badge bg-light text-dark"
+                                        };
+                                    }
+                                    <span class="@statusClass">@item.StatusDisplayName</span>
+                                </td>
+                                <td>@(string.IsNullOrEmpty(item.LastError) ? "-" : item.LastError)</td>
+                                <td>
+                                    @if (user != null && (user.Role == UserRole.Operator || user.Role == UserRole.Supervisor || user.Role == UserRole.Admin))
+                                    {
+                                        @if (item.Status == 0) // 待处理状态
+                                        {
+                                            <button class="btn btn-success btn-sm" onclick="retryCachedTask(@item.Id)">
+                                                重试
+                                            </button>
+                                            <button class="btn btn-danger btn-sm" onclick="cancelCachedTask(@item.Id)">
+                                                取消
+                                            </button>
+                                        }
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="15" class="text-center">暂无缓存任务</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 分页导航 -->
+        <div class="d-flex justify-content-end">
+            <nav aria-label="Page navigation">
+                <ul class="pagination pagination-sm">
+                    @if (Model.HasPreviousPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="?page=@(Model.PageNumber - 1)">上一页</a>
+                        </li>
+                    }
+
+                    <li class="page-item disabled">
+                        <span class="page-link">当前页面: @Model.PageNumber / @Model.TotalPages</span>
+                    </li>
+
+                    @if (Model.HasNextPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="?page=@(Model.PageNumber + 1)">下一页</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function retryCachedTask(id) {
+            if (confirm("确定要重试此缓存任务吗？")) {
+                $.ajax({
+                    url: '@Url.Action("RetryCachedTask", "Tasks")',
+                    type: 'POST',
+                    data: {
+                        id: id,
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (result) {
+                        if (result.success) {
+                            alert("任务重试成功");
+                            location.reload();
+                        } else {
+                            alert("任务重试失败: " + result.message);
+                        }
+                    },
+                    error: function () {
+                        alert("请求失败，请稍后重试");
+                    }
+                });
+            }
+        }
+
+        function cancelCachedTask(id) {
+            if (confirm("确定要取消此缓存任务吗？")) {
+                $.ajax({
+                    url: '@Url.Action("CancelCachedTask", "Tasks")',
+                    type: 'POST',
+                    data: {
+                        id: id,
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (result) {
+                        if (result.success) {
+                            alert("任务取消成功");
+                            location.reload();
+                        } else {
+                            alert("任务取消失败: " + result.message);
+                        }
+                    },
+                    error: function () {
+                        alert("请求失败，请稍后重试");
+                    }
+                });
+            }
+        }
+
+        function clearAllCachedTasks() {
+            if (confirm("确定要清空所有缓存任务吗？此操作不可恢复！")) {
+                $.ajax({
+                    url: '@Url.Action("ClearAllCachedTasks", "Tasks")',
+                    type: 'POST',
+                    data: {
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (result) {
+                        if (result.success) {
+                            alert("所有缓存任务已清空");
+                            location.reload();
+                        } else {
+                            alert("清空缓存任务失败: " + result.message);
+                        }
+                    },
+                    error: function () {
+                        alert("请求失败，请稍后重试");
+                    }
+                });
+            }
+        }
+    </script>
+}

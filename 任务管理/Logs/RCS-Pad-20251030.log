@@ -1,0 +1,1313 @@
+2025-10-30 09:21:41.175 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 09:21:41.236 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 09:21:41.259 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 09:21:41.366 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 09:21:46.641 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 09:21:48.383 +08:00 [INF] 正在验证用户: admin
+2025-10-30 09:21:48.386 +08:00 [INF] 输入的密码: admin123
+2025-10-30 09:21:48.387 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 09:21:48.389 +08:00 [INF] 密码验证结果: True
+2025-10-30 09:21:48.415 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 09:21:48.417 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 09:21:48.505 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:21:50.828 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:21:52.820 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:21:54.818 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:21:56.816 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:21:58.815 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:00.835 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:02.815 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:04.815 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:06.816 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:08.815 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:10.213 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=06A05, Target=06C06, Priority=1, RequestCode=1761787330
+2025-10-30 09:22:13.207 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:14.273 +08:00 [INF] 较慢请求: GET /Tasks/Index - 829ms
+2025-10-30 09:22:16.716 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:18.034 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2071ms - 来自 ::1
+2025-10-30 09:22:18.044 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:19.811 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1771ms - 来自 ::1
+2025-10-30 09:22:20.366 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:20.949 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1134ms - 来自 ::1
+2025-10-30 09:22:20.969 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:23.170 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 13045ms - 来自 ::1
+2025-10-30 09:22:23.171 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2217ms - 来自 ::1
+2025-10-30 09:22:23.178 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:25.550 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:26.815 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:28.816 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:30.818 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:32.814 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:34.816 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:36.816 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:38.816 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:40.817 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:40.917 +08:00 [INF] 接收到的任务数据: TaskType=manualTask, Source=06A05, Target=06C06, Priority=1, RequestCode=1761787360
+2025-10-30 09:22:43.566 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:44.912 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1957ms - 来自 ::1
+2025-10-30 09:22:46.026 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:46.531 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1271ms - 来自 ::1
+2025-10-30 09:22:47.065 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:48.659 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1615ms - 来自 ::1
+2025-10-30 09:22:50.525 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:52.500 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2539ms - 来自 ::1
+2025-10-30 09:22:53.294 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:54.345 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1841ms - 来自 ::1
+2025-10-30 09:22:54.958 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:54.982 +08:00 [INF] 任务起点: 06A05, 终点: 06C06
+2025-10-30 09:22:55.962 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1285ms - 来自 ::1
+2025-10-30 09:22:55.973 +08:00 [INF] 查询到任务数据: ID=151984, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:57.765 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 16848ms - 来自 ::1
+2025-10-30 09:22:57.793 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:57.814 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:22:59.997 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:23:02.006 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:23:03.996 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 09:23:05.995 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:14:44.086 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 12:14:44.242 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 12:14:44.283 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 12:14:44.507 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 12:14:47.096 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 12:14:49.114 +08:00 [INF] 正在验证用户: admin
+2025-10-30 12:14:49.115 +08:00 [INF] 输入的密码: admin123
+2025-10-30 12:14:49.117 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 12:14:49.118 +08:00 [INF] 密码验证结果: True
+2025-10-30 12:14:49.143 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 12:14:49.145 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 12:14:49.224 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:14:51.555 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:14:53.584 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:14:55.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:14:57.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:14:59.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:01.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:03.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:05.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:07.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:09.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:11.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:13.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:15.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:17.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:19.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:21.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:23.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:25.618 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:27.550 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:29.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:31.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:33.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:35.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:37.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:39.553 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:41.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:43.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:45.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:47.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:49.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:51.224 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=07A02, Target=19B23, Priority=1, RequestCode=1761797751
+2025-10-30 12:15:54.822 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:56.126 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1367ms - 来自 ::1
+2025-10-30 12:15:58.022 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:15:58.052 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1391ms - 来自 ::1
+2025-10-30 12:15:58.062 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:00.157 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:02.322 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2667ms - 来自 ::1
+2025-10-30 12:16:02.346 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:28.129 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 37025ms - 来自 ::1
+2025-10-30 12:16:28.129 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:28.155 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 15933ms - 来自 ::1
+2025-10-30 12:16:28.162 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:28.174 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:28.186 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:28.200 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:30.492 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:31.551 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:33.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:35.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:37.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:39.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:41.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:43.540 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:45.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:47.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:49.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:51.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:53.551 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:55.552 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:57.553 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:16:59.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:01.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:03.551 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:05.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:07.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:09.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:11.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:13.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:15.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:17.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:19.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:21.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:23.558 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:25.550 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:27.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:29.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:31.554 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:33.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:35.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:37.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:39.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:41.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:43.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:45.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:47.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:49.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:51.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:53.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:55.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:57.563 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:17:59.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:01.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:03.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:05.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:07.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:09.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:11.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:13.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:15.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:17.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:19.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:21.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:23.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:25.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:27.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:29.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:31.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:33.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:35.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:37.552 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:39.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:40.759 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=07A02, Target=19B23, Priority=1, RequestCode=1761797920
+2025-10-30 12:18:43.442 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:44.203 +08:00 [INF] 较慢请求: GET /Tasks/Index - 811ms
+2025-10-30 12:18:44.804 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:47.110 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2884ms - 来自 ::1
+2025-10-30 12:18:47.910 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:18:52.671 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 5554ms - 来自 ::1
+2025-10-30 12:18:52.793 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:25.007 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 44247ms - 来自 ::1
+2025-10-30 12:19:25.071 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:25.073 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 32335ms - 来自 ::1
+2025-10-30 12:19:25.082 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:27.036 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:27.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:27.822 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=07A02, Target=19B23, Priority=1, RequestCode=1761797967
+2025-10-30 12:19:30.129 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:31.046 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1049ms - 来自 ::1
+2025-10-30 12:19:32.156 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:33.274 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1570ms - 来自 ::1
+2025-10-30 12:19:34.162 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:35.556 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1825ms - 来自 ::1
+2025-10-30 12:19:35.569 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:36.456 +08:00 [INF] 较慢请求: GET /Tasks/Index - 895ms
+2025-10-30 12:19:38.378 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:38.984 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1108ms - 来自 ::1
+2025-10-30 12:19:40.775 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:41.833 +08:00 [INF] 已锁定储位: 137
+2025-10-30 12:19:41.834 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:44.591 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2773ms - 来自 ::1
+2025-10-30 12:19:45.263 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:45.289 +08:00 [INF] 较慢请求: GET /Tasks/Index - 695ms
+2025-10-30 12:19:46.019 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:47.649 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1633ms - 来自 ::1
+2025-10-30 12:19:48.427 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:49.054 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1366ms - 来自 ::1
+2025-10-30 12:19:51.510 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:53.294 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 3200ms - 来自 ::1
+2025-10-30 12:19:55.577 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:19:56.293 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1963ms - 来自 ::1
+2025-10-30 12:19:58.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:20:02.820 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 6506ms - 来自 ::1
+2025-10-30 12:20:02.829 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:49.035 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 141213ms - 来自 ::1
+2025-10-30 12:21:49.082 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 106262ms - 来自 ::1
+2025-10-30 12:21:49.101 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:49.108 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:49.111 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:49.117 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:51.020 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:51.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:53.553 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:55.553 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:57.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:21:59.594 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:01.551 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:03.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:05.550 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:07.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:09.553 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:11.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:13.550 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:15.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:17.551 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:19.559 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:21.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:23.552 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:25.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:27.554 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:29.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:31.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:33.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:35.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:37.542 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:39.541 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:41.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:43.550 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:45.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:47.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:49.551 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:51.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:53.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:55.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:57.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:22:59.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:01.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:03.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:05.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:07.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:09.566 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:11.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:13.568 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:15.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:17.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:19.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:21.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:23.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:25.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:27.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:29.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:31.543 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:33.542 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:35.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:37.546 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:39.547 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:41.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:43.553 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:45.548 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:47.545 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:49.544 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:51.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:23:53.549 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:09.383 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 12:24:09.464 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 12:24:09.483 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 12:24:09.568 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 12:24:11.763 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 12:24:13.397 +08:00 [INF] 正在验证用户: admin
+2025-10-30 12:24:13.399 +08:00 [INF] 输入的密码: admin123
+2025-10-30 12:24:13.400 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 12:24:13.401 +08:00 [INF] 密码验证结果: True
+2025-10-30 12:24:13.416 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 12:24:13.418 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 12:24:13.489 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:15.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:17.866 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:19.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:21.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:23.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:25.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:27.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:29.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:31.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:33.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:35.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:37.858 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:39.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:40.871 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=06A05, Target=19B23, Priority=1, RequestCode=1761798280
+2025-10-30 12:24:44.508 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:45.321 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1688ms - 来自 ::1
+2025-10-30 12:24:45.335 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:46.649 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:47.585 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1599ms - 来自 ::1
+2025-10-30 12:24:49.916 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:50.616 +08:00 [INF] 较慢请求: GET /Tasks/Index - 829ms
+2025-10-30 12:24:51.811 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:53.805 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 3172ms - 来自 ::1
+2025-10-30 12:24:53.823 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:54.843 +08:00 [INF] 已锁定储位: 136
+2025-10-30 12:24:54.844 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1031ms - 来自 ::1
+2025-10-30 12:24:57.307 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:24:58.776 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 3925ms - 来自 ::1
+2025-10-30 12:24:58.847 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:13.594 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:15.147 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 16257ms - 来自 ::1
+2025-10-30 12:25:16.451 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:17.648 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2489ms - 来自 ::1
+2025-10-30 12:25:18.338 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:22.603 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 4327ms - 来自 ::1
+2025-10-30 12:25:22.671 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:29.786 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 7179ms - 来自 ::1
+2025-10-30 12:25:29.803 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:31.329 +08:00 [INF] 起点 06A05 已被锁定，将任务缓存
+2025-10-30 12:25:31.330 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1543ms - 来自 ::1
+2025-10-30 12:25:31.829 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:31.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:31.896 +08:00 [INF] 任务已缓存: 1761798280, 错误信息: 起点 06A05 已被锁定
+2025-10-30 12:25:31.898 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:34.049 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2156ms - 来自 ::1
+2025-10-30 12:25:34.105 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:35.947 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 55181ms - 来自 ::1
+2025-10-30 12:25:35.995 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1927ms - 来自 ::1
+2025-10-30 12:25:36.002 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:36.059 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:36.079 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:36.083 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:38.360 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:40.353 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:42.348 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:44.348 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:46.348 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:48.348 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:50.352 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:52.347 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:54.351 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:56.346 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:25:58.348 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:00.343 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:02.345 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:04.345 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:06.719 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:06.727 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:08.690 +08:00 [INF] 接收到取消任务请求，任务ID: 151985
+2025-10-30 12:26:08.742 +08:00 [INF] 任务 151985 已成功取消
+2025-10-30 12:26:08.744 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-30 12:26:09.453 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:10.757 +08:00 [INF] 接收到取消任务请求，任务ID: 151984
+2025-10-30 12:26:10.798 +08:00 [INF] 任务 151984 已成功取消
+2025-10-30 12:26:10.800 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-30 12:26:11.299 +08:00 [INF] 接收到取消任务请求，任务ID: 151984
+2025-10-30 12:26:11.306 +08:00 [INF] 取消任务结果: 成功=False, 消息=已完成的任务不能取消
+2025-10-30 12:26:13.653 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:13.664 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:17.112 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:18.476 +08:00 [INF] 接收到取消任务请求，任务ID: 151983
+2025-10-30 12:26:18.518 +08:00 [INF] 任务 151983 已成功取消
+2025-10-30 12:26:18.519 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-30 12:26:18.988 +08:00 [INF] 接收到取消任务请求，任务ID: 151983
+2025-10-30 12:26:18.993 +08:00 [INF] 取消任务结果: 成功=False, 消息=已完成的任务不能取消
+2025-10-30 12:26:20.943 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:21.112 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:21.193 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:23.181 +08:00 [INF] 接收到取消任务请求，任务ID: 151982
+2025-10-30 12:26:23.189 +08:00 [INF] 任务 151982 已成功取消
+2025-10-30 12:26:23.192 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-30 12:26:24.219 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:25.371 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:25.692 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:27.421 +08:00 [INF] 接收到取消任务请求，任务ID: 151981
+2025-10-30 12:26:27.473 +08:00 [INF] 任务 151981 已成功取消
+2025-10-30 12:26:27.477 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-30 12:26:28.375 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:29.797 +08:00 [INF] 接收到取消任务请求，任务ID: 151980
+2025-10-30 12:26:29.837 +08:00 [INF] 任务 151980 已成功取消
+2025-10-30 12:26:29.839 +08:00 [INF] 取消任务结果: 成功=True, 消息=任务已成功取消
+2025-10-30 12:26:31.148 +08:00 [INF] 接收到取消任务请求，任务ID: 151980
+2025-10-30 12:26:31.153 +08:00 [INF] 取消任务结果: 成功=False, 消息=已完成的任务不能取消
+2025-10-30 12:26:32.383 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:32.386 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:35.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:37.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:39.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:41.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:43.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:45.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:47.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:49.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:51.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:53.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:55.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:57.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:26:59.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:01.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:03.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:05.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:07.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:09.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:11.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:13.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:15.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:17.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:19.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:21.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:23.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:25.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:27.863 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:29.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:31.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:33.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:35.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:37.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:39.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:41.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:43.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:45.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:47.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:49.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:51.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:53.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:55.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:57.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:27:59.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:01.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:03.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:05.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:07.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:09.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:11.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:13.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:15.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:17.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:19.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:21.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:23.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:25.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:27.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:29.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:31.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:33.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:35.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:37.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:39.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:41.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:43.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:45.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:47.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:49.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:51.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:53.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:55.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:57.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:28:59.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:01.848 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:03.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:05.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:07.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:09.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:11.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:13.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:15.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:17.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:19.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:21.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:23.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:25.862 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:27.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:29.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:31.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:33.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:35.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:37.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:39.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:41.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:43.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:45.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:47.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:49.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:51.848 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:53.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:55.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:57.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:29:59.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:01.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:03.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:05.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:07.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:09.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:11.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:13.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:15.860 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:17.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:19.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:21.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:23.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:25.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:27.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:29.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:31.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:33.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:35.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:37.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:39.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:41.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:43.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:45.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:47.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:49.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:51.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:53.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:55.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:57.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:30:59.848 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:01.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:03.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:05.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:07.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:09.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:11.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:13.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:15.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:17.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:19.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:21.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:23.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:25.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:27.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:29.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:31.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:33.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:35.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:37.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:39.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:41.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:43.861 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:45.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:47.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:49.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:51.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:53.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:55.890 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:57.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:31:59.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:01.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:03.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:05.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:07.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:09.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:11.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:13.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:15.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:17.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:19.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:21.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:23.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:25.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:27.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:29.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:31.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:33.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:35.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:37.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:39.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:41.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:43.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:45.870 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:47.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:49.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:51.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:53.848 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:55.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:57.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:32:59.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:01.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:03.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:05.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:07.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:09.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:11.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:13.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:15.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:17.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:19.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:21.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:23.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:25.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:27.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:29.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:31.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:33.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:35.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:37.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:39.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:41.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:43.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:45.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:47.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:49.848 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:51.848 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:53.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:55.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:57.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:33:59.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:01.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:03.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:05.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:07.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:09.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:11.870 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:13.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:15.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:17.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:19.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:21.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:23.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:25.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:27.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:29.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:31.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:33.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:35.868 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:37.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:39.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:41.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:43.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:45.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:47.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:49.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:51.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:53.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:55.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:57.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:34:59.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:01.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:03.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:05.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:07.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:09.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:11.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:13.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:15.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:17.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:19.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:21.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:23.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:25.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:27.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:29.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:31.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:33.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:35.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:37.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:39.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:41.858 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:43.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:45.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:47.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:49.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:51.850 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:53.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:55.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:57.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:35:59.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:01.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:03.849 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:05.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:07.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:09.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:11.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:13.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:15.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:17.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:19.858 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:21.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:23.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:25.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:27.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:29.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:31.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:33.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:35.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:37.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:39.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:41.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:43.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:45.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:47.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:49.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:51.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:53.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:55.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:57.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:36:59.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:01.856 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:03.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:05.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:07.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:09.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:11.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:13.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:15.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:17.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:19.858 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:21.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:23.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:25.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:27.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:29.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:31.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:33.859 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:35.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:37.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:39.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:41.857 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:43.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:45.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:47.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:49.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:51.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:53.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:55.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:57.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:37:59.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:01.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:03.852 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:05.854 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:07.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:09.851 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:11.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:13.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:15.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:17.855 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:19.853 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:30.853 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 12:38:30.903 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 12:38:30.930 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 12:38:31.071 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 12:38:33.025 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 12:38:34.404 +08:00 [INF] 正在验证用户: admin
+2025-10-30 12:38:34.405 +08:00 [INF] 输入的密码: admin123
+2025-10-30 12:38:34.406 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 12:38:34.407 +08:00 [INF] 密码验证结果: True
+2025-10-30 12:38:34.431 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 12:38:34.433 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 12:38:34.535 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:36.943 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:38.921 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:40.910 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:42.910 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:44.910 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:46.914 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:48.917 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:50.914 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:52.913 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:54.913 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:56.909 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:38:58.911 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:00.910 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:02.944 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:04.913 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:06.912 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:08.909 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:10.913 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:12.915 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:14.912 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:16.911 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:18.913 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:20.910 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:22.908 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:23.745 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=05A32, Target=06A07, Priority=1, RequestCode=1761799163
+2025-10-30 12:39:26.861 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:27.859 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1024ms - 来自 ::1
+2025-10-30 12:39:29.482 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:29.490 +08:00 [INF] 较慢请求: GET /Tasks/Index - 716ms
+2025-10-30 12:39:29.498 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:36.639 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:36.875 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 5587ms - 来自 ::1
+2025-10-30 12:39:38.136 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:38.158 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:40.385 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:41.214 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2101ms - 来自 ::1
+2025-10-30 12:39:41.798 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:42.761 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1489ms - 来自 ::1
+2025-10-30 12:39:43.733 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:43.749 +08:00 [INF] 已锁定储位: 137
+2025-10-30 12:39:45.031 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1320ms - 来自 ::1
+2025-10-30 12:39:49.420 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:50.991 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1610ms - 来自 ::1
+2025-10-30 12:39:51.373 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:52.106 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1111ms - 来自 ::1
+2025-10-30 12:39:56.236 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:56.368 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2585ms - 来自 ::1
+2025-10-30 12:39:56.419 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:39:58.180 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1807ms - 来自 ::1
+2025-10-30 12:39:58.243 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:40:01.767 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 3565ms - 来自 ::1
+2025-10-30 12:40:03.715 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:05.609 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 12:42:05.712 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 12:42:05.758 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 12:42:05.900 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 12:42:07.763 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 12:42:09.671 +08:00 [INF] 正在验证用户: admin
+2025-10-30 12:42:09.676 +08:00 [INF] 输入的密码: admin123
+2025-10-30 12:42:09.679 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 12:42:09.681 +08:00 [INF] 密码验证结果: True
+2025-10-30 12:42:09.705 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 12:42:09.707 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 12:42:09.827 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:12.263 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:14.237 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:16.245 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:18.233 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:20.240 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:21.717 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=05A32, Target=06C06, Priority=1, RequestCode=1761799341
+2025-10-30 12:42:24.346 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:26.143 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1863ms - 来自 ::1
+2025-10-30 12:42:27.530 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:29.732 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2249ms - 来自 ::1
+2025-10-30 12:42:29.787 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:30.499 +08:00 [INF] 较慢请求: GET /Tasks/Index - 732ms
+2025-10-30 12:42:31.722 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:32.579 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1164ms - 来自 ::1
+2025-10-30 12:42:33.218 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:34.513 +08:00 [INF] 已锁定储位: 137
+2025-10-30 12:42:34.514 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1306ms - 来自 ::1
+2025-10-30 12:42:37.928 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:39.556 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 4459ms - 来自 ::1
+2025-10-30 12:42:39.629 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:41.233 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1675ms - 来自 ::1
+2025-10-30 12:42:41.294 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:42.166 +08:00 [INF] 较慢请求: GET /Tasks/Index - 907ms
+2025-10-30 12:42:43.147 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:45.374 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 3204ms - 来自 ::1
+2025-10-30 12:42:47.592 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:47.635 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 05A32
+2025-10-30 12:42:52.374 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 6981ms - 来自 ::1
+2025-10-30 12:42:52.436 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:54.238 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1813ms - 来自 ::1
+2025-10-30 12:42:55.145 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:55.715 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1034ms - 来自 ::1
+2025-10-30 12:42:55.743 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:56.466 +08:00 [INF] 较慢请求: GET /Tasks/Index - 729ms
+2025-10-30 12:42:57.103 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:57.760 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1293ms - 来自 ::1
+2025-10-30 12:42:58.534 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:42:59.826 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2061ms - 来自 ::1
+2025-10-30 12:42:59.826 +08:00 [INF] 终点 06C06 已被锁定，将任务缓存
+2025-10-30 12:43:00.058 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:00.072 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:00.094 +08:00 [INF] 任务已缓存: 1761799341, 错误信息: 终点 06C06 已被锁定
+2025-10-30 12:43:00.884 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:04.567 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 4232ms - 来自 ::1
+2025-10-30 12:43:04.584 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:05.063 +08:00 [INF] 任务拆分成功，原始任务: 1761799341，生成了 0 个子任务
+2025-10-30 12:43:05.077 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:05.672 +08:00 [INF] 较慢请求: GET /Tasks/Index - 605ms
+2025-10-30 12:43:06.638 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:07.960 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1335ms - 来自 ::1
+2025-10-30 12:43:08.353 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:09.730 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 48146ms - 来自 ::1
+2025-10-30 12:43:09.776 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:11.937 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:13.936 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:15.201 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:17.507 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:19.494 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:21.497 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:23.496 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:25.495 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:27.494 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:29.495 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:31.924 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:31.924 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:34.107 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:36.104 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:38.100 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:40.104 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:42.105 +08:00 [INF] 查询到任务数据: ID=151985, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:43:44.104 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:46.107 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:48.124 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:50.104 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:51.170 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:53.330 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:55.544 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:55.657 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:57.881 +08:00 [WRN] 查询结果为空
+2025-10-30 12:43:59.874 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:01.873 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:03.873 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:05.875 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:07.873 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:09.871 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:11.897 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:13.876 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:15.878 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:17.876 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:18.953 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:21.204 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:23.166 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:25.166 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:27.167 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:29.165 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:31.166 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:32.183 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=05A32, Target=06B06, Priority=1, RequestCode=1761799472
+2025-10-30 12:44:33.714 +08:00 [INF] 已锁定储位: 137
+2025-10-30 12:44:33.714 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:33.719 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 05A32
+2025-10-30 12:44:33.727 +08:00 [INF] 终点 06B06 已被锁定，将任务缓存
+2025-10-30 12:44:33.732 +08:00 [INF] 任务已缓存: 1761799472, 错误信息: 终点 06B06 已被锁定
+2025-10-30 12:44:33.735 +08:00 [INF] 任务拆分成功，原始任务: 1761799472，生成了 0 个子任务
+2025-10-30 12:44:33.739 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 1557ms - 来自 ::1
+2025-10-30 12:44:33.776 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:35.946 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:37.945 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:39.945 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:40.644 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:43.458 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:44.463 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:46.643 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:48.648 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:50.644 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:52.645 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:54.641 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:56.640 +08:00 [WRN] 查询结果为空
+2025-10-30 12:44:58.653 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:00.645 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:02.648 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:04.645 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:06.642 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:08.642 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:10.642 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:12.643 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:14.679 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:16.643 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:18.642 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:20.640 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:22.640 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:24.645 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:26.643 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:28.728 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:30.644 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:32.647 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:34.224 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=05A32, Target=06B06, Priority=1, RequestCode=1761799534
+2025-10-30 12:45:37.034 +08:00 [INF] 已锁定储位: 136
+2025-10-30 12:45:37.048 +08:00 [WRN] 查询结果为空
+2025-10-30 12:45:37.060 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 05A32
+2025-10-30 12:45:37.092 +08:00 [INF] 已锁定任务起点储位: 05A32
+2025-10-30 12:45:37.093 +08:00 [INF] 已锁定小地牛中转点储位: PC001
+2025-10-30 12:45:37.096 +08:00 [INF] 已锁定三向车中转点储位: PD001
+2025-10-30 12:45:37.099 +08:00 [INF] 已锁定任务终点储位: 06B06
+2025-10-30 12:45:37.101 +08:00 [INF] 任务拆分完成（类型2），分组ID: ca815963-9a84-4859-aa7d-59d9f6538917，第一个任务: 1761799534_1，第二个任务: 1761799534_2
+2025-10-30 12:45:37.123 +08:00 [INF] 任务拆分成功，原始任务: 1761799534，生成了 2 个子任务
+2025-10-30 12:45:37.126 +08:00 [WRN] 慢请求检测: POST /Tasks/CreateTask - 2902ms - 来自 ::1
+2025-10-30 12:45:37.156 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:39.338 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:41.339 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:42.556 +08:00 [INF] 接收到取消任务请求，任务ID: 151986
+2025-10-30 12:45:42.617 +08:00 [INF] 拆分任务分组 ca815963-9a84-4859-aa7d-59d9f6538917 已成功取消，共取消 2 个任务
+2025-10-30 12:45:42.619 +08:00 [INF] 取消任务结果: 成功=True, 消息=拆分任务分组已成功取消，共取消 2 个任务
+2025-10-30 12:45:43.309 +08:00 [INF] 接收到取消任务请求，任务ID: 151986
+2025-10-30 12:45:43.316 +08:00 [INF] 取消任务结果: 成功=False, 消息=已完成的任务不能取消
+2025-10-30 12:45:45.077 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:45.336 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:45.630 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:47.785 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:49.783 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:51.794 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:53.777 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:55.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:57.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:45:59.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:01.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:03.778 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:05.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:07.783 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:09.782 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:11.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:13.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:15.786 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:17.777 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:19.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:21.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:23.787 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:25.782 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:27.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:29.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:31.776 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:33.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:35.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:37.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:39.778 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:41.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:43.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:45.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:47.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:49.783 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:51.775 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:53.778 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:55.777 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:57.784 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:46:59.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:01.775 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:03.775 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:05.775 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:07.783 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:09.774 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:11.776 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:13.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:15.778 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:17.783 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:19.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:21.776 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:23.776 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:25.774 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:27.774 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:29.775 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:31.777 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:33.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:35.780 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:37.782 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:39.777 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:41.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:43.781 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:45.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:47.782 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:49.777 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:51.829 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:53.782 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:47:55.779 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:50:11.021 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 12:50:11.108 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 12:50:11.133 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 12:50:11.250 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 12:50:13.483 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 12:50:14.839 +08:00 [INF] 正在验证用户: admin
+2025-10-30 12:50:14.841 +08:00 [INF] 输入的密码: admin123
+2025-10-30 12:50:14.841 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 12:50:14.842 +08:00 [INF] 密码验证结果: True
+2025-10-30 12:50:14.857 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 12:50:14.858 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 12:50:14.935 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:50:17.226 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:50:19.215 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:50:21.204 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 12:50:23.200 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:08.290 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 13:11:08.346 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 13:11:08.367 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 13:11:08.447 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 13:11:09.870 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 13:11:25.965 +08:00 [INF] 正在验证用户: admin
+2025-10-30 13:11:25.967 +08:00 [INF] 输入的密码: admin123
+2025-10-30 13:11:25.968 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 13:11:25.969 +08:00 [INF] 密码验证结果: True
+2025-10-30 13:11:25.988 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 13:11:25.990 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 13:11:26.075 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:28.432 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:30.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:32.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:34.423 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:36.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:38.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:40.436 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:42.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:44.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:46.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:48.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:50.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:52.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:54.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:56.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:11:58.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:00.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:02.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:04.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:06.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:08.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:10.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:12.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:14.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:16.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:18.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:20.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:22.426 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:24.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:26.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:28.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:30.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:32.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:34.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:36.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:38.423 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:40.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:42.423 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:44.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:46.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:48.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:50.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:52.426 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:54.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:56.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:12:58.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:00.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:02.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:04.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:06.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:08.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:10.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:12.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:14.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:16.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:18.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:20.423 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:22.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:24.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:26.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:28.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:30.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:32.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:34.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:36.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:38.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:40.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:42.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:44.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:46.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:48.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:50.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:52.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:54.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:56.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:13:58.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:00.420 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:02.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:04.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:06.423 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:08.422 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:10.421 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:23.774 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 13:14:23.827 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 13:14:23.847 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 13:14:23.940 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 13:14:25.512 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 13:14:26.931 +08:00 [INF] 正在验证用户: admin
+2025-10-30 13:14:26.933 +08:00 [INF] 输入的密码: admin123
+2025-10-30 13:14:26.934 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 13:14:26.935 +08:00 [INF] 密码验证结果: True
+2025-10-30 13:14:26.955 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 13:14:26.957 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 13:14:27.029 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:29.369 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:31.361 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:33.359 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:35.359 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:37.359 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:39.359 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:41.359 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:43.359 +08:00 [INF] 查询到任务数据: ID=151986, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:14:45.360 +08:00 [WRN] 查询结果为空
+2025-10-30 13:14:47.359 +08:00 [WRN] 查询结果为空
+2025-10-30 13:14:49.359 +08:00 [WRN] 查询结果为空
+2025-10-30 13:14:51.359 +08:00 [WRN] 查询结果为空
+2025-10-30 13:14:53.360 +08:00 [WRN] 查询结果为空
+2025-10-30 13:14:54.321 +08:00 [WRN] 查询结果为空
+2025-10-30 13:14:56.430 +08:00 [WRN] 查询结果为空
+2025-10-30 13:14:58.430 +08:00 [WRN] 查询结果为空
+2025-10-30 13:15:00.430 +08:00 [WRN] 查询结果为空
+2025-10-30 13:15:02.429 +08:00 [WRN] 查询结果为空
+2025-10-30 13:15:04.429 +08:00 [WRN] 查询结果为空
+2025-10-30 13:15:06.022 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=05A32, Target=06A05, Priority=1, RequestCode=1761801306
+2025-10-30 13:15:06.045 +08:00 [INF] 已锁定储位: 14
+2025-10-30 13:15:06.050 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 05A32
+2025-10-30 13:15:06.066 +08:00 [INF] 已锁定任务起点储位: 05A32
+2025-10-30 13:15:06.068 +08:00 [INF] 已锁定小地牛中转点储位: PC001
+2025-10-30 13:15:06.072 +08:00 [INF] 已锁定三向车中转点储位: PD001
+2025-10-30 13:15:06.073 +08:00 [INF] 已锁定任务终点储位: 06A05
+2025-10-30 13:15:06.075 +08:00 [INF] 任务拆分完成（类型2），分组ID: 37001bde-ab46-41ad-917f-f97f01b8d582，第一个任务: 1761801306_1，第二个任务: 1761801306_2
+2025-10-30 13:15:06.090 +08:00 [INF] 任务拆分成功，原始任务: 1761801306，生成了 2 个子任务
+2025-10-30 13:15:06.110 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:15:08.240 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:15:10.240 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:15:46.616 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 13:15:46.669 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 13:15:46.689 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 13:15:46.764 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 13:15:48.367 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 13:15:49.676 +08:00 [INF] 正在验证用户: admin
+2025-10-30 13:15:49.678 +08:00 [INF] 输入的密码: admin123
+2025-10-30 13:15:49.679 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 13:15:49.680 +08:00 [INF] 密码验证结果: True
+2025-10-30 13:15:49.696 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 13:15:49.697 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 13:15:49.760 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:15:52.062 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:15:54.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:15:56.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:15:58.051 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:00.051 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:02.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:04.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:06.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:08.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:10.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:12.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:14.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:16.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:18.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:20.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:22.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:24.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:26.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:28.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:30.052 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:32.051 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:34.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:36.048 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:38.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:40.051 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:42.048 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:44.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:46.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:48.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:50.059 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:52.059 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:54.049 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:56.048 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:58.050 +08:00 [INF] 查询到任务数据: ID=151988, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:16:59.362 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=14A01, Target=06B05, Priority=1, RequestCode=1761801419
+2025-10-30 13:16:59.385 +08:00 [INF] 已锁定储位: 19
+2025-10-30 13:16:59.391 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 14A01
+2025-10-30 13:16:59.407 +08:00 [INF] 已锁定任务起点储位: 14A01
+2025-10-30 13:16:59.408 +08:00 [INF] 已锁定小地牛中转点储位: PC006
+2025-10-30 13:16:59.409 +08:00 [INF] 已锁定三向车中转点储位: PD006
+2025-10-30 13:16:59.411 +08:00 [INF] 已锁定任务终点储位: 06B05
+2025-10-30 13:16:59.415 +08:00 [INF] 任务拆分完成（类型2），分组ID: cdf410dd-d4ae-40a7-924a-f74a9ed63858，第一个任务: 1761801419_1，第二个任务: 1761801419_2
+2025-10-30 13:16:59.429 +08:00 [INF] 任务拆分成功，原始任务: 1761801419，生成了 2 个子任务
+2025-10-30 13:16:59.452 +08:00 [INF] 查询到任务数据: ID=151990, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:17:01.601 +08:00 [INF] 查询到任务数据: ID=151990, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:17:03.600 +08:00 [INF] 查询到任务数据: ID=151990, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:17:05.602 +08:00 [INF] 查询到任务数据: ID=151990, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:17:07.601 +08:00 [INF] 查询到任务数据: ID=151990, MaterialCode=, MaterialQuantity=0, PalletNumber=
+2025-10-30 13:30:44.966 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 13:30:45.038 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 13:30:45.062 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 13:30:45.128 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 13:30:46.545 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 13:30:48.076 +08:00 [INF] 正在验证用户: admin
+2025-10-30 13:30:48.078 +08:00 [INF] 输入的密码: admin123
+2025-10-30 13:30:48.079 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 13:30:48.080 +08:00 [INF] 密码验证结果: True
+2025-10-30 13:30:48.097 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 13:30:48.098 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 13:33:02.749 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-30 13:33:02.800 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-30 13:33:02.818 +08:00 [INF] 任务缓存处理器已启动
+2025-10-30 13:33:02.885 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-30 13:33:04.502 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-10-30 13:33:05.887 +08:00 [INF] 正在验证用户: admin
+2025-10-30 13:33:05.889 +08:00 [INF] 输入的密码: admin123
+2025-10-30 13:33:05.890 +08:00 [INF] 数据库中的密码: admin123
+2025-10-30 13:33:05.891 +08:00 [INF] 密码验证结果: True
+2025-10-30 13:33:05.907 +08:00 [INF] 更新最后登录时间成功
+2025-10-30 13:33:05.908 +08:00 [INF] 用户 admin 登录成功
+2025-10-30 13:33:29.858 +08:00 [INF] 接收到的任务数据: TaskType=rmHandover, Source=08A10, Target=08B10, Priority=1, RequestCode=1761802409
+2025-10-30 13:33:29.881 +08:00 [INF] 已锁定储位: 11
+2025-10-30 13:33:29.887 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 08A10
+2025-10-30 13:33:29.902 +08:00 [INF] 已锁定任务起点储位: 08A10
+2025-10-30 13:33:29.903 +08:00 [INF] 已锁定小地牛中转点储位: PC003
+2025-10-30 13:33:29.904 +08:00 [INF] 已锁定三向车中转点储位: PD003
+2025-10-30 13:33:29.905 +08:00 [INF] 已锁定任务终点储位: 08B10
+2025-10-30 13:33:29.907 +08:00 [INF] 任务拆分完成（类型2），分组ID: 88bf3179-d52c-4357-9ae8-0af1b66ce378，第一个任务: 1761802409_1，第二个任务: 1761802409_2
+2025-10-30 13:33:29.919 +08:00 [INF] 任务拆分成功，原始任务: 1761802409，生成了 2 个子任务

@@ -1,0 +1,49 @@
+2025-11-06 10:43:36.474 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-11-06 10:43:36.542 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-11-06 10:43:36.565 +08:00 [INF] 任务缓存处理器已启动
+2025-11-06 10:43:36.674 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-11-06 10:43:42.096 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-06 10:43:49.078 +08:00 [INF] 正在验证用户: admin
+2025-11-06 10:43:49.080 +08:00 [INF] 输入的密码: admin123
+2025-11-06 10:43:49.082 +08:00 [INF] 数据库中的密码: admin123
+2025-11-06 10:43:49.085 +08:00 [INF] 密码验证结果: True
+2025-11-06 10:43:49.108 +08:00 [INF] 更新最后登录时间成功
+2025-11-06 10:43:49.110 +08:00 [INF] 用户 admin 登录成功
+2025-11-06 10:44:28.748 +08:00 [INF] 调用AddTask接口，请求参数：{"toNum":"TASK20240601A003","suNum":"PLT-20240601-01","material":"MAT-1001","materialNum":10,"createTime":"2024-06-01T09:00:00","confirmTime":"2024-06-01T10:00:00","sourceType":"1","sourceBin":"A区-01","destType":"2","taskType":"fgHandover","destBin":"A区-02","$type":"AddTaskRequest"}
+2025-11-06 10:44:34.392 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2483ms - 来自 ::1
+2025-11-06 10:44:37.148 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1507ms - 来自 ::1
+2025-11-06 10:44:40.109 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1693ms - 来自 ::1
+2025-11-06 10:44:49.605 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2391ms - 来自 ::1
+2025-11-06 10:44:51.229 +08:00 [INF] 已锁定储位: 28
+2025-11-06 10:44:52.099 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1479ms - 来自 ::1
+2025-11-06 10:44:59.589 +08:00 [INF] 较慢请求: GET /Tasks/Index - 987ms
+2025-11-06 10:45:00.850 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1255ms - 来自 ::1
+2025-11-06 10:45:02.719 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1861ms - 来自 ::1
+2025-11-06 10:47:52.672 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-11-06 10:47:52.733 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-11-06 10:47:52.757 +08:00 [INF] 任务缓存处理器已启动
+2025-11-06 10:47:52.859 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-11-06 10:47:54.969 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-11-06 10:47:57.021 +08:00 [INF] 正在验证用户: admin
+2025-11-06 10:47:57.023 +08:00 [INF] 输入的密码: admin123
+2025-11-06 10:47:57.024 +08:00 [INF] 数据库中的密码: admin123
+2025-11-06 10:47:57.025 +08:00 [INF] 密码验证结果: True
+2025-11-06 10:47:57.042 +08:00 [INF] 更新最后登录时间成功
+2025-11-06 10:47:57.043 +08:00 [INF] 用户 admin 登录成功
+2025-11-06 10:48:03.679 +08:00 [INF] 调用AddTask接口，请求参数：{"toNum":"TASK20240601A003","suNum":"PLT-20240601-01","material":"MAT-1001","materialNum":10,"createTime":"2024-06-01T09:00:00","confirmTime":"2024-06-01T10:00:00","sourceType":"1","sourceBin":"A区-01","destType":"2","taskType":"fgHandover","destBin":"A区-02","$type":"AddTaskRequest"}
+2025-11-06 10:48:09.746 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 2023ms - 来自 ::1
+2025-11-06 10:48:13.568 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1574ms - 来自 ::1
+2025-11-06 10:48:44.930 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 31333ms - 来自 ::1
+2025-11-06 10:48:51.152 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 5112ms - 来自 ::1
+2025-11-06 10:49:06.041 +08:00 [INF] 已锁定储位: 34
+2025-11-06 10:49:07.313 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1902ms - 来自 ::1
+2025-11-06 10:49:08.701 +08:00 [INF] 较慢请求: GET /Tasks/Index - 824ms
+2025-11-06 10:49:10.453 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1748ms - 来自 ::1
+2025-11-06 10:49:12.316 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1063ms - 来自 ::1
+2025-11-06 10:49:14.638 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1172ms - 来自 ::1
+2025-11-06 10:49:16.516 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1527ms - 来自 ::1
+2025-11-06 10:49:21.542 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 5021ms - 来自 ::1
+2025-11-06 10:49:21.553 +08:00 [WRN] 起点不存在，已回滚自动分配的储位锁定
+2025-11-06 10:49:23.040 +08:00 [INF] AddTask接口调用成功，返回：{"suNum":"PLT-20240601-01","callTime":"2025-11-06T10:48:07Z","status":"Fail","failType":106,"message":"起点 A区-01 不存在库位配置中","$type":"TaskResponse"}
+2025-11-06 10:49:23.042 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1489ms - 来自 ::1
+2025-11-06 10:49:23.073 +08:00 [WRN] 慢请求检测: POST /api/rcs/addTask - 79426ms - 来自 ::1

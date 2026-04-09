@@ -1,0 +1,186 @@
+2025-12-12 08:13:34.611 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-12-12 08:13:34.669 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-12-12 08:13:34.694 +08:00 [INF] 任务缓存处理器已启动
+2025-12-12 08:13:34.717 +08:00 [INF] 本次处理 36 个缓存任务
+2025-12-12 08:13:34.719 +08:00 [INF] 开始处理缓存任务: Id=98, PalletNumber=PLT001, RequestCode=CACHE001, RetryCount=0
+2025-12-12 08:13:34.738 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT001, RequestCode=CACHE001
+2025-12-12 08:13:34.743 +08:00 [INF] 开始处理缓存任务: Id=99, PalletNumber=PLT002, RequestCode=CACHE002, RetryCount=0
+2025-12-12 08:13:34.745 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT002, RequestCode=CACHE002
+2025-12-12 08:13:34.751 +08:00 [INF] 开始处理缓存任务: Id=101, PalletNumber=PLT004, RequestCode=CACHE004, RetryCount=0
+2025-12-12 08:13:34.753 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT004, RequestCode=CACHE004
+2025-12-12 08:13:34.754 +08:00 [INF] 开始处理缓存任务: Id=102, PalletNumber=PLT005, RequestCode=CACHE005, RetryCount=0
+2025-12-12 08:13:34.755 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT005, RequestCode=CACHE005
+2025-12-12 08:13:34.757 +08:00 [INF] 开始处理缓存任务: Id=108, PalletNumber=PLT011, RequestCode=CACHE011, RetryCount=0
+2025-12-12 08:13:34.758 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT011, RequestCode=CACHE011
+2025-12-12 08:13:34.760 +08:00 [INF] 开始处理缓存任务: Id=109, PalletNumber=PLT012, RequestCode=CACHE012, RetryCount=0
+2025-12-12 08:13:34.762 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT012, RequestCode=CACHE012
+2025-12-12 08:13:34.762 +08:00 [INF] 开始处理缓存任务: Id=111, PalletNumber=PLT014, RequestCode=CACHE014, RetryCount=0
+2025-12-12 08:13:34.764 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT014, RequestCode=CACHE014
+2025-12-12 08:13:34.765 +08:00 [INF] 开始处理缓存任务: Id=113, PalletNumber=PLT016, RequestCode=CACHE016, RetryCount=0
+2025-12-12 08:13:34.767 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT016, RequestCode=CACHE016
+2025-12-12 08:13:34.767 +08:00 [INF] 开始处理缓存任务: Id=104, PalletNumber=PLT007, RequestCode=CACHE007, RetryCount=0
+2025-12-12 08:13:34.769 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT007, RequestCode=CACHE007
+2025-12-12 08:13:34.770 +08:00 [INF] 开始处理缓存任务: Id=115, PalletNumber=PLT018, RequestCode=CACHE018, RetryCount=0
+2025-12-12 08:13:34.772 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT018, RequestCode=CACHE018
+2025-12-12 08:13:34.774 +08:00 [INF] 开始处理缓存任务: Id=117, PalletNumber=PLT020, RequestCode=CACHE020, RetryCount=0
+2025-12-12 08:13:34.778 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT020, RequestCode=CACHE020
+2025-12-12 08:13:34.779 +08:00 [INF] 开始处理缓存任务: Id=123, PalletNumber=PLT026, RequestCode=CACHE026, RetryCount=0
+2025-12-12 08:13:34.781 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT026, RequestCode=CACHE026
+2025-12-12 08:13:34.788 +08:00 [INF] 开始处理缓存任务: Id=124, PalletNumber=PLT027, RequestCode=CACHE027, RetryCount=0
+2025-12-12 08:13:34.790 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT027, RequestCode=CACHE027
+2025-12-12 08:13:34.793 +08:00 [INF] 开始处理缓存任务: Id=126, PalletNumber=PLT029, RequestCode=CACHE029, RetryCount=0
+2025-12-12 08:13:34.801 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT029, RequestCode=CACHE029
+2025-12-12 08:13:34.802 +08:00 [INF] 开始处理缓存任务: Id=128, PalletNumber=PLT031, RequestCode=CACHE031, RetryCount=0
+2025-12-12 08:13:34.803 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-12-12 08:13:34.806 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT031, RequestCode=CACHE031
+2025-12-12 08:13:34.807 +08:00 [INF] 开始处理缓存任务: Id=129, PalletNumber=PLT032, RequestCode=CACHE032, RetryCount=0
+2025-12-12 08:13:34.810 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT032, RequestCode=CACHE032
+2025-12-12 08:13:34.811 +08:00 [INF] 开始处理缓存任务: Id=131, PalletNumber=PLT034, RequestCode=CACHE034, RetryCount=0
+2025-12-12 08:13:34.813 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT034, RequestCode=CACHE034
+2025-12-12 08:13:34.815 +08:00 [INF] 开始处理缓存任务: Id=120, PalletNumber=PLT023, RequestCode=CACHE023, RetryCount=0
+2025-12-12 08:13:34.817 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT023, RequestCode=CACHE023
+2025-12-12 08:13:34.818 +08:00 [INF] 开始处理缓存任务: Id=121, PalletNumber=PLT024, RequestCode=CACHE024, RetryCount=0
+2025-12-12 08:13:34.821 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT024, RequestCode=CACHE024
+2025-12-12 08:13:34.822 +08:00 [INF] 开始处理缓存任务: Id=134, PalletNumber=PLT037, RequestCode=CACHE037, RetryCount=0
+2025-12-12 08:13:34.824 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT037, RequestCode=CACHE037
+2025-12-12 08:13:34.825 +08:00 [INF] 开始处理缓存任务: Id=136, PalletNumber=PLT039, RequestCode=CACHE039, RetryCount=0
+2025-12-12 08:13:34.827 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT039, RequestCode=CACHE039
+2025-12-12 08:13:34.830 +08:00 [INF] 开始处理缓存任务: Id=137, PalletNumber=PLT040, RequestCode=CACHE040, RetryCount=0
+2025-12-12 08:13:34.834 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT040, RequestCode=CACHE040
+2025-12-12 08:13:34.835 +08:00 [INF] 开始处理缓存任务: Id=139, PalletNumber=PLT042, RequestCode=CACHE042, RetryCount=0
+2025-12-12 08:13:34.837 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT042, RequestCode=CACHE042
+2025-12-12 08:13:34.838 +08:00 [INF] 开始处理缓存任务: Id=142, PalletNumber=PLT045, RequestCode=CACHE045, RetryCount=0
+2025-12-12 08:13:34.840 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT045, RequestCode=CACHE045
+2025-12-12 08:13:34.841 +08:00 [INF] 开始处理缓存任务: Id=143, PalletNumber=PLT046, RequestCode=CACHE046, RetryCount=0
+2025-12-12 08:13:34.843 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT046, RequestCode=CACHE046
+2025-12-12 08:13:34.844 +08:00 [INF] 开始处理缓存任务: Id=146, PalletNumber=PLT049, RequestCode=CACHE049, RetryCount=0
+2025-12-12 08:13:34.846 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT049, RequestCode=CACHE049
+2025-12-12 08:13:34.847 +08:00 [INF] 开始处理缓存任务: Id=144, PalletNumber=PLT047, RequestCode=CACHE047, RetryCount=1
+2025-12-12 08:13:34.849 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT047, RequestCode=CACHE047
+2025-12-12 08:13:34.850 +08:00 [INF] 开始处理缓存任务: Id=135, PalletNumber=PLT038, RequestCode=CACHE038, RetryCount=1
+2025-12-12 08:13:34.852 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT038, RequestCode=CACHE038
+2025-12-12 08:13:34.853 +08:00 [INF] 开始处理缓存任务: Id=122, PalletNumber=PLT025, RequestCode=CACHE025, RetryCount=1
+2025-12-12 08:13:34.855 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT025, RequestCode=CACHE025
+2025-12-12 08:13:34.856 +08:00 [INF] 开始处理缓存任务: Id=127, PalletNumber=PLT030, RequestCode=CACHE030, RetryCount=1
+2025-12-12 08:13:34.858 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT030, RequestCode=CACHE030
+2025-12-12 08:13:34.859 +08:00 [INF] 开始处理缓存任务: Id=107, PalletNumber=PLT010, RequestCode=CACHE010, RetryCount=1
+2025-12-12 08:13:34.860 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT010, RequestCode=CACHE010
+2025-12-12 08:13:34.861 +08:00 [INF] 开始处理缓存任务: Id=114, PalletNumber=PLT017, RequestCode=CACHE017, RetryCount=1
+2025-12-12 08:13:34.863 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT017, RequestCode=CACHE017
+2025-12-12 08:13:34.864 +08:00 [INF] 开始处理缓存任务: Id=100, PalletNumber=PLT003, RequestCode=CACHE003, RetryCount=1
+2025-12-12 08:13:34.865 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT003, RequestCode=CACHE003
+2025-12-12 08:13:34.866 +08:00 [INF] 开始处理缓存任务: Id=103, PalletNumber=PLT006, RequestCode=CACHE006, RetryCount=2
+2025-12-12 08:13:34.868 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT006, RequestCode=CACHE006
+2025-12-12 08:13:34.869 +08:00 [INF] 开始处理缓存任务: Id=118, PalletNumber=PLT021, RequestCode=CACHE021, RetryCount=2
+2025-12-12 08:13:34.871 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT021, RequestCode=CACHE021
+2025-12-12 08:13:34.872 +08:00 [INF] 开始处理缓存任务: Id=132, PalletNumber=PLT035, RequestCode=CACHE035, RetryCount=2
+2025-12-12 08:13:34.874 +08:00 [INF] 缓存任务对应的实际任务已存在，删除缓存: PalletNumber=PLT035, RequestCode=CACHE035
+2025-12-12 08:13:40.377 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-12-12 08:14:08.062 +08:00 [INF] 正在验证用户: admin
+2025-12-12 08:14:08.064 +08:00 [INF] 输入的密码: admin123
+2025-12-12 08:14:08.067 +08:00 [INF] 数据库中的密码: admin123
+2025-12-12 08:14:08.069 +08:00 [INF] 密码验证结果: True
+2025-12-12 08:14:08.090 +08:00 [INF] 更新最后登录时间成功
+2025-12-12 08:14:08.092 +08:00 [INF] 用户 admin 登录成功
+2025-12-12 08:14:34.883 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:15:34.886 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:16:34.901 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:17:34.918 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:18:34.932 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:19:34.938 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:20:25.352 +08:00 [WRN] 慢请求检测: GET /Tasks/Index - 1192ms - 来自 ::1
+2025-12-12 08:20:34.949 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:21:31.446 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-12-12 08:21:31.500 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-12-12 08:21:31.520 +08:00 [INF] 任务缓存处理器已启动
+2025-12-12 08:21:31.545 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:21:31.603 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-12-12 08:21:33.475 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-12-12 08:21:37.099 +08:00 [INF] 正在验证用户: admin
+2025-12-12 08:21:37.101 +08:00 [INF] 输入的密码: admin123
+2025-12-12 08:21:37.102 +08:00 [INF] 数据库中的密码: admin123
+2025-12-12 08:21:37.104 +08:00 [INF] 密码验证结果: True
+2025-12-12 08:21:37.124 +08:00 [INF] 更新最后登录时间成功
+2025-12-12 08:21:37.126 +08:00 [INF] 用户 admin 登录成功
+2025-12-12 08:22:31.557 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:23:31.570 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:24:31.588 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:25:31.605 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:26:31.609 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:27:31.618 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:28:31.621 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:29:31.639 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:30:05.379 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-12-12 08:30:05.434 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-12-12 08:30:05.456 +08:00 [INF] 任务缓存处理器已启动
+2025-12-12 08:30:05.471 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:30:05.535 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-12-12 08:30:07.127 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-12-12 08:31:05.488 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:32:05.510 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:32:08.529 +08:00 [INF] 正在验证用户: admin
+2025-12-12 08:32:08.531 +08:00 [INF] 输入的密码: admin123
+2025-12-12 08:32:08.532 +08:00 [INF] 数据库中的密码: admin123
+2025-12-12 08:32:08.533 +08:00 [INF] 密码验证结果: True
+2025-12-12 08:32:08.547 +08:00 [INF] 更新最后登录时间成功
+2025-12-12 08:32:08.549 +08:00 [INF] 用户 admin 登录成功
+2025-12-12 08:33:05.525 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:34:05.543 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:36:35.963 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-12-12 08:36:36.016 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-12-12 08:36:36.038 +08:00 [INF] 任务缓存处理器已启动
+2025-12-12 08:36:36.063 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:36:36.120 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-12-12 08:36:37.560 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-12-12 08:36:39.009 +08:00 [INF] 正在验证用户: admin
+2025-12-12 08:36:39.012 +08:00 [INF] 输入的密码: admin123
+2025-12-12 08:36:39.014 +08:00 [INF] 数据库中的密码: admin123
+2025-12-12 08:36:39.017 +08:00 [INF] 密码验证结果: True
+2025-12-12 08:36:39.033 +08:00 [INF] 更新最后登录时间成功
+2025-12-12 08:36:39.035 +08:00 [INF] 用户 admin 登录成功
+2025-12-12 08:37:36.077 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:38:36.090 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:39:36.103 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:40:36.120 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:40:55.958 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-12-12 08:40:56.013 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-12-12 08:40:56.032 +08:00 [INF] 任务缓存处理器已启动
+2025-12-12 08:40:56.048 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:40:56.104 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-12-12 08:40:57.904 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-12-12 08:40:59.873 +08:00 [INF] 正在验证用户: admin
+2025-12-12 08:40:59.875 +08:00 [INF] 输入的密码: admin123
+2025-12-12 08:40:59.875 +08:00 [INF] 数据库中的密码: admin123
+2025-12-12 08:40:59.876 +08:00 [INF] 密码验证结果: True
+2025-12-12 08:40:59.893 +08:00 [INF] 更新最后登录时间成功
+2025-12-12 08:40:59.894 +08:00 [INF] 用户 admin 登录成功
+2025-12-12 08:41:56.056 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:43:00.673 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-12-12 08:43:00.730 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-12-12 08:43:00.750 +08:00 [INF] 任务缓存处理器已启动
+2025-12-12 08:43:00.765 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:43:00.821 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-12-12 08:43:02.203 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-12-12 08:43:03.492 +08:00 [INF] 正在验证用户: admin
+2025-12-12 08:43:03.494 +08:00 [INF] 输入的密码: admin123
+2025-12-12 08:43:03.496 +08:00 [INF] 数据库中的密码: admin123
+2025-12-12 08:43:03.497 +08:00 [INF] 密码验证结果: True
+2025-12-12 08:43:03.512 +08:00 [INF] 更新最后登录时间成功
+2025-12-12 08:43:03.513 +08:00 [INF] 用户 admin 登录成功
+2025-12-12 08:44:00.776 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:44:35.229 +08:00 [WRN] 查询结果为空
+2025-12-12 08:44:37.396 +08:00 [WRN] 查询结果为空
+2025-12-12 08:45:00.793 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:45:51.980 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-12-12 08:45:52.034 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-12-12 08:45:52.054 +08:00 [INF] 任务缓存处理器已启动
+2025-12-12 08:45:52.076 +08:00 [INF] 本次处理 0 个缓存任务
+2025-12-12 08:45:52.131 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-12-12 08:45:53.484 +08:00 [WRN] Failed to determine the https port for redirect.
+2025-12-12 08:45:54.930 +08:00 [INF] 正在验证用户: admin
+2025-12-12 08:45:54.932 +08:00 [INF] 输入的密码: admin123
+2025-12-12 08:45:54.934 +08:00 [INF] 数据库中的密码: admin123
+2025-12-12 08:45:54.935 +08:00 [INF] 密码验证结果: True
+2025-12-12 08:45:54.949 +08:00 [INF] 更新最后登录时间成功
+2025-12-12 08:45:54.951 +08:00 [INF] 用户 admin 登录成功
+2025-12-12 08:46:52.087 +08:00 [INF] 本次处理 0 个缓存任务

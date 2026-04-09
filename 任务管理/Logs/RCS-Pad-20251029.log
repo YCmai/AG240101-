@@ -1,0 +1,5 @@
+2025-10-29 11:58:19.783 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2025-10-29 11:58:19.842 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2025-10-29 11:58:19.862 +08:00 [INF] 任务缓存处理器已启动
+2025-10-29 11:58:19.966 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-29 11:58:23.871 +08:00 [WRN] Failed to determine the https port for redirect.

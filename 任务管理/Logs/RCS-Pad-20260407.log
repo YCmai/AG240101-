@@ -1,0 +1,206 @@
+2026-04-07 15:42:50.188 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2026-04-07 15:42:50.271 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2026-04-07 15:42:50.305 +08:00 [INF] Task cache processor started
+2026-04-07 15:42:50.387 +08:00 [INF] Selected 3 cached tasks. Last completed task context: TaskIdentification=null, ShelvesIdentification=null
+2026-04-07 15:42:50.391 +08:00 [INF] Processing cached task Id=157, PalletNumber=20260325155316809, RequestCode=1774425196, RetryCount=2, Priority=1, TaskIdentification=0, ShelvesIdentification=06
+2026-04-07 15:42:50.451 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-04-07 15:42:50.458 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155316809, RequestCode=1774425196, TaskType=manualTask, 起点=06A06, 终点=06B07, 物料=, 数量=0
+2026-04-07 15:42:50.477 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2026-04-07 15:42:50.506 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:42:50.514 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=157, PalletNumber=20260325155316809
+2026-04-07 15:42:50.523 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:42:50.527 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:42:50.540 +08:00 [INF] AddTaskAsync returned Status=Success, Message=任务已缓存，等待点位释放后自动处理, FailType=null for cached task RequestCode=1774425196
+2026-04-07 15:42:50.555 +08:00 [INF] Cached task remains in cache for retry. PalletNumber=20260325155316809, RequestCode=1774425196, RetryCount=3
+2026-04-07 15:42:50.561 +08:00 [INF] Finished processing cached task Id=157, PalletNumber=20260325155316809, RequestCode=1774425196
+2026-04-07 15:42:50.567 +08:00 [INF] Processing cached task Id=158, PalletNumber=20260325155339364, RequestCode=1774425219, RetryCount=2, Priority=1, TaskIdentification=0, ShelvesIdentification=06
+2026-04-07 15:42:50.579 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155339364, RequestCode=1774425219, TaskType=manualTask, 起点=06C06, 终点=06A07, 物料=, 数量=0
+2026-04-07 15:42:50.590 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06C06
+2026-04-07 15:42:50.612 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:42:50.622 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=158, PalletNumber=20260325155339364
+2026-04-07 15:42:50.626 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:42:50.636 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:42:50.639 +08:00 [INF] AddTaskAsync returned Status=Success, Message=任务已缓存，等待点位释放后自动处理, FailType=null for cached task RequestCode=1774425219
+2026-04-07 15:42:50.676 +08:00 [INF] Cached task remains in cache for retry. PalletNumber=20260325155339364, RequestCode=1774425219, RetryCount=3
+2026-04-07 15:42:50.711 +08:00 [INF] Finished processing cached task Id=158, PalletNumber=20260325155339364, RequestCode=1774425219
+2026-04-07 15:42:50.786 +08:00 [INF] Processing cached task Id=159, PalletNumber=20260325155440794, RequestCode=1774425259, RetryCount=1, Priority=1, TaskIdentification=0, ShelvesIdentification=06
+2026-04-07 15:42:50.799 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155440794, RequestCode=1774425259, TaskType=manualTask, 起点=06A15, 终点=06A11, 物料=, 数量=0
+2026-04-07 15:42:50.809 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A15
+2026-04-07 15:42:50.824 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:42:50.844 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=159, PalletNumber=20260325155440794
+2026-04-07 15:42:50.852 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:42:50.859 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:42:50.865 +08:00 [INF] AddTaskAsync returned Status=Success, Message=任务已缓存，等待点位释放后自动处理, FailType=null for cached task RequestCode=1774425259
+2026-04-07 15:42:50.875 +08:00 [INF] Cached task remains in cache for retry. PalletNumber=20260325155440794, RequestCode=1774425259, RetryCount=2
+2026-04-07 15:42:50.879 +08:00 [INF] Finished processing cached task Id=159, PalletNumber=20260325155440794, RequestCode=1774425259
+2026-04-07 15:42:55.210 +08:00 [WRN] Failed to determine the https port for redirect.
+2026-04-07 15:42:58.678 +08:00 [INF] 正在验证用户: admin
+2026-04-07 15:42:58.684 +08:00 [INF] 输入的密码: admin123
+2026-04-07 15:42:58.699 +08:00 [INF] 数据库中的密码: admin123
+2026-04-07 15:42:58.715 +08:00 [INF] 密码验证结果: True
+2026-04-07 15:42:58.754 +08:00 [INF] 更新最后登录时间成功
+2026-04-07 15:42:58.758 +08:00 [INF] 用户 admin 登录成功
+2026-04-07 15:43:04.703 +08:00 [INF] 缓存任务 159 已设置为优先执行，优先级: 10
+2026-04-07 15:43:07.799 +08:00 [INF] 缓存任务 158 已设置为优先执行，优先级: 10
+2026-04-07 15:43:12.339 +08:00 [INF] 缓存任务 157 已设置为优先执行，优先级: 10
+2026-04-07 15:43:50.904 +08:00 [INF] Detected 3 prioritized cached tasks. Processing them before regular dispatch ordering.
+2026-04-07 15:43:50.913 +08:00 [INF] Selected 3 cached tasks. Last completed task context: TaskIdentification=null, ShelvesIdentification=null
+2026-04-07 15:43:50.916 +08:00 [INF] Processing cached task Id=157, PalletNumber=20260325155316809, RequestCode=1774425196, RetryCount=3, Priority=10, TaskIdentification=0, ShelvesIdentification=06
+2026-04-07 15:43:50.930 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155316809, RequestCode=1774425196, TaskType=manualTask, 起点=06A06, 终点=06B07, 物料=, 数量=0
+2026-04-07 15:43:50.939 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2026-04-07 15:43:50.947 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:43:50.952 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=157, PalletNumber=20260325155316809
+2026-04-07 15:43:50.957 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:43:50.961 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:43:50.964 +08:00 [INF] AddTaskAsync returned Status=Success, Message=任务已缓存，等待点位释放后自动处理, FailType=null for cached task RequestCode=1774425196
+2026-04-07 15:43:50.971 +08:00 [INF] Cached task remains in cache for retry. PalletNumber=20260325155316809, RequestCode=1774425196, RetryCount=4
+2026-04-07 15:43:50.974 +08:00 [INF] Finished processing cached task Id=157, PalletNumber=20260325155316809, RequestCode=1774425196
+2026-04-07 15:43:50.977 +08:00 [INF] Processing cached task Id=158, PalletNumber=20260325155339364, RequestCode=1774425219, RetryCount=3, Priority=10, TaskIdentification=0, ShelvesIdentification=06
+2026-04-07 15:43:50.985 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155339364, RequestCode=1774425219, TaskType=manualTask, 起点=06C06, 终点=06A07, 物料=, 数量=0
+2026-04-07 15:43:50.991 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06C06
+2026-04-07 15:43:50.996 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:43:51.000 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=158, PalletNumber=20260325155339364
+2026-04-07 15:43:51.003 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:43:51.008 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:43:51.012 +08:00 [INF] AddTaskAsync returned Status=Success, Message=任务已缓存，等待点位释放后自动处理, FailType=null for cached task RequestCode=1774425219
+2026-04-07 15:43:51.020 +08:00 [INF] Cached task remains in cache for retry. PalletNumber=20260325155339364, RequestCode=1774425219, RetryCount=4
+2026-04-07 15:43:51.024 +08:00 [INF] Finished processing cached task Id=158, PalletNumber=20260325155339364, RequestCode=1774425219
+2026-04-07 15:43:51.034 +08:00 [INF] Processing cached task Id=159, PalletNumber=20260325155440794, RequestCode=1774425259, RetryCount=2, Priority=10, TaskIdentification=0, ShelvesIdentification=06
+2026-04-07 15:43:51.049 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155440794, RequestCode=1774425259, TaskType=manualTask, 起点=06A15, 终点=06A11, 物料=, 数量=0
+2026-04-07 15:43:51.059 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A15
+2026-04-07 15:43:51.068 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:43:51.079 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=159, PalletNumber=20260325155440794
+2026-04-07 15:43:51.087 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:43:51.093 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:43:51.098 +08:00 [INF] AddTaskAsync returned Status=Success, Message=任务已缓存，等待点位释放后自动处理, FailType=null for cached task RequestCode=1774425259
+2026-04-07 15:43:51.107 +08:00 [INF] Cached task remains in cache for retry. PalletNumber=20260325155440794, RequestCode=1774425259, RetryCount=3
+2026-04-07 15:43:51.112 +08:00 [INF] Finished processing cached task Id=159, PalletNumber=20260325155440794, RequestCode=1774425259
+2026-04-07 15:45:43.924 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2026-04-07 15:45:44.013 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2026-04-07 15:45:50.195 +08:00 [INF] 缓存任务处理器已启动
+2026-04-07 15:45:59.222 +08:00 [INF] 检测到3条抢单缓存任务，本轮先处理抢单任务，再处理普通缓存任务。
+2026-04-07 15:46:02.763 +08:00 [INF] 本轮选出3条缓存任务。最近一条已完成正式任务上下文：TaskIdentification=null，ShelvesIdentification=null
+2026-04-07 15:46:05.079 +08:00 [INF] 开始处理缓存任务：Id=157，托盘号=20260325155316809，请求号=1774425196，重试次数=4，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:46:05.355 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-04-07 15:46:13.713 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155316809, RequestCode=1774425196, TaskType=manualTask, 起点=06A06, 终点=06B07, 物料=, 数量=0
+2026-04-07 15:46:13.755 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2026-04-07 15:46:13.809 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:46:13.817 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=157, PalletNumber=20260325155316809
+2026-04-07 15:46:13.829 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:46:13.832 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:46:14.279 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425196
+2026-04-07 15:46:20.468 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155316809，RequestCode=1774425196，RetryCount=5
+2026-04-07 15:50:50.755 +08:00 [INF] TCP服务未启用，数据清理服务将不会启动。
+2026-04-07 15:50:50.837 +08:00 [INF] TcpServerService 启动，监听 127.0.0.1:9000
+2026-04-07 15:50:50.867 +08:00 [INF] 缓存任务处理器已启动
+2026-04-07 15:50:50.934 +08:00 [INF] 检测到3条抢单缓存任务，本轮先处理抢单任务，再处理普通缓存任务。
+2026-04-07 15:50:50.983 +08:00 [INF] 本轮选出3条缓存任务。最近一条已完成正式任务上下文：TaskIdentification=null，ShelvesIdentification=null
+2026-04-07 15:50:50.987 +08:00 [INF] 开始处理缓存任务：Id=157，托盘号=20260325155316809，请求号=1774425196，重试次数=5，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:50:51.019 +08:00 [WRN] Overriding address(es) 'http://localhost:5055'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2026-04-07 15:50:51.044 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155316809, RequestCode=1774425196, TaskType=manualTask, 起点=06A06, 终点=06B07, 物料=, 数量=0
+2026-04-07 15:50:51.106 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2026-04-07 15:50:51.134 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:50:51.140 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=157, PalletNumber=20260325155316809
+2026-04-07 15:50:51.147 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:50:51.151 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:50:51.161 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425196
+2026-04-07 15:50:51.174 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155316809，RequestCode=1774425196，RetryCount=6
+2026-04-07 15:50:51.177 +08:00 [INF] 缓存任务处理完成：Id=157，PalletNumber=20260325155316809，RequestCode=1774425196
+2026-04-07 15:50:51.179 +08:00 [INF] 开始处理缓存任务：Id=158，托盘号=20260325155339364，请求号=1774425219，重试次数=4，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:50:51.190 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155339364, RequestCode=1774425219, TaskType=manualTask, 起点=06C06, 终点=06A07, 物料=, 数量=0
+2026-04-07 15:50:51.198 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06C06
+2026-04-07 15:50:51.205 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:50:51.212 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=158, PalletNumber=20260325155339364
+2026-04-07 15:50:51.215 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:50:51.220 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:50:51.223 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425219
+2026-04-07 15:50:51.228 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155339364，RequestCode=1774425219，RetryCount=5
+2026-04-07 15:50:51.232 +08:00 [INF] 缓存任务处理完成：Id=158，PalletNumber=20260325155339364，RequestCode=1774425219
+2026-04-07 15:50:51.235 +08:00 [INF] 开始处理缓存任务：Id=159，托盘号=20260325155440794，请求号=1774425259，重试次数=3，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:50:51.245 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155440794, RequestCode=1774425259, TaskType=manualTask, 起点=06A15, 终点=06A11, 物料=, 数量=0
+2026-04-07 15:50:51.253 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A15
+2026-04-07 15:50:51.257 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:50:51.262 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=159, PalletNumber=20260325155440794
+2026-04-07 15:50:51.266 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:50:51.269 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:50:51.272 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425259
+2026-04-07 15:50:51.279 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155440794，RequestCode=1774425259，RetryCount=4
+2026-04-07 15:50:51.281 +08:00 [INF] 缓存任务处理完成：Id=159，PalletNumber=20260325155440794，RequestCode=1774425259
+2026-04-07 15:50:53.581 +08:00 [WRN] Failed to determine the https port for redirect.
+2026-04-07 15:50:55.611 +08:00 [INF] 正在验证用户: admin
+2026-04-07 15:50:55.616 +08:00 [INF] 输入的密码: admin123
+2026-04-07 15:50:55.631 +08:00 [INF] 数据库中的密码: admin123
+2026-04-07 15:50:55.649 +08:00 [INF] 密码验证结果: True
+2026-04-07 15:50:55.690 +08:00 [INF] 更新最后登录时间成功
+2026-04-07 15:50:55.695 +08:00 [INF] 用户 admin 登录成功
+2026-04-07 15:51:18.720 +08:00 [INF] 同步操作中转点: 72 -> 597, 锁定状态: false
+2026-04-07 15:51:51.301 +08:00 [INF] 检测到3条抢单缓存任务，本轮先处理抢单任务，再处理普通缓存任务。
+2026-04-07 15:51:51.315 +08:00 [INF] 本轮选出3条缓存任务。最近一条已完成正式任务上下文：TaskIdentification=null，ShelvesIdentification=null
+2026-04-07 15:51:51.331 +08:00 [INF] 开始处理缓存任务：Id=157，托盘号=20260325155316809，请求号=1774425196，重试次数=6，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:51:51.385 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155316809, RequestCode=1774425196, TaskType=manualTask, 起点=06A06, 终点=06B07, 物料=, 数量=0
+2026-04-07 15:51:51.421 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2026-04-07 15:51:51.450 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息=中转点 PD002 已被执行中任务占用
+2026-04-07 15:51:51.458 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=157, PalletNumber=20260325155316809
+2026-04-07 15:51:51.476 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155316809, RequestCode=1774425196, 错误信息: 中转点 PD002 已被执行中任务占用
+2026-04-07 15:51:51.494 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:51:51.512 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425196
+2026-04-07 15:51:51.546 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155316809，RequestCode=1774425196，RetryCount=7
+2026-04-07 15:51:51.561 +08:00 [INF] 缓存任务处理完成：Id=157，PalletNumber=20260325155316809，RequestCode=1774425196
+2026-04-07 15:51:51.574 +08:00 [INF] 开始处理缓存任务：Id=158，托盘号=20260325155339364，请求号=1774425219，重试次数=5，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:51:51.597 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155339364, RequestCode=1774425219, TaskType=manualTask, 起点=06C06, 终点=06A07, 物料=, 数量=0
+2026-04-07 15:51:51.608 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06C06
+2026-04-07 15:51:51.613 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息=中转点 PD002 已被执行中任务占用
+2026-04-07 15:51:51.619 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=158, PalletNumber=20260325155339364
+2026-04-07 15:51:51.623 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息: 中转点 PD002 已被执行中任务占用
+2026-04-07 15:51:51.633 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:51:51.636 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425219
+2026-04-07 15:51:51.643 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155339364，RequestCode=1774425219，RetryCount=6
+2026-04-07 15:51:51.646 +08:00 [INF] 缓存任务处理完成：Id=158，PalletNumber=20260325155339364，RequestCode=1774425219
+2026-04-07 15:51:51.650 +08:00 [INF] 开始处理缓存任务：Id=159，托盘号=20260325155440794，请求号=1774425259，重试次数=4，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:51:51.657 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155440794, RequestCode=1774425259, TaskType=manualTask, 起点=06A15, 终点=06A11, 物料=, 数量=0
+2026-04-07 15:51:51.665 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A15
+2026-04-07 15:51:51.670 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息=中转点 PD002 已被执行中任务占用
+2026-04-07 15:51:51.673 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=159, PalletNumber=20260325155440794
+2026-04-07 15:51:51.676 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息: 中转点 PD002 已被执行中任务占用
+2026-04-07 15:51:51.682 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:51:51.685 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425259
+2026-04-07 15:51:51.691 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155440794，RequestCode=1774425259，RetryCount=5
+2026-04-07 15:51:51.694 +08:00 [INF] 缓存任务处理完成：Id=159，PalletNumber=20260325155440794，RequestCode=1774425259
+2026-04-07 15:52:33.987 +08:00 [WRN] 查询结果为空
+2026-04-07 15:52:38.988 +08:00 [WRN] 查询结果为空
+2026-04-07 15:52:43.985 +08:00 [WRN] 查询结果为空
+2026-04-07 15:52:48.990 +08:00 [WRN] 查询结果为空
+2026-04-07 15:52:51.702 +08:00 [INF] 检测到3条抢单缓存任务，本轮先处理抢单任务，再处理普通缓存任务。
+2026-04-07 15:52:51.714 +08:00 [INF] 本轮选出3条缓存任务。最近一条已完成正式任务上下文：TaskIdentification=null，ShelvesIdentification=null
+2026-04-07 15:52:51.721 +08:00 [INF] 开始处理缓存任务：Id=157，托盘号=20260325155316809，请求号=1774425196，重试次数=7，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:52:51.757 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155316809, RequestCode=1774425196, TaskType=manualTask, 起点=06A06, 终点=06B07, 物料=, 数量=0
+2026-04-07 15:52:51.781 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A06
+2026-04-07 15:52:51.813 +08:00 [INF] 已锁定任务起点储位: 06A06
+2026-04-07 15:52:51.816 +08:00 [INF] 已锁定小地牛中转点储位: PC002
+2026-04-07 15:52:51.821 +08:00 [INF] 已锁定三向车中转点储位: PD002
+2026-04-07 15:52:51.825 +08:00 [INF] 已锁定任务终点储位: 06B07
+2026-04-07 15:52:51.831 +08:00 [INF] 任务拆分完成（类型2），分组ID: 22c39975-1116-4d04-96f5-ce94cb5e3a53，第一个任务: 1774425196_1，第二个任务: 1774425196_2
+2026-04-07 15:52:51.857 +08:00 [INF] 任务拆分成功，原始任务: 1774425196，生成了 2 个子任务
+2026-04-07 15:52:51.860 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务拆分成功，生成了 2 个子任务，FailType=null，RequestCode=1774425196
+2026-04-07 15:52:51.870 +08:00 [INF] 缓存任务下发成功：PalletNumber=20260325155316809，RequestCode=1774425196
+2026-04-07 15:52:51.872 +08:00 [INF] 缓存任务处理完成：Id=157，PalletNumber=20260325155316809，RequestCode=1774425196
+2026-04-07 15:52:51.875 +08:00 [INF] 开始处理缓存任务：Id=158，托盘号=20260325155339364，请求号=1774425219，重试次数=6，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:52:51.885 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155339364, RequestCode=1774425219, TaskType=manualTask, 起点=06C06, 终点=06A07, 物料=, 数量=0
+2026-04-07 15:52:51.893 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06C06
+2026-04-07 15:52:51.898 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:52:51.904 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=158, PalletNumber=20260325155339364
+2026-04-07 15:52:51.908 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155339364, RequestCode=1774425219, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:52:51.912 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:52:51.915 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425219
+2026-04-07 15:52:51.925 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155339364，RequestCode=1774425219，RetryCount=7
+2026-04-07 15:52:51.930 +08:00 [INF] 缓存任务处理完成：Id=158，PalletNumber=20260325155339364，RequestCode=1774425219
+2026-04-07 15:52:51.936 +08:00 [INF] 开始处理缓存任务：Id=159，托盘号=20260325155440794，请求号=1774425259，重试次数=5，优先级=10，TaskIdentification=0，ShelvesIdentification=06
+2026-04-07 15:52:51.948 +08:00 [INF] 开始处理AddTaskAsync请求: PalletNumber=20260325155440794, RequestCode=1774425259, TaskType=manualTask, 起点=06A15, 终点=06A11, 物料=, 数量=0
+2026-04-07 15:52:51.958 +08:00 [INF] 检测到需要拆分的任务（类型2），起点: 06A15
+2026-04-07 15:52:51.966 +08:00 [INF] 开始执行CacheTaskAsync: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息=中转点 PD002 已被锁定
+2026-04-07 15:52:51.973 +08:00 [INF] 发现已存在的缓存任务，将更新而非新增: Id=159, PalletNumber=20260325155440794
+2026-04-07 15:52:51.976 +08:00 [INF] 缓存任务已存在，已更新: PalletNumber=20260325155440794, RequestCode=1774425259, 错误信息: 中转点 PD002 已被锁定
+2026-04-07 15:52:51.985 +08:00 [INF] CacheTaskAsync完成（更新已存在的缓存任务）
+2026-04-07 15:52:51.987 +08:00 [INF] 缓存任务调用AddTaskAsync返回：Status=Success，Message=任务已缓存，等待点位释放后自动处理，FailType=null，RequestCode=1774425259
+2026-04-07 15:52:51.995 +08:00 [INF] 缓存任务继续保留等待重试。PalletNumber=20260325155440794，RequestCode=1774425259，RetryCount=6
+2026-04-07 15:52:52.026 +08:00 [INF] 缓存任务处理完成：Id=159，PalletNumber=20260325155440794，RequestCode=1774425259

@@ -1,0 +1,151 @@
+@{
+    ViewData["Title"] = "登录";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - 仓库管理系统</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+@*     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" /> *@
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: #7f8c8d;
+            margin: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            height: 45px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+
+        .btn-login {
+            height: 45px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            background: #3498db;
+            border: none;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .btn-login:hover {
+            background: #2980b9;
+        }
+
+        .validation-summary-errors {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            background-color: rgba(231, 76, 60, 0.1);
+        }
+
+        .validation-summary-errors ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .input-group-text {
+            background: transparent;
+            border-right: none;
+        }
+
+        .form-control {
+            border-left: none;
+        }
+
+        .input-group:focus-within {
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+
+        .input-group:focus-within .input-group-text,
+        .input-group:focus-within .form-control {
+            border-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>仓库管理系统</h1>
+            <p>请登录以继续</p>
+        </div>
+
+        <form asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
+            <div asp-validation-summary="All" class="validation-summary-errors"></div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <input type="text" name="username" class="form-control" placeholder="用户名" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                    <input type="password" name="password" class="form-control" placeholder="密码" required />
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-login">
+                <i class="fas fa-sign-in-alt"></i> 登录
+            </button>
+        </form>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

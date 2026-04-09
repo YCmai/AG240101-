@@ -1,0 +1,117 @@
+@model WarehouseManagementSystem.Models.User
+
+@{
+    ViewData["Title"] = "创建用户";
+}
+
+<div>
+    <div class="row mb-3">
+        <div class="col">
+            <h2>创建用户</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create" method="post">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- 显示所有验证错误的摘要 -->
+                        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="Username" class="form-label">用户名</label>
+                            <input asp-for="Username" class="form-control" required />
+                            <span asp-validation-for="Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label">密码</label>
+                            <input asp-for="Password" type="password" class="form-control" required />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Role" class="form-label">角色</label>
+                            <select asp-for="Role" class="form-select" onchange="handleRoleChange(this.value)">
+                                <option value="@UserRole.Viewer">查看者</option>
+                                <option value="@UserRole.Operator">操作员</option>
+                                <option value="@UserRole.Supervisor">主管</option>
+                                <option value="@UserRole.Admin">管理员</option>
+                            </select>
+                            <span asp-validation-for="Role" class="text-danger"></span>
+                        </div>
+
+                        <div id="taskTypesContainer" class="mb-3" style="display: none;">
+                            <label class="form-label">允许操作的任务类型</label>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.receiving)" />
+                                <label class="form-check-label">收货</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.shipmentToOther)" />
+                                <label class="form-check-label">出货外发</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.rmHandover)" />
+                                <label class="form-check-label">物料交收</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.shipment)" />
+                                <label class="form-check-label">出货</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.stockIn)" />
+                                <label class="form-check-label">入库</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.binToBin)" />
+                                <label class="form-check-label">库位转移</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.scrap)" />
+                                <label class="form-check-label">废料接货</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="taskTypes" value="@((int)RCS_UserTasks.TaskType.EPMRF)" />
+                                <label class="form-check-label">EPMRF接货</label>
+                            </div>
+                        </div>
+
+                        @* 添加AllowedTaskTypes的验证消息显示 *@
+                        <span asp-validation-for="AllowedTaskTypes" class="text-danger"></span>
+
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input asp-for="IsActive" class="form-check-input" />
+                                <label asp-for="IsActive" class="form-check-label">启用账户</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">创建</button>
+                        <a href="@Url.Action("Index")" class="btn btn-secondary">返回</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function handleRoleChange(role) {
+            var taskTypesContainer = document.getElementById('taskTypesContainer');
+            if (role == '@UserRole.Operator') {
+                taskTypesContainer.style.display = 'block';
+            } else {
+                taskTypesContainer.style.display = 'none';
+            }
+        }
+
+        // 页面加载时初始化
+        $(document).ready(function() {
+            handleRoleChange($('#Role').val());
+        });
+    </script>
+} 
