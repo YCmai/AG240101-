@@ -153,6 +153,11 @@ namespace Spark.Domain.Worker
                 {
                     await HandleTaskFinish(userTask);
                 }
+                else if (ndcTask.TaskStatus >= TaskStatuEnum.PickDown &&
+                         ndcTask.TaskStatus < TaskStatuEnum.TaskFinish)
+                {
+                    await HandleTaskReadyForReuse(userTask, ndcTask.TaskStatus);
+                }
                 else if (ndcTask.TaskStatus == TaskStatuEnum.Canceled)
                 {
                     await HandleTaskCancel(userTask);
@@ -214,6 +219,66 @@ namespace Spark.Domain.Worker
             {
                 await SendTaskStatusToHost(userTask.requestCode, "3");
             }
+        }
+
+        /// <summary>
+        /// 处理拆分任务第二段进入可复用阶段。
+        /// </summary>
+        /// <remarks>
+        /// 拆分任务第二段在到达 PickDown 及之后、但尚未完成前，
+        /// 说明中转位上的货物通常已经被AGV取走，允许后续任务尽快复用该中转位。
+        /// 这里放宽判断，兼容现场状态直接跳过 PickDown 的情况。
+        /// </remarks>
+        private async Task HandleTaskReadyForReuse(RCS_UserTasks userTask, TaskStatuEnum currentStatus)
+        {
+            if (!userTask.IsSplitTask || userTask.TaskSequence <= 1)
+            {
+                return;
+            }
+
+            var groupTasks = await _userTasks.GetListAsync(x => x.TaskGroupId == userTask.TaskGroupId);
+            var firstTask = groupTasks.FirstOrDefault(t => t.TaskSequence == 1);
+            var locationsToRelease = new List<RCS_Locations>();
+
+            if (firstTask != null)
+            {
+                var firstTaskTargetLocation = await _locations.FirstOrDefaultAsync(l => l.NodeRemark == firstTask.targetPosition);
+                if (firstTaskTargetLocation != null)
+                {
+                    locationsToRelease.Add(firstTaskTargetLocation);
+                }
+            }
+
+            var secondTaskSourceLocation = await _locations.FirstOrDefaultAsync(l => l.NodeRemark == userTask.sourcePosition);
+            if (secondTaskSourceLocation != null)
+            {
+                if (locationsToRelease.All(l => l.Id != secondTaskSourceLocation.Id))
+                {
+                    locationsToRelease.Add(secondTaskSourceLocation);
+                }
+            }
+
+            if (!locationsToRelease.Any())
+            {
+                await _loggerManager.LogAndLogError(
+                    $"拆分任务第二段提前放行失败，未找到可释放的中转位：{userTask.requestCode}，当前状态：{currentStatus}，第一段终点：{firstTask?.targetPosition}，第二段起点：{userTask.sourcePosition}");
+                return;
+            }
+
+            foreach (var location in locationsToRelease)
+            {
+                location.Lock = false;
+                location.MaterialCode = null;
+                location.PalletID = null;
+                location.Weight = "0";
+                location.Quanitity = "0";
+                await _locations.UpdateAsync(location);
+            }
+
+            var releasedNodeRemarks = string.Join("、", locationsToRelease.Select(l => l.NodeRemark ?? l.Name));
+
+            await _loggerManager.LogAndLogCritical(
+                $"拆分任务第二段进入可复用阶段，提前释放成对中转位：{userTask.requestCode}，释放点位：{releasedNodeRemarks}，当前状态：{currentStatus}");
         }
 
         /// <summary>

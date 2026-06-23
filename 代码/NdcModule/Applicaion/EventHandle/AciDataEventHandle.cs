@@ -328,7 +328,7 @@ namespace AciModule.Applicaion.EventHandle
                     case AciHostEventTypeEnum.CarWashRequest:
                         try
                         {
-                            _aciAppManager.SendHostAcknowledge(null, ev.Index, (int)ReplyTaskState.ConfirmUnknown, 1160, 0);
+                            _aciAppManager.SendHostAcknowledge(null, ev.Index, (int)ReplyTaskState.ConfirmUnknown, 0, 0);
                         }
                         catch (Exception ex)
                         {

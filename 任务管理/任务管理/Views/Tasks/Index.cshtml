@@ -1,0 +1,1992 @@
+﻿﻿@using WarehouseManagementSystem.Models
+@model TaskListViewModel
+
+@{
+    ViewData["Title"] = "任务管理";
+    var user = Context.Items["User"] as WarehouseManagementSystem.Models.User;
+}
+
+@section Scripts {
+    @* <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> *@
+}
+
+<div>
+    @Html.AntiForgeryToken()
+
+    <div>
+        <div>
+            <div class="row mb-3">
+                <div class="col-md-9">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-md-3">
+                            <label for="filterDate">开始时间</label>
+                            <input type="date" id="filterDate" class="form-control" value="@ViewData["filterDate"]" />
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="endDate">结束时间</label>
+                            <input type="date" id="endDate" class="form-control" value="@ViewData["endDate"]" />
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="taskType">任务类型</label>
+                            <select id="taskType" class="form-control">
+                                <option value="">全部</option>
+                                <option value="0">人工任务</option>
+                                <option value="1">收货</option>
+                                <option value="2">出货外发</option>
+                                <option value="3">物料交收</option>
+                                <option value="4">出货</option>
+                                <option value="5">入库</option>
+                                <option value="6">库位转移</option>
+                                <option value="7">废料接货</option>
+                                <option value="8">EPMRF接货</option>
+                                <option value="9">物料交收</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="sourcePositionFilter">起点</label>
+                            <input type="text" id="sourcePositionFilter" class="form-control"
+                                   value="@ViewData["sourcePosition"]" placeholder="输入起点" />
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="targetPositionFilter">终点</label>
+                            <input type="text" id="targetPositionFilter" class="form-control"
+                                   value="@ViewData["targetPosition"]" placeholder="输入终点" />
+                        </div>
+
+                        <div class="col-md-2">
+                            <label for="robotCodeFilter">执行AGV</label>
+                            <input type="text" id="robotCodeFilter" class="form-control" value="@ViewData["robotCode"]"
+                                   placeholder="输入AGV编号" />
+                        </div>
+
+                        <div class="col-md-2">
+                            <button class="btn btn-primary px-4 w-100" onclick="submitForm()">搜索</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="task-operation-box">
+                        <div class="task-operation-title">操作框</div>
+                        <div class="task-operation-actions">
+                            <button class="btn btn-outline-primary" id="autoRefreshBtn" onclick="toggleAutoRefresh()">
+                                <i class="fas fa-sync-alt"></i> 自动刷新
+                            </button>
+                            @if (user != null && (user.Role == UserRole.Operator || user.Role == UserRole.Supervisor ||
+                                                user.Role == UserRole.Admin))
+                            {
+                                <button class="btn btn-success" onclick="showCreateTaskModal()">创建任务</button>
+                            }
+                            <button class="btn btn-info" onclick="exportTasks()">导出Excel</button>
+                            <button class="btn btn-secondary" onclick="showStatisticsModal()">任务统计</button>
+                            <div class="btn-group" role="group" aria-label="筛选任务">
+                                <button type="button" class="btn btn-outline-secondary active" id="filterUserBtn"
+                                        onclick="setTaskFilter('user')">普通任务</button>
+                                <button type="button" class="btn btn-outline-secondary" id="filterCacheBtn"
+                                        onclick="setTaskFilter('cache')">缓存任务</button>
+                            </div>
+                            <button class="btn btn-danger" onclick="batchCancelCachedTasks()">
+                                批量取消缓存任务
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 异常时间设置 -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input type="number" id="abnormalTimeThreshold" class="form-control"
+                               value="@RCS_UserTasks.AbnormalTimeThreshold" min="1" />
+                        <span class="input-group-text">分钟</span>
+                        <button class="btn btn-outline-primary" onclick="setAbnormalTimeThreshold()">设置异常时间</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 表格 -->
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered text-center">
+                    <thead class="table-light" id="mainTableHead">
+                        <tr>
+                            <th style="width: 56px;">
+                                <input type="checkbox" id="selectAllCachedTasks" title="全选当前页缓存任务" />
+                            </th>
+                            <th onclick="sortTable('taskType')" style="cursor: pointer;">
+                                任务类型
+                                <i class="fas fa-sort" id="sort-taskType"></i>
+                            </th>
+                            <th onclick="sortTable('sourcePosition')" style="cursor: pointer;">
+                                起始点
+                                <i class="fas fa-sort" id="sort-sourcePosition"></i>
+                            </th>
+                            <th onclick="sortTable('targetPosition')" style="cursor: pointer;">
+                                终点
+                                <i class="fas fa-sort" id="sort-targetPosition"></i>
+                            </th>
+                            <th onclick="sortTable('taskStatus')" style="cursor: pointer;">
+                                任务状态
+                                <i class="fas fa-sort" id="sort-taskStatus"></i>
+                            </th>
+                            <th onclick="sortTable('robotCode')" style="cursor: pointer;">
+                                AGVNo
+                                <i class="fas fa-sort" id="sort-robotCode"></i>
+                            </th>
+                            <th onclick="sortTable('requestCode')" style="cursor: pointer;">
+                                PO
+                                <i class="fas fa-sort" id="sort-requestCode"></i>
+                            </th>
+                            <th onclick="sortTable('MaterialCode')" style="cursor: pointer;">
+                                物料编码
+                                <i class="fas fa-sort" id="sort-MaterialCode"></i>
+                            </th>
+                            <th onclick="sortTable('MaterialQuantity')" style="cursor: pointer;">
+                                物料数量
+                                <i class="fas fa-sort" id="sort-MaterialQuantity"></i>
+                            </th>
+                            <th onclick="sortTable('PalletNumber')" style="cursor: pointer;">
+                                SU
+                                <i class="fas fa-sort" id="sort-PalletNumber"></i>
+                            </th>
+                            <th onclick="sortTable('SourceType')" style="cursor: pointer;">
+                                起始类型
+                                <i class="fas fa-sort" id="sort-SourceType"></i>
+                            </th>
+                            <th onclick="sortTable('DestType')" style="cursor: pointer;">
+                                目标类型
+                                <i class="fas fa-sort" id="sort-DestType"></i>
+                            </th>
+                            <th onclick="sortTable('creatTime')" style="cursor: pointer;">
+                                创建日期
+                                <i class="fas fa-sort" id="sort-creatTime"></i>
+                            </th>
+                            <th onclick="sortTable('ConfirmTime')" style="cursor: pointer;">
+                                确认时间
+                                <i class="fas fa-sort" id="sort-ConfirmTime"></i>
+                            </th>
+                            <th onclick="sortTable('endTime')" style="cursor: pointer;">
+                                完成日期
+                                <i class="fas fa-sort" id="sort-endTime"></i>
+                            </th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mainTableBody">
+                        @{
+                            var hasData = false;
+                        }
+
+                        @* 显示普通任务 *@
+                        @if (Model.UserTasks.Items != null && Model.UserTasks.Items.Any())
+                        {
+                            hasData = true;
+                            @foreach (var item in Model.UserTasks.Items)
+                            {
+                                <tr class="user-task-row @(item.IsAbnormal ? "abnormal-task-row" : "")">
+                                    <td>-</td>
+                                    <td>
+                                        @if (item.IsAbnormal)
+                                        {
+                                            <span class="badge bg-danger me-2">异常</span>
+                                        }
+                                        @item.TaskTypeDisplayName
+                                    </td>
+                                    <td>@item.sourcePosition</td>
+                                    <td>@item.targetPosition</td>
+                                    <td>
+                                        @{
+                                            var statusClass = item.taskStatus switch
+                                            {
+                                                TaskStatuEnum.None => "badge bg-secondary",
+                                                TaskStatuEnum.CarWash => "badge bg-info",
+                                                TaskStatuEnum.TaskStart => "badge bg-primary",
+                                                TaskStatuEnum.Confirm => "badge bg-primary",
+                                                TaskStatuEnum.ConfirmCar => "badge bg-primary",
+                                                TaskStatuEnum.PickingUp => "badge bg-warning",
+                                                TaskStatuEnum.PickDown => "badge bg-info",
+                                                TaskStatuEnum.Unloading => "badge bg-warning",
+                                                TaskStatuEnum.UnloadDown => "badge bg-info",
+                                                TaskStatuEnum.TaskFinish => "badge bg-success",
+                                                TaskStatuEnum.Canceled => "badge bg-danger",
+                                                TaskStatuEnum.CanceledWashing => "badge bg-warning",
+                                                TaskStatuEnum.CanceledWashFinish => "badge bg-success",
+                                                TaskStatuEnum.RedirectRequest => "badge bg-danger",
+                                                TaskStatuEnum.InvalidUp => "badge bg-danger",
+                                                TaskStatuEnum.InvalidDown => "badge bg-danger",
+                                                TaskStatuEnum.OrderAgv => "badge bg-warning",
+                                                TaskStatuEnum.OrderAgvFinish => "badge bg-success",
+                                                _ => "badge bg-light text-dark"
+                                            };
+
+                                            var statusText = item.taskStatus switch
+                                            {
+                                                TaskStatuEnum.None => "未执行",
+                                                TaskStatuEnum.CarWash => "洗车中",
+                                                TaskStatuEnum.TaskStart => "任务开始",
+                                                TaskStatuEnum.Confirm => "参数确认中",
+                                                TaskStatuEnum.ConfirmCar => "确认执行AGV",
+                                                TaskStatuEnum.PickingUp => "取货中",
+                                                TaskStatuEnum.PickDown => "取货完成",
+                                                TaskStatuEnum.Unloading => "卸货中",
+                                                TaskStatuEnum.UnloadDown => "卸货完成",
+                                                TaskStatuEnum.TaskFinish => "任务完成",
+                                                TaskStatuEnum.Canceled => "已取消",
+                                                TaskStatuEnum.CanceledWashing => "取消后洗车中",
+                                                TaskStatuEnum.CanceledWashFinish => "取消洗车完成",
+                                                TaskStatuEnum.RedirectRequest => "取货路线异常",
+                                                TaskStatuEnum.InvalidUp => "无效取货点",
+                                                TaskStatuEnum.InvalidDown => "无效卸货点",
+                                                TaskStatuEnum.OrderAgv => "卸货路线异常",
+                                                TaskStatuEnum.OrderAgvFinish => "异常任务完成",
+                                                _ => item.taskStatus.ToString()
+                                            };
+                                        }
+                                        <span class="@statusClass">@statusText</span>
+                                    </td>
+                                    <td>@item.robotCode</td>
+                                    <td>
+                                        @{
+                                            var poDisplay = item.requestCode;
+                                            if (!string.IsNullOrEmpty(item.requestCode))
+                                            {
+                                                poDisplay = item.requestCode.Split('-', '_')[0].Trim();
+                                            }
+                                        }
+                                        @poDisplay
+                                    </td>
+                                    <td>@(string.IsNullOrEmpty(item.MaterialCode) ? "-" : item.MaterialCode)</td>
+                                    <td>@(item.MaterialQuantity > 0 ? item.MaterialQuantity.ToString() : "-")</td>
+                                    <td>@(string.IsNullOrEmpty(item.PalletNumber) ? "-" : item.PalletNumber.Split('_')[0])</td>
+                                    <td>@(string.IsNullOrEmpty(item.SourceType) ? "-" : item.SourceType)</td>
+                                    <td>@(string.IsNullOrEmpty(item.DestType) ? "-" : item.DestType)</td>
+                                    <td>@(item.creatTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-")</td>
+                                    <td>@(item.ConfirmTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-")</td>
+                                    <td>@(item.endTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-")</td>
+                                    <td>
+                                        @if (user != null && (user.Role == UserRole.Operator || user.Role == UserRole.Supervisor
+                                                                        || user.Role == UserRole.Admin))
+                                        {
+                                            @if (item.taskStatus < TaskStatuEnum.TaskFinish && !item.IsCancelled)
+                                            {
+                                                <button class="btn btn-danger btn-sm cancel-task" data-task-id="@item.ID"
+                                                        onclick="cancelTask(@item.ID)">
+                                                    取消任务
+                                                </button>
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+
+                        @* 显示缓存任务 *@
+                        @if (Model.CachedTasks.Items != null && Model.CachedTasks.Items.Any())
+                        {
+                            hasData = true;
+                            @foreach (var item in Model.CachedTasks.Items)
+                            {
+                                var isPrioritized = item.Priority == 10;
+                                <tr class="cached-task-row @(isPrioritized ? "prioritized-task-row" : "")">
+                                    <td>
+                                        @if (item.Status == 0)
+                                        {
+                                            <input type="checkbox" class="cached-task-checkbox" value="@item.Id" />
+                                        }
+                                        else
+                                        {
+                                            <span>-</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <span class="badge bg-warning me-2">缓存</span>
+                                        @if (isPrioritized)
+                                        {
+                                            <span class="badge bg-danger me-2">优先</span>
+                                        }
+                                        @item.TaskTypeDisplayName
+                                        <div class="cache-reason"
+                                             title="@(string.IsNullOrWhiteSpace(item.LastError) ? "暂无缓存原因" : item.LastError)">
+                                            缓存原因：@(string.IsNullOrWhiteSpace(item.LastError) ? "暂无" : item.LastError)
+                                        </div>
+                                    </td>
+                                    <td>@item.SourcePosition</td>
+                                    <td>@item.TargetPosition</td>
+                                    <td>
+                                        <span class="badge bg-info">@item.StatusDisplayName</span>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        @{
+                                            var cachedPoDisplay = item.RequestCode;
+                                            if (!string.IsNullOrEmpty(item.RequestCode))
+                                            {
+                                                cachedPoDisplay = item.RequestCode.Split('-', '_')[0].Trim();
+                                            }
+                                        }
+                                        @cachedPoDisplay
+                                    </td>
+                                    <td>@(string.IsNullOrEmpty(item.MaterialCode) ? "-" : item.MaterialCode)</td>
+                                    <td>@(item.MaterialQuantity > 0 ? item.MaterialQuantity.ToString() : "-")</td>
+                                    <td>@(string.IsNullOrEmpty(item.PalletNumber) ? "-" : item.PalletNumber.Split('_')[0])</td>
+                                    <td>@(string.IsNullOrEmpty(item.SourceType) ? "-" : item.SourceType)</td>
+                                    <td>@(string.IsNullOrEmpty(item.DestType) ? "-" : item.DestType)</td>
+                                    <td>@item.CreateTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                                    <td>@(item.ConfirmTime?.ToString("yyyy-MM-dd HH:mm:ss") ?? "-")</td>
+                                    <td>-</td>
+                                    <td>
+                                        @if (user != null && (user.Role == UserRole.Operator || user.Role == UserRole.Supervisor
+                                                                        || user.Role == UserRole.Admin))
+                                        {
+                                            @if (item.Status == 0) // 待处理状态
+                                            {
+                                                @if (isPrioritized)
+                                                {
+                                                    <button class="btn btn-secondary btn-xs me-1" disabled>已优先</button>
+                                                }
+                                                else
+                                                {
+                                                    <button class="btn btn-primary btn-xs me-1" onclick="prioritizeCachedTask(@item.Id)">
+                                                        优先执行
+                                                    </button>
+                                                }
+                                                <button class="btn btn-danger btn-xs" onclick="cancelCachedTask(@item.Id)">
+                                                    取消
+                                                </button>
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+
+                        @if (!hasData)
+                        {
+                            <tr>
+                                <td colspan="17" class="text-center">暂无数据</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 分页导航 -->
+        <div class="d-flex justify-content-end">
+            <nav aria-label="Page navigation">
+                <ul class="pagination pagination-sm" id="paginationContainer">
+                    @{
+                        var filterDateParam = ViewData["filterDate"] != null ? ViewData["filterDate"].ToString() : "";
+                        var endDateParam = ViewData["endDate"] != null ? ViewData["endDate"].ToString() : "";
+                        var taskTypeParam = ViewData["taskType"] != null ? ViewData["taskType"].ToString() : "";
+                        var sourcePositionParam = ViewData["sourcePosition"] != null ? ViewData["sourcePosition"].ToString()
+                    : "";
+                        var targetPositionParam = ViewData["targetPosition"] != null ? ViewData["targetPosition"].ToString()
+                    : "";
+                        var robotCodeParam = ViewData["robotCode"] != null ? ViewData["robotCode"].ToString() : "";
+                        var sortColumnParam = ViewData["sortColumn"] != null ? ViewData["sortColumn"].ToString() :
+                        "creatTime";
+                        var sortDirectionParam = ViewData["sortDirection"] != null ? ViewData["sortDirection"].ToString() :
+                        "desc";
+                        var taskFilterParam = ViewData["taskFilter"] != null ? ViewData["taskFilter"].ToString() : "all";
+                    }
+                    @* 普通任务分页 *@
+                    @if (Model.UserTasks.TotalPages > 0)
+                    {
+                        @if (Model.UserTasks.PageNumber > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link"
+                                   href="?page=1&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">首页</a>
+                            </li>
+                        }
+                        @if (Model.UserTasks.HasPreviousPage)
+                        {
+                            <li class="page-item" id="userTasksPrev">
+                                <a class="page-link"
+                                   href="?page=@(Model.UserTasks.PageNumber - 1)&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">上一页</a>
+                            </li>
+                        }
+                        <li class="page-item disabled" id="userTasksPagination">
+                            <span class="page-link">第 @Model.UserTasks.PageNumber / @Model.UserTasks.TotalPages 页</span>
+                        </li>
+                        @if (Model.UserTasks.HasNextPage)
+                        {
+                            <li class="page-item" id="userTasksNext">
+                                <a class="page-link"
+                                   href="?page=@(Model.UserTasks.PageNumber + 1)&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">下一页</a>
+                            </li>
+                        }
+                        @if (Model.UserTasks.PageNumber < Model.UserTasks.TotalPages)
+                        {
+                            <li class="page-item">
+                                <a class="page-link"
+                                   href="?page=@Model.UserTasks.TotalPages&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">末页</a>
+                            </li>
+                        }
+                    }
+                    @* 缓存任务分页 *@
+                    @if (Model.CachedTasks.TotalPages > 0)
+                    {
+                        @if (Model.CachedTasks.PageNumber > 1)
+                        {
+                            <li class="page-item">
+                                <a class="page-link"
+                                   href="?page=1&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">首页</a>
+                            </li>
+                        }
+                        @if (Model.CachedTasks.HasPreviousPage)
+                        {
+                            <li class="page-item" id="cachedTasksPrev">
+                                <a class="page-link"
+                                   href="?page=@(Model.CachedTasks.PageNumber - 1)&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">上一页</a>
+                            </li>
+                        }
+                        <li class="page-item disabled" id="cachedTasksPagination">
+                            <span class="page-link">第 @Model.CachedTasks.PageNumber / @Model.CachedTasks.TotalPages 页</span>
+                        </li>
+                        @if (Model.CachedTasks.HasNextPage)
+                        {
+                            <li class="page-item" id="cachedTasksNext">
+                                <a class="page-link"
+                                   href="?page=@(Model.CachedTasks.PageNumber + 1)&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">下一页</a>
+                            </li>
+                        }
+                        @if (Model.CachedTasks.PageNumber < Model.CachedTasks.TotalPages)
+                        {
+                            <li class="page-item">
+                                <a class="page-link"
+                                   href="?page=@Model.CachedTasks.TotalPages&filterDate=@filterDateParam&endDate=@endDateParam&taskType=@taskTypeParam&sourcePosition=@sourcePositionParam&targetPosition=@targetPositionParam&robotCode=@robotCodeParam&sortColumn=@sortColumnParam&sortDirection=@sortDirectionParam&taskFilter=@taskFilterParam">末页</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 创建任务模态框 -->
+    <div class="modal fade" id="createTaskModal" tabindex="-1" aria-labelledby="createTaskModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createTaskModalLabel">创建任务</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createTaskForm">
+                        <div class="form-group">
+                            <label for="modalTaskType">任务类型</label>
+                            <select class="form-control" id="modalTaskType" name="modalTaskType" required>
+                                <option value="0" selected>人工任务</option>
+                                <option value="1">收货</option>
+                                <option value="2">出货外发</option>
+                                <option value="3">物料交收</option>
+                                <option value="4">出货</option>
+                                <option value="5">入库</option>
+                                <option value="6">库位转移</option>
+                                <option value="7">废料接货</option>
+                                <option value="8">EPMRF接货</option>
+                                <option value="9">物料交收</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskStatus">任务状态</label>
+                            <select class="form-control" id="taskStatus" name="taskStatus">
+                                <option value="-1">未执行</option>
+                                <option value="0">洗车中</option>
+                                <option value="1">任务开始</option>
+                                <option value="2">参数确认中</option>
+                                <option value="3">确认执行AGV</option>
+                                <option value="4">取货中</option>
+                                <option value="6">取货完成</option>
+                                <option value="8">卸货中</option>
+                                <option value="10">卸货完成</option>
+                                <option value="11">任务完成</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sourcePosition">起始点</label>
+                            <div class="position-selector">
+                                <input type="text" class="form-control" id="sourcePositionSearch"
+                                       placeholder="输入关键词搜索起始点..." autocomplete="off">
+                                <select class="form-control" id="sourcePosition" name="sourcePosition" required
+                                        style="display: none;">
+                                    <option value="">-- 请选择起始点 --</option>
+                                </select>
+                                <div class="position-dropdown" id="sourcePositionDropdown" style="display: none;">
+                                    <!-- 动态生成的选项将在这里显示 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="targetPosition">终点</label>
+                            <div class="position-selector">
+                                <input type="text" class="form-control" id="targetPositionSearch"
+                                       placeholder="输入关键词搜索终点..." autocomplete="off">
+                                <select class="form-control" id="targetPosition" name="targetPosition" required
+                                        style="display: none;">
+                                    <option value="">-- 请选择终点 --</option>
+                                </select>
+                                <div class="position-dropdown" id="targetPositionDropdown" style="display: none;">
+                                    <!-- 动态生成的选项将在这里显示 -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority">优先级</label>
+                            <input type="number" class="form-control" id="priority" name="priority" min="1" max="3"
+                                   value="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="requestCode">请求编号</label>
+                            <input type="text" class="form-control" id="requestCode" name="requestCode" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="materialCode">物料编码</label>
+                            <input type="text" class="form-control" id="materialCode" name="materialCode">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="materialQuantity">物料数量</label>
+                            <input type="number" class="form-control" id="materialQuantity" name="materialQuantity"
+                                   min="0" value="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="palletNumber">卡板单号</label>
+                            <input type="text" class="form-control" id="palletNumber" name="palletNumber">
+                        </div>
+
+                        @* <div class="form-group">
+                            <label for="sourceType">起始类型</label>
+                            <input type="text" class="form-control" id="sourceType" name="sourceType">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destType">目标类型</label>
+                            <input type="text" class="form-control" id="destType" name="destType">
+                        </div> *@
+
+                        @* <div class="form-group">
+                            <label for="confirmTime">确认时间</label>
+                            <input type="datetime-local" class="form-control" id="confirmTime" name="confirmTime">
+                        </div> *@
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" onclick="createTask()">创建</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 任务统计模态框 -->
+    <div class="modal fade" id="statisticsModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg modal-draggable">
+            <div class="modal-content">
+                <div class="modal-header" style="cursor: move;">
+                    <h5 class="modal-title">任务统计</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label class="form-label">开始时间</label>
+                            <input type="date" class="form-control" id="statStartDate">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">结束时间</label>
+                            <input type="date" class="form-control" id="statEndDate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>任务类型</th>
+                                            <th>待执行任务</th>
+                                            <th>执行中任务</th>
+                                            <th>已完成任务</th>
+                                            <th>已取消任务</th>
+                                            <th>总计</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="statisticsTableBody">
+                                        <!-- 统计数据将在这里显示 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="loadStatistics()">查询</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 刷新状态指示器 -->
+<div class="refresh-indicator" id="refreshIndicator">
+    <i class="fas fa-sync-alt"></i> 正在刷新数据...
+</div>
+
+<script>
+    let currentSort = {
+        column: '@ViewData["sortColumn"]' || 'creatTime',
+        direction: '@ViewData["sortDirection"]' || 'desc'
+    };
+    // 列表筛选：user/cache
+    let currentTaskFilter = '@ViewData["taskFilter"]' || 'user';
+
+    // 页面加载时设置初始排序图标
+    $(document).ready(function () {
+        $('#taskType').val('@(ViewData["taskType"] ?? "")');
+        updateSortIcons();
+        // 启动自动刷新
+        startAutoRefresh();
+        // 恢复筛选按钮状态
+        $('#filterUserBtn, #filterCacheBtn').removeClass('active');
+        if (currentTaskFilter === 'user') $('#filterUserBtn').addClass('active');
+        if (currentTaskFilter === 'cache') $('#filterCacheBtn').addClass('active');
+    });
+
+    // 自动刷新相关变量
+    let autoRefreshInterval;
+    let isAutoRefreshEnabled = false;
+    let isRefreshing = false; // 防止并发刷新
+
+    // 启动自动刷新
+    function startAutoRefresh() {
+        if (autoRefreshInterval) {
+            clearInterval(autoRefreshInterval);
+        }
+
+        isAutoRefreshEnabled = true;
+
+        // 每8秒刷新一次数据（降低压力）
+        autoRefreshInterval = setInterval(function () {
+            if (isAutoRefreshEnabled) {
+                refreshTaskData();
+            }
+        }, 5000);
+
+        console.log('自动刷新已启动，每5-8秒刷新一次（实际以当前设置为准）');
+
+        // 更新按钮状态
+        var $btn = $('#autoRefreshBtn');
+        $btn.removeClass('btn-outline-secondary').addClass('btn-outline-primary');
+        $btn.html('<i class="fas fa-sync-alt"></i> 自动刷新');
+    }
+
+    // 停止自动刷新
+    function stopAutoRefresh() {
+        if (autoRefreshInterval) {
+            clearInterval(autoRefreshInterval);
+            autoRefreshInterval = null;
+        }
+        isAutoRefreshEnabled = false;
+        console.log('自动刷新已停止');
+
+        // 更新按钮状态
+        var $btn = $('#autoRefreshBtn');
+        $btn.removeClass('btn-outline-primary').addClass('btn-outline-secondary');
+        $btn.html('<i class="fas fa-pause"></i> 已暂停');
+    }
+
+    // 刷新任务数据
+    function refreshTaskData() {
+        // 并发节流：如果上一次刷新还未完成，则跳过本次
+        if (isRefreshing) {
+            return;
+        }
+        isRefreshing = true;
+
+        // 显示刷新状态
+        showRefreshIndicator();
+
+        // 获取当前页面的筛选条件
+        var filterDate = document.getElementById("filterDate").value;
+        var endDate = document.getElementById("endDate").value;
+        var taskType = document.getElementById("taskType").value;
+        var sourcePosition = document.getElementById("sourcePositionFilter").value;
+        var targetPosition = document.getElementById("targetPositionFilter").value;
+        var robotCode = document.getElementById("robotCodeFilter").value;
+        var currentPage = currentTaskFilter === 'cache' ? @Model.CachedTasks.PageNumber : @Model.UserTasks.PageNumber;
+
+        // 构建刷新URL
+        var refreshUrl = "/Tasks/Index?page=" + currentPage +
+            "&filterDate=" + encodeURIComponent(filterDate) +
+            "&endDate=" + encodeURIComponent(endDate) +
+            "&taskType=" + encodeURIComponent(taskType) +
+            "&sourcePosition=" + encodeURIComponent(sourcePosition) +
+            "&targetPosition=" + encodeURIComponent(targetPosition) +
+            "&robotCode=" + encodeURIComponent(robotCode) +
+            "&sortColumn=" + encodeURIComponent(currentSort.column) +
+            "&sortDirection=" + encodeURIComponent(currentSort.direction) +
+            "&taskFilter=" + encodeURIComponent(currentTaskFilter);
+
+        // 使用AJAX刷新数据
+        $.ajax({
+            url: refreshUrl,
+            type: 'GET',
+            cache: false,
+            success: function (data) {
+                // 解析返回的HTML，提取表格内容
+                var $newData = $(data);
+                var $newTableBody = $newData.find('#mainTableBody');
+                var $newPagination = $newData.find('.pagination');
+
+                // 更新主表格内容（只更新主表格，不影响统计模态框）
+                $('#mainTableBody').html($newTableBody.html());
+
+                // 更新分页
+                $('.pagination').parent().html($newPagination.parent().html());
+
+                // 重新绑定事件
+                bindTaskEvents();
+                requestAnimationFrame(function () {
+                    restoreCachedTaskSelection();
+                });
+
+                // 隐藏刷新状态
+                hideRefreshIndicator();
+
+                //console.log('任务数据已刷新 - ' + new Date().toLocaleTimeString());
+            },
+            error: function (xhr, status, error) {
+                console.error('刷新数据失败:', error);
+                hideRefreshIndicator();
+            },
+            complete: function () {
+                isRefreshing = false;
+            }
+        });
+    }
+
+    // 任务筛选切换
+    function setTaskFilter(type) {
+        currentTaskFilter = type;
+        // 更新按钮激活状态
+        $('#filterUserBtn, #filterCacheBtn').removeClass('active');
+        if (type === 'user') $('#filterUserBtn').addClass('active');
+        if (type === 'cache') $('#filterCacheBtn').addClass('active');
+
+        // 重新加载页面数据
+        submitForm();
+    }
+
+    // 显示刷新状态指示器
+    function showRefreshIndicator() {
+        $('#refreshIndicator').addClass('show');
+    }
+
+    // 隐藏刷新状态指示器
+    function hideRefreshIndicator() {
+        setTimeout(function () {
+            $('#refreshIndicator').removeClass('show');
+        }, 500);
+    }
+
+    // 绑定任务相关事件
+    function bindTaskEvents() {
+        // 重新绑定取消任务按钮事件
+        $('.cancel-task').off('click').on('click', function () {
+            var taskId = $(this).data('task-id');
+            cancelTask(taskId);
+        });
+    }
+
+    // 切换自动刷新功能
+    function toggleAutoRefresh() {
+        var $btn = $('#autoRefreshBtn');
+        var $icon = $btn.find('i');
+
+        if (isAutoRefreshEnabled) {
+            // 停止自动刷新
+            stopAutoRefresh();
+            $btn.removeClass('btn-outline-primary').addClass('btn-outline-secondary');
+            $icon.removeClass('fa-sync-alt').addClass('fa-pause');
+            $btn.html('<i class="fas fa-pause"></i> 已暂停');
+        } else {
+            // 启动自动刷新
+            startAutoRefresh();
+            $btn.removeClass('btn-outline-secondary').addClass('btn-outline-primary');
+            $icon.removeClass('fa-pause').addClass('fa-sync-alt');
+            $btn.html('<i class="fas fa-sync-alt"></i> 自动刷新');
+        }
+    }
+
+    function updateSortIcons() {
+        // 重置所有图标
+        $('.fas.fa-sort').removeClass('fa-sort-asc fa-sort-desc fa-sort-up fa-sort-down').addClass('fa-sort');
+
+        // 设置当前排序列的图标
+        if (currentSort.column) {
+            var icon = $(`#sort-${currentSort.column}`);
+            icon.removeClass('fa-sort');
+            if (currentSort.direction === 'asc') {
+                icon.removeClass('fa-sort-desc fa-sort-down').addClass('fa-sort-asc fa-sort-up');
+            } else {
+                icon.removeClass('fa-sort-asc fa-sort-up').addClass('fa-sort-desc fa-sort-down');
+            }
+        }
+    }
+
+    function sortTable(column) {
+        if (currentSort.column === column) {
+            currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+            currentSort.column = column;
+            currentSort.direction = 'asc';
+        }
+
+        updateSortIcons();
+        submitForm();
+    }
+
+    function submitForm() {
+        var filterDate = document.getElementById("filterDate").value;
+        var endDate = document.getElementById("endDate").value;
+        var taskType = document.getElementById("taskType").value;
+        var sourcePosition = document.getElementById("sourcePositionFilter").value;
+        var targetPosition = document.getElementById("targetPositionFilter").value;
+        var robotCode = document.getElementById("robotCodeFilter").value;
+
+        window.location.href = "/Tasks/Index?page=1" +
+            "&filterDate=" + encodeURIComponent(filterDate) +
+            "&endDate=" + encodeURIComponent(endDate) +
+            "&taskType=" + encodeURIComponent(taskType) +
+            "&sourcePosition=" + encodeURIComponent(sourcePosition) +
+            "&targetPosition=" + encodeURIComponent(targetPosition) +
+            "&robotCode=" + encodeURIComponent(robotCode) +
+            "&sortColumn=" + encodeURIComponent(currentSort.column) +
+            "&sortDirection=" + encodeURIComponent(currentSort.direction) +
+            "&taskFilter=" + encodeURIComponent(currentTaskFilter);
+    }
+
+    function setAbnormalTimeThreshold() {
+        var minutes = document.getElementById("abnormalTimeThreshold").value;
+        $.ajax({
+            url: '/Tasks/SetAbnormalTimeThreshold',
+            type: 'POST',
+            data: { minutes: minutes },
+            success: function (result) {
+                if (result.success) {
+                    alert('设置成功');
+                    location.reload();
+                } else {
+                    alert(result.message);
+                }
+            }
+        });
+    }
+
+    function showCreateTaskModal() {
+        // 清空表单
+        $('#createTaskForm')[0].reset();
+
+        // 加载位置列表
+        loadLocations();
+
+        // 显示模态框
+        $('#createTaskModal').modal('show');
+    }
+
+    function createTask() {
+
+        // 获取表单数据
+        var taskTypeSelect = $('#modalTaskType');
+        var taskType = taskTypeSelect.val();
+
+        console.log('任务类型下拉框:', taskTypeSelect);
+        console.log('选中的任务类型值:', taskType);
+        console.log('任务类型选项:', taskTypeSelect.find('option').map(function () {
+            return { value: $(this).val(), text: $(this).text() };
+        }).get());
+
+        var taskStatusVal = $('#taskStatus').val();
+        var sourcePosition = $('#sourcePosition').val();
+        var targetPosition = $('#targetPosition').val();
+        var priorityVal = $('#priority').val();
+        var requestCode = $('#requestCode').val();
+        var materialCode = $('#materialCode').val();
+        var materialQuantityVal = $('#materialQuantity').val();
+        var palletNumber = $('#palletNumber').val();
+        var sourceType = "";
+        var destType = "";
+        var confirmTimeVal = $('#confirmTime').val();
+
+        // 根据图片中的表单进行校验，对于没有填写的值添加默认数据
+
+        // 任务类型校验 - 默认为"人工任务"(0)
+        if (!taskType) {
+            taskType = "0"; // 默认为人工任务
+            console.log('使用默认任务类型: 人工任务');
+        }
+
+        // 任务状态校验 - 默认为"未执行"(-1)
+        if (!taskStatusVal) {
+            taskStatusVal = "-1"; // 默认为未执行
+            console.log('使用默认任务状态: 未执行');
+        }
+
+        // 起始点和终点校验
+        console.log('起始点值:', sourcePosition);
+        console.log('终点值:', targetPosition);
+
+        // 如果隐藏的select没有值，尝试从搜索框获取
+        if (!sourcePosition || sourcePosition.trim() === '') {
+            const sourceSearchValue = $('#sourcePositionSearch').val();
+            if (sourceSearchValue) {
+                // 从搜索框的值中提取nodeRemark（格式：name - nodeRemark）
+                const parts = sourceSearchValue.split(' - ');
+                if (parts.length >= 2) {
+                    sourcePosition = parts[parts.length - 1].trim();
+                    console.log('从搜索框提取起始点值:', sourcePosition);
+                }
+            }
+        }
+
+        if (!targetPosition || targetPosition.trim() === '') {
+            const targetSearchValue = $('#targetPositionSearch').val();
+            if (targetSearchValue) {
+                // 从搜索框的值中提取nodeRemark（格式：name - nodeRemark）
+                const parts = targetSearchValue.split(' - ');
+                if (parts.length >= 2) {
+                    targetPosition = parts[parts.length - 1].trim();
+                    console.log('从搜索框提取终点值:', targetPosition);
+                }
+            }
+        }
+
+        if (!sourcePosition || sourcePosition.trim() === '') {
+            alert('请选择起始点');
+            return;
+        }
+
+        if (!targetPosition || targetPosition.trim() === '') {
+            alert('请选择终点');
+            return;
+        }
+
+        // 优先级校验 - 默认为1
+        if (!priorityVal || priorityVal.trim() === '') {
+            priorityVal = "1";
+            console.log('使用默认优先级: 1');
+        }
+
+        // 请求编号校验 - 如果为空，添加默认值"即使为空，也被发任务"
+        if (!requestCode || requestCode.trim() === '') {
+            requestCode = "";
+            console.log('使用默认请求编号');
+        }
+
+        // 物料编码校验 - 如果为空，添加默认值"即使为空，也被发任务"
+        if (!materialCode || materialCode.trim() === '') {
+            materialCode = "";
+            console.log('使用默认物料编码');
+        }
+
+        // 物料数量校验 - 默认为0
+        if (!materialQuantityVal || materialQuantityVal.trim() === '') {
+            materialQuantityVal = "0";
+            console.log('使用默认物料数量: 0');
+        }
+
+        // 卡板单号校验 - 如果为空，添加默认值"即使为空，也被发任务"
+        if (!palletNumber || palletNumber.trim() === '') {
+            palletNumber = "";
+            console.log('使用默认卡板单号');
+        }
+
+
+        // 确认时间校验 - 如果为空，添加默认值"取满选项，不需要"
+        // if (!confirmTimeVal) {
+        //     // 确认时间为空时不设置，使用后端默认值
+        //     console.log('确认时间为空，使用系统当前时间');
+        // }
+
+        // 设置可选项默认值与类型
+        var taskStatus = Number.isInteger(parseInt(taskStatusVal)) ? parseInt(taskStatusVal) : -1; // 默认未执行
+        var priority = Number.isInteger(parseInt(priorityVal)) ? parseInt(priorityVal) : 1;
+        var materialQuantity = Number.isInteger(parseInt(materialQuantityVal)) ? parseInt(materialQuantityVal) : 0;
+        //var confirmTime = confirmTimeVal ? new Date(confirmTimeVal).toISOString() : null;
+
+        // 构建请求数据（仅包含需要的字段，避免无效类型）
+        var taskData = {
+            taskType: parseInt(taskType),
+            taskStatus: taskStatus,
+            sourcePosition: sourcePosition,
+            targetPosition: targetPosition,
+            priority: priority,
+            requestCode: requestCode,
+            MaterialCode: materialCode,
+            MaterialQuantity: materialQuantityVal,
+            PalletNumber: palletNumber,
+            SourceType: sourceType,
+            DestType: destType,
+            ConfirmTime: new Date().toISOString(),
+            creatTime: new Date().toISOString(),
+            executed: false,
+            IsCancelled: false
+        };
+
+        console.log('发送的数据:', taskData); // 调试日志
+
+        $.ajax({
+            url: '/Tasks/CreateTask',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(taskData),
+            headers: {
+                'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').length ? $('input[name="__RequestVerificationToken"]').val() : undefined
+            },
+            success: function (response) {
+                if (response && response.success) {
+                    $('#createTaskModal').modal('hide');
+                    location.reload();
+                } else {
+                    var msg = response && response.message ? response.message : '未知错误';
+                    alert('创建任务失败：' + msg);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('创建任务失败:', error);
+                console.error('响应状态:', status);
+                console.error('响应数据:', xhr.responseText);
+                alert('创建任务失败，请稍后重试');
+            }
+        });
+    }
+
+    function exportTasks() {
+        var filterDate = document.getElementById("filterDate").value;
+        var endDate = document.getElementById("endDate").value;
+        var taskType = document.getElementById("taskType").value;
+
+        window.location.href = "/Tasks/ExportTasks" +
+            "?startDate=" + encodeURIComponent(filterDate) +
+            "&endDate=" + encodeURIComponent(endDate) +
+            "&taskType=" + encodeURIComponent(taskType);
+    }
+
+    function showStatisticsModal() {
+        // 设置默认日期为当天
+        var today = new Date();
+        var todayStr = today.toISOString().split('T')[0];
+
+        document.getElementById("statStartDate").value = todayStr;
+        document.getElementById("statEndDate").value = todayStr;
+
+        var modal = new bootstrap.Modal(document.getElementById('statisticsModal'));
+        modal.show();
+
+        // 自动加载当天的统计数据
+        loadStatistics();
+    }
+
+    function loadStatistics() {
+        var startDate = document.getElementById("statStartDate").value;
+        var endDate = document.getElementById("statEndDate").value;
+
+        if (!startDate || !endDate) {
+            alert('请选择开始时间和结束时间');
+            return;
+        }
+
+        $.ajax({
+            url: '/Tasks/GetTaskStatistics',
+            type: 'GET',
+            data: {
+                startDate: startDate,
+                endDate: endDate,
+                shift: 'all'
+            },
+            success: function (result) {
+                if (result.success) {
+                    var tbody = document.getElementById('statisticsTableBody');
+                    tbody.innerHTML = ''; // 清空现有数据
+
+                    // 遍历每种任务类型
+                    result.data.labels.forEach((label, index) => {
+                        var row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${label}</td>
+                            <td>${result.data.pending[index] || 0}</td>
+                            <td>${result.data.executing[index] || 0}</td>
+                            <td>${result.data.completed[index] || 0}</td>
+                            <td>${result.data.cancelled[index] || 0}</td>
+                            <td>${result.data.values[index] || 0}</td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                } else {
+                    alert(result.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('获取统计数据失败:', error);
+                alert('获取统计数据失败，请稍后重试');
+            }
+        });
+    }
+
+    function cancelTask(taskId) {
+        if (confirm('确定要取消此任务吗？')) {
+            $.ajax({
+                url: '/Tasks/Cancel',
+                type: 'POST',
+                data: { id: taskId },
+                headers: {
+                    'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (result) {
+                    if (result.success) {
+                        location.reload();
+                    } else {
+                        alert('取消任务失败: ' + result.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('取消任务请求失败:', error);
+                    console.error('状态:', status);
+                    console.error('响应:', xhr.responseText);
+                    alert('取消任务请求失败，请检查网络连接或联系管理员');
+                }
+            });
+        }
+    }
+
+    // 缓存任务相关函数
+    function prioritizeCachedTask(id) {
+        if (confirm("确定要设置此任务为优先执行吗？")) {
+            $.ajax({
+                url: '/Tasks/PrioritizeCachedTask',
+                type: 'POST',
+                data: {
+                    id: id,
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (result) {
+                    if (result.success) {
+                        alert("任务优先级已设置");
+                        location.reload();
+                    } else {
+                        alert("设置失败: " + result.message);
+                    }
+                },
+                error: function () {
+                    alert("请求失败，请稍后重试");
+                }
+            });
+        }
+    }
+
+    function getCachedTaskSelection() {
+        try {
+            return JSON.parse(sessionStorage.getItem('cachedTaskSelection') || '[]');
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function setCachedTaskSelection(ids) {
+        sessionStorage.setItem('cachedTaskSelection', JSON.stringify(ids));
+    }
+
+    function syncCachedTaskSelectionFromPage() {
+        const ids = $('.cached-task-checkbox:checked').map(function () {
+            return parseInt(this.value, 10);
+        }).get();
+        setCachedTaskSelection(ids);
+        updateSelectAllCachedTasksState();
+    }
+
+    function updateSelectAllCachedTasksState() {
+        const checkboxes = $('.cached-task-checkbox');
+        const checkedCount = checkboxes.filter(':checked').length;
+        const selectAll = $('#selectAllCachedTasks');
+
+        if (!checkboxes.length || !selectAll.length) {
+            return;
+        }
+
+        selectAll.prop('checked', checkedCount > 0 && checkedCount === checkboxes.length);
+        selectAll.prop('indeterminate', checkedCount > 0 && checkedCount < checkboxes.length);
+    }
+
+    function updateCachedTaskCheckboxState() {
+        syncCachedTaskSelectionFromPage();
+        updateSelectAllCachedTasksState();
+    }
+
+    function restoreCachedTaskSelection() {
+        const selectedIds = getCachedTaskSelection().map(function (id) {
+            return parseInt(id, 10);
+        });
+
+        if (!selectedIds.length) {
+            $('.cached-task-checkbox').prop('checked', false);
+            updateSelectAllCachedTasksState();
+            return;
+        }
+
+        $('.cached-task-checkbox').each(function () {
+            const id = parseInt(this.value, 10);
+            this.checked = selectedIds.includes(id);
+        });
+
+        updateSelectAllCachedTasksState();
+    }
+
+    function cancelCachedTask(id) {
+        if (confirm("确定要取消此缓存任务吗？")) {
+            $.ajax({
+                url: '/Tasks/CancelCachedTask',
+                type: 'POST',
+                data: {
+                    id: id,
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val()
+                },
+                success: function (result) {
+                    if (result.success) {
+                        const remaining = getCachedTaskSelection().filter(function (selectedId) {
+                            return parseInt(selectedId, 10) !== parseInt(id, 10);
+                        });
+                        setCachedTaskSelection(remaining);
+                        location.reload();
+                    } else {
+                        alert("任务取消失败: " + result.message);
+                    }
+                },
+                error: function () {
+                    alert("请求失败，请稍后重试");
+                }
+            });
+        }
+    }
+
+    function batchCancelCachedTasks() {
+        const ids = $('.cached-task-checkbox:checked').map(function () {
+            return parseInt(this.value, 10);
+        }).get();
+
+        if (!ids.length) {
+            alert('请选择要取消的待处理缓存任务');
+            return;
+        }
+
+        if (!confirm('确定要批量取消选中的缓存任务吗？')) {
+            return;
+        }
+
+        $.ajax({
+            url: '/Tasks/BatchCancelCachedTasks',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(ids),
+            headers: {
+                'RequestVerificationToken': $('input[name="__RequestVerificationToken"]').val()
+            },
+            success: function (result) {
+                if (result.success) {
+                    const remaining = getCachedTaskSelection().filter(function (selectedId) {
+                        return !ids.includes(parseInt(selectedId, 10));
+                    });
+                    setCachedTaskSelection(remaining);
+                    location.reload();
+                } else {
+                    alert('批量取消失败: ' + result.message);
+                }
+            },
+            error: function () {
+                alert('请求失败，请稍后重试');
+            }
+        });
+    }
+
+    $(function () {
+        restoreCachedTaskSelection();
+
+        $(document).on('change', '.cached-task-checkbox', function () {
+            updateCachedTaskCheckboxState();
+        });
+
+        $(document).on('change', '#selectAllCachedTasks', function () {
+            $('.cached-task-checkbox').each(function () {
+                this.checked = $('#selectAllCachedTasks').is(':checked');
+            });
+            updateCachedTaskCheckboxState();
+            $(this).prop('indeterminate', false);
+        });
+    });
+
+    // 全局变量存储位置数据
+    let allLocations = [];
+
+    // 分组名称映射
+    const groupNameMapping = {
+        'dispatch': '出货区',
+        'receiving': '收货区',
+        'fghandover': '物料交货区',
+        'rmhandover': '成品交货区',
+        'rack1': '货架区1',
+        'rack2': '货架区2',
+        'rack3': '货架区3',
+        'transit': 'AGV中转区'
+    };
+
+    // 获取分组的中文名称
+    function getGroupDisplayName(groupName) {
+        if (!groupName) return '';
+        const lowerGroup = groupName.toLowerCase();
+        return groupNameMapping[lowerGroup] || groupName;
+    }
+
+    // 加载位置列表
+    function loadLocations() {
+        $.ajax({
+            url: '/Tasks/GetLocations',
+            type: 'GET',
+            success: function (response) {
+                if (response.success) {
+                    allLocations = response.data;
+                    initializePositionSelectors();
+                } else {
+                    alert('加载位置列表失败：' + response.message);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('加载位置列表失败:', error);
+                alert('加载位置列表失败，请稍后重试');
+            }
+        });
+    }
+
+    // 初始化位置选择器
+    function initializePositionSelectors() {
+        // 初始化起始点搜索
+        initializePositionSearch('sourcePositionSearch', 'sourcePositionDropdown', 'sourcePosition');
+
+        // 初始化终点搜索
+        initializePositionSearch('targetPositionSearch', 'targetPositionDropdown', 'targetPosition');
+
+        // 为隐藏的select元素添加所有位置选项
+        populateHiddenSelects();
+    }
+
+    // 为隐藏的select元素填充选项
+    function populateHiddenSelects() {
+        const $sourceSelect = $('#sourcePosition');
+        const $targetSelect = $('#targetPosition');
+
+        // 清空现有选项
+        $sourceSelect.empty().append('<option value="">-- 请选择起始点 --</option>');
+        $targetSelect.empty().append('<option value="">-- 请选择终点 --</option>');
+
+        // 添加所有位置选项
+        allLocations.forEach(function (location) {
+            const option = $('<option></option>')
+                .val(location.nodeRemark)
+                .text(location.name + ' - ' + location.nodeRemark);
+            $sourceSelect.append(option.clone());
+            $targetSelect.append(option);
+        });
+    }
+
+    // 初始化单个位置搜索器
+    function initializePositionSearch(searchInputId, dropdownId, hiddenSelectId) {
+        const $searchInput = $('#' + searchInputId);
+        const $dropdown = $('#' + dropdownId);
+        const $hiddenSelect = $('#' + hiddenSelectId);
+
+        // 搜索输入事件
+        $searchInput.on('input', function () {
+            const searchTerm = $(this).val().toLowerCase();
+            filterAndShowLocations(searchTerm, $dropdown, $hiddenSelect);
+        });
+
+        // 点击输入框时显示所有选项
+        $searchInput.on('focus', function () {
+            if ($(this).val() === '') {
+                filterAndShowLocations('', $dropdown, $hiddenSelect);
+            }
+        });
+
+        // 点击外部时隐藏下拉框
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.position-selector').length) {
+                $dropdown.hide();
+            }
+        });
+
+        // 键盘导航
+        $searchInput.on('keydown', function (e) {
+            handleKeyboardNavigation(e, $dropdown, $hiddenSelect, $searchInput);
+        });
+    }
+
+    // 过滤并显示位置选项
+    function filterAndShowLocations(searchTerm, $dropdown, $hiddenSelect) {
+        // 获取已选择的位置，避免重复选择
+        const selectedSource = $('#sourcePosition').val();
+        const selectedTarget = $('#targetPosition').val();
+
+        const filteredLocations = allLocations.filter(function (location) {
+            // 排除已选择的位置
+            if (location.nodeRemark === selectedSource || location.nodeRemark === selectedTarget) {
+                return false;
+            }
+
+            // 搜索过滤
+            if (!searchTerm) return true;
+
+            const name = (location.name || '').toLowerCase();
+            const nodeRemark = (location.nodeRemark || '').toLowerCase();
+            const group = (location.group || '').toLowerCase();
+
+            return name.includes(searchTerm) ||
+                nodeRemark.includes(searchTerm) ||
+                group.includes(searchTerm);
+        });
+
+        $dropdown.empty();
+
+        if (filteredLocations.length === 0) {
+            $dropdown.append('<div class="position-dropdown-no-results">未找到匹配的位置</div>');
+        } else {
+            filteredLocations.forEach(function (location) {
+                const $item = $('<div class="position-dropdown-item"></div>')
+                    .data('location', location)
+                    .html(`
+                        <span class="location-name">${location.name || ''}</span>
+                        <span class="location-remark">${location.nodeRemark || ''}</span>
+                        <span class="location-group">${getGroupDisplayName(location.group)}</span>
+                    `)
+                    .on('click', function () {
+                        selectLocation(location, $hiddenSelect, $dropdown);
+                    });
+
+                $dropdown.append($item);
+            });
+        }
+
+        $dropdown.show();
+    }
+
+    // 选择位置
+    function selectLocation(location, $hiddenSelect, $dropdown) {
+        const $searchInput = $dropdown.siblings('input[type="text"]');
+
+        console.log('选择位置:', location);
+        console.log('隐藏select元素:', $hiddenSelect);
+
+        // 更新搜索框显示
+        $searchInput.val(`${location.name} - ${location.nodeRemark}`);
+
+        // 更新隐藏的select值
+        $hiddenSelect.val(location.nodeRemark);
+
+        console.log('设置后的隐藏select值:', $hiddenSelect.val());
+
+        // 隐藏下拉框
+        $dropdown.hide();
+
+        // 触发change事件
+        $hiddenSelect.trigger('change');
+
+        // 刷新另一个搜索框的选项（排除刚选择的位置）
+        refreshOtherPositionSelector($hiddenSelect);
+    }
+
+    // 刷新另一个位置选择器的选项
+    function refreshOtherPositionSelector($currentSelect) {
+        const isSource = $currentSelect.attr('id') === 'sourcePosition';
+        const otherSearchInputId = isSource ? 'targetPositionSearch' : 'sourcePositionSearch';
+        const otherDropdownId = isSource ? 'targetPositionDropdown' : 'sourcePositionDropdown';
+        const otherHiddenSelectId = isSource ? 'targetPosition' : 'sourcePosition';
+
+        const $otherSearchInput = $('#' + otherSearchInputId);
+        const $otherDropdown = $('#' + otherDropdownId);
+        const $otherHiddenSelect = $('#' + otherHiddenSelectId);
+
+        // 如果另一个搜索框有内容，重新过滤显示
+        if ($otherSearchInput.val()) {
+            const searchTerm = $otherSearchInput.val().toLowerCase();
+            filterAndShowLocations(searchTerm, $otherDropdown, $otherHiddenSelect);
+        }
+    }
+
+    // 键盘导航处理
+    function handleKeyboardNavigation(e, $dropdown, $hiddenSelect, $searchInput) {
+        const $items = $dropdown.find('.position-dropdown-item');
+        const $selected = $dropdown.find('.position-dropdown-item.selected');
+
+        switch (e.keyCode) {
+            case 38: // 上箭头
+                e.preventDefault();
+                if ($selected.length) {
+                    $selected.removeClass('selected');
+                    const prev = $selected.prev('.position-dropdown-item');
+                    if (prev.length) {
+                        prev.addClass('selected');
+                    } else {
+                        $items.last().addClass('selected');
+                    }
+                } else {
+                    $items.last().addClass('selected');
+                }
+                break;
+
+            case 40: // 下箭头
+                e.preventDefault();
+                if ($selected.length) {
+                    $selected.removeClass('selected');
+                    const next = $selected.next('.position-dropdown-item');
+                    if (next.length) {
+                        next.addClass('selected');
+                    } else {
+                        $items.first().addClass('selected');
+                    }
+                } else {
+                    $items.first().addClass('selected');
+                }
+                break;
+
+            case 13: // 回车
+                e.preventDefault();
+                const $activeItem = $dropdown.find('.position-dropdown-item.selected');
+                if ($activeItem.length) {
+                    const location = $activeItem.data('location');
+                    selectLocation(location, $hiddenSelect, $dropdown);
+                }
+                break;
+
+            case 27: // ESC
+                $dropdown.hide();
+                break;
+        }
+    }
+
+    // 当选择起始点后，刷新终点搜索框的选项
+    $('#sourcePosition').change(function () {
+        var selectedSource = $(this).val();
+        // 刷新终点搜索框的选项（排除已选择的起始点）
+        refreshOtherPositionSelector($(this));
+    });
+
+    // 当选择终点后，刷新起始点搜索框的选项
+    $('#targetPosition').change(function () {
+        var selectedTarget = $(this).val();
+        // 刷新起始点搜索框的选项（排除已选择的终点）
+        refreshOtherPositionSelector($(this));
+    });
+
+
+    // 模态框拖拽功能
+    $(document).ready(function () {
+        var $modal = $('#statisticsModal');
+        var $modalDialog = $modal.find('.modal-dialog');
+        var $modalHeader = $modal.find('.modal-header');
+        var isDragging = false;
+        var startX, startY, initialLeft, initialTop;
+
+        $modalHeader.on('mousedown', function (e) {
+            if (e.target.tagName === 'BUTTON' || e.target.tagName === 'I') {
+                return; // 不拖拽关闭按钮
+            }
+
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+
+            var offset = $modalDialog.offset();
+            initialLeft = offset.left;
+            initialTop = offset.top;
+
+            $modalDialog.css({
+                'position': 'fixed',
+                'margin': '0',
+                'left': initialLeft + 'px',
+                'top': initialTop + 'px'
+            });
+
+            e.preventDefault();
+        });
+
+        $(document).on('mousemove', function (e) {
+            if (!isDragging) return;
+
+            var deltaX = e.clientX - startX;
+            var deltaY = e.clientY - startY;
+
+            $modalDialog.css({
+                'left': (initialLeft + deltaX) + 'px',
+                'top': (initialTop + deltaY) + 'px'
+            });
+        });
+
+        $(document).on('mouseup', function () {
+            isDragging = false;
+        });
+
+        // 模态框关闭时重置位置
+        $modal.on('hidden.bs.modal', function () {
+            $modalDialog.css({
+                'position': '',
+                'margin': '',
+                'left': '',
+                'top': ''
+            });
+        });
+    });
+</script>
+
+<style>
+    .badge {
+        padding: 6px 10px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .badge:hover {
+        opacity: 0.9;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+    /* 超小按钮样式 */
+    .btn-xs {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        border-radius: 0.2rem;
+    }
+
+    /* 状态徽章的阴影效果 */
+    .badge.bg-warning {
+        box-shadow: 0 2px 4px rgba(255, 193, 7, 0.2);
+    }
+
+    .badge.bg-primary {
+        box-shadow: 0 2px 4px rgba(13, 110, 253, 0.2);
+    }
+
+    .badge.bg-success {
+        box-shadow: 0 2px 4px rgba(25, 135, 84, 0.2);
+    }
+
+    .badge.bg-secondary {
+        box-shadow: 0 2px 4px rgba(108, 117, 125, 0.2);
+    }
+
+    .badge.bg-danger {
+        box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2);
+    }
+
+    /* 任务类型徽章的阴影效果 */
+    .badge.bg-info {
+        box-shadow: 0 2px 4px rgba(13, 202, 240, 0.2);
+    }
+
+    /* 排序图标样式 */
+    .fas.fa-sort,
+    .fas.fa-sort-asc,
+    .fas.fa-sort-desc,
+    .fas.fa-sort-up,
+    .fas.fa-sort-down {
+        margin-left: 5px;
+        font-size: 0.8em;
+        color: #6c757d;
+    }
+
+    .fas.fa-sort-asc,
+    .fas.fa-sort-desc,
+    .fas.fa-sort-up,
+    .fas.fa-sort-down {
+        color: #0d6efd;
+    }
+
+    th {
+        position: relative;
+    }
+
+    th:hover {
+        background-color: #e9ecef;
+    }
+
+    th i {
+        transition: all 0.2s ease;
+    }
+
+    /* 异常任务行样式 */
+    .abnormal-task-row {
+        background: linear-gradient(135deg, rgba(220, 53, 69, 0.15) 0%, rgba(255, 193, 7, 0.1) 100%) !important;
+        border-left: 4px solid #dc3545 !important;
+        position: relative;
+        animation: abnormalPulse 2s infinite;
+    }
+
+    .abnormal-task-row:hover {
+        background: linear-gradient(135deg, rgba(220, 53, 69, 0.25) 0%, rgba(255, 193, 7, 0.15) 100%) !important;
+        transform: scale(1.01);
+        transition: all 0.3s ease;
+    }
+
+    .abnormal-task-row td {
+        font-weight: 600;
+        color: #721c24;
+    }
+
+    /* 异常任务脉冲动画 */
+    @@keyframes abnormalPulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+        }
+
+        50% {
+            box-shadow: 0 0 0 8px rgba(220, 53, 69, 0.1);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+        }
+    }
+
+    /* 缓存任务行样式 */
+    .cached-task-row {
+        background: linear-gradient(135deg, rgba(255, 193, 7, 0.15) 0%, rgba(255, 193, 7, 0.05) 100%) !important;
+        border-left: 4px solid #ffc107 !important;
+        position: relative;
+    }
+
+    .cached-task-row:hover {
+        background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 193, 7, 0.1) 100%) !important;
+        transform: scale(1.005);
+        transition: all 0.3s ease;
+    }
+
+    .cached-task-row td {
+        font-weight: 500;
+        color: #856404;
+    }
+
+    .cache-reason {
+        margin-top: 4px;
+        font-size: 12px;
+        color: #6c757d;
+        max-width: 220px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .cached-task-row.prioritized-task-row {
+        background: linear-gradient(135deg, rgba(220, 53, 69, 0.16) 0%, rgba(255, 193, 7, 0.08) 100%) !important;
+        border-left: 4px solid #dc3545 !important;
+    }
+
+    .cached-task-row.prioritized-task-row td {
+        color: #6f1d1b;
+        font-weight: 600;
+    }
+
+    /* 缓存标记徽章样式 */
+    .badge.bg-warning {
+        background: linear-gradient(45deg, #ffc107, #e0a800) !important;
+        box-shadow: 0 2px 8px rgba(255, 193, 7, 0.4);
+        font-weight: 700;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    /* 异常标记徽章样式 */
+    .badge.bg-danger {
+        background: linear-gradient(45deg, #dc3545, #c82333) !important;
+        box-shadow: 0 2px 8px rgba(220, 53, 69, 0.4);
+        font-weight: 700;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        animation: badgeBlink 1.5s infinite;
+    }
+
+    @@keyframes badgeBlink {
+
+        0%,
+        50% {
+            opacity: 1;
+        }
+
+        25%,
+        75% {
+            opacity: 0.7;
+        }
+    }
+
+    /* 位置选择器样式 */
+    .position-selector {
+        position: relative;
+    }
+
+    .position-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border: 1px solid #ced4da;
+        border-top: none;
+        border-radius: 0 0 0.375rem 0.375rem;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .position-dropdown-item {
+        padding: 8px 12px;
+        cursor: pointer;
+        border-bottom: 1px solid #f8f9fa;
+        transition: background-color 0.2s ease;
+    }
+
+    .position-dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .position-dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    .position-dropdown-item.selected {
+        background-color: #e3f2fd;
+        color: #1976d2;
+    }
+
+    .position-dropdown-item .location-name {
+        font-weight: 500;
+        color: #333;
+    }
+
+    .position-dropdown-item .location-remark {
+        font-size: 0.875rem;
+        color: #666;
+        margin-left: 8px;
+    }
+
+    .position-dropdown-item .location-group {
+        font-size: 0.75rem;
+        color: #999;
+        float: right;
+        background: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 3px;
+    }
+
+    /* 搜索框聚焦时的样式 */
+    #sourcePositionSearch:focus,
+    #targetPositionSearch:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    /* 无结果提示 */
+    .position-dropdown-no-results {
+        padding: 12px;
+        text-align: center;
+        color: #666;
+        font-style: italic;
+    }
+
+    /* 自动刷新按钮样式 */
+    #autoRefreshBtn {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #autoRefreshBtn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    #autoRefreshBtn i {
+        transition: transform 0.3s ease;
+    }
+
+    .task-operation-box {
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        padding: 12px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 249, 250, 0.98) 100%);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .task-operation-title {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: #495057;
+        margin-bottom: 10px;
+    }
+
+    .task-operation-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-end;
+    }
+
+    #autoRefreshBtn.active i {
+        animation: spin 1s linear infinite;
+    }
+
+    @@keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* 刷新状态指示器 */
+    .refresh-indicator {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: rgba(0, 123, 255, 0.9);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.875rem;
+        z-index: 9999;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+    }
+
+    .refresh-indicator.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
