@@ -519,6 +519,100 @@ namespace AciModule.Applicaion.EventHandle
             return _rcs_RCS_UserTasks.FindAsync(x => x.requestCode == schedulTaskNo).Result;
         }
 
+        private async Task<RCS_UserTasks?> GetUserTaskBySchedulTaskNoAsync(string schedulTaskNo)
+        {
+            if (string.IsNullOrEmpty(schedulTaskNo)) return null;
+
+            var parts = schedulTaskNo.Split('_');
+            if (parts.Length > 1 && int.TryParse(parts.Last(), out int taskId))
+            {
+                return await _rcs_RCS_UserTasks.FindAsync(x => x.ID == taskId);
+            }
+
+            return await _rcs_RCS_UserTasks.FindAsync(x => x.requestCode == schedulTaskNo);
+        }
+
+        /// <summary>
+        /// 第二段拆分任务在取货完成及其后续中间状态出现时，立即释放中转位。
+        /// </summary>
+        private async Task TryReleaseSplitTransitLocationsAsync(NdcTask_Moves ndcTaskModel, TaskStatuEnum triggerStatus, string triggerName)
+        {
+            if (ndcTaskModel == null || string.IsNullOrEmpty(ndcTaskModel.SchedulTaskNo))
+            {
+                return;
+            }
+
+            var userTask = await GetUserTaskBySchedulTaskNoAsync(ndcTaskModel.SchedulTaskNo);
+            if (userTask == null ||
+                !userTask.IsSplitTask ||
+                string.IsNullOrEmpty(userTask.TaskGroupId) ||
+                userTask.TaskSequence <= 1)
+            {
+                return;
+            }
+
+            var groupTasks = await _rcs_RCS_UserTasks.GetListAsync(x => x.TaskGroupId == userTask.TaskGroupId);
+            var firstTask = groupTasks.FirstOrDefault(t => t.TaskSequence == 1);
+            if (firstTask == null)
+            {
+                _logger.LogError(
+                    $"拆分任务第二段释放中转位失败，未找到第一段任务：{userTask.requestCode}，触发状态：{triggerStatus}，触发事件：{triggerName}");
+                return;
+            }
+
+            var locationsToRelease = new List<RCS_Locations>();
+
+            var firstTaskTargetLocation = await _rcs_Locations.FirstOrDefaultAsync(l => l.NodeRemark == firstTask.targetPosition);
+            if (firstTaskTargetLocation != null)
+            {
+                locationsToRelease.Add(firstTaskTargetLocation);
+            }
+
+            var secondTaskSourceLocation = await _rcs_Locations.FirstOrDefaultAsync(l => l.NodeRemark == userTask.sourcePosition);
+            if (secondTaskSourceLocation != null && locationsToRelease.All(l => l.Id != secondTaskSourceLocation.Id))
+            {
+                locationsToRelease.Add(secondTaskSourceLocation);
+            }
+
+            if (!locationsToRelease.Any())
+            {
+                _logger.LogError(
+                    $"拆分任务第二段释放中转位失败，未找到中转位：{userTask.requestCode}，触发状态：{triggerStatus}，触发事件：{triggerName}，第一段终点：{firstTask.targetPosition}，第二段起点：{userTask.sourcePosition}");
+                return;
+            }
+
+            var releasedNodeNames = new List<string>();
+
+            foreach (var location in locationsToRelease)
+            {
+                var needUpdate = location.Lock ||
+                                 !string.IsNullOrEmpty(location.MaterialCode) ||
+                                 !string.IsNullOrEmpty(location.PalletID) ||
+                                 location.Weight != "0" ||
+                                 location.Quanitity != "0";
+
+                if (!needUpdate)
+                {
+                    continue;
+                }
+
+                location.Lock = false;
+                location.MaterialCode = null;
+                location.PalletID = null;
+                location.Weight = "0";
+                location.Quanitity = "0";
+                await _rcs_Locations.UpdateAsync(location);
+
+                releasedNodeNames.Add(location.NodeRemark ?? location.Name);
+            }
+
+            if (releasedNodeNames.Any())
+            {
+                _logger.LogCritical(
+                    $"拆分任务第二段已在中间状态释放中转位：{userTask.requestCode}，触发状态：{triggerStatus}，触发事件：{triggerName}，释放点位：{string.Join("、", releasedNodeNames)}");
+            }
+        }
+
 
         /// <summary>
         /// 处理移动到装货点事件
@@ -603,12 +697,14 @@ namespace AciModule.Applicaion.EventHandle
                 loadDone0.SetStatus(TaskStatuEnum.PickDown);
 
                 await _ndcTask.UpdateAsync(loadDone0);
+                //await TryReleaseSplitTransitLocationsAsync(loadDone0, TaskStatuEnum.PickDown, nameof(HandleLoadingHostSyncronisationEvent));
                 return;
             }
 
             var loadDone1 = await _ndcTask.FirstOrDefaultAsync(x => x.NdcTaskId == ev.Parameter2 && x.TaskStatus == TaskStatuEnum.PickDown);
             if (loadDone1 != null)
             {
+                //await TryReleaseSplitTransitLocationsAsync(loadDone1, TaskStatuEnum.PickDown, nameof(HandleLoadingHostSyncronisationEvent));
                 _aciAppManager.SendHostAcknowledge(null, ev.Index, (int)ReplyTaskState.PickDown, 0, 0);
                 return;
             }
@@ -644,11 +740,13 @@ namespace AciModule.Applicaion.EventHandle
             {
                 unoad0.SetStatus(TaskStatuEnum.Unloading);
                 await _ndcTask.UpdateAsync(unoad0);
+                await TryReleaseSplitTransitLocationsAsync(unoad0, TaskStatuEnum.Unloading, nameof(HandleUnloadHostSyncronisationEvent));
             }
 
             var unoad1 = await _ndcTask.FirstOrDefaultAsync(x => x.NdcTaskId == ev.Parameter2 && x.TaskStatus == TaskStatuEnum.Unloading);
             if (unoad1 != null)
             {
+                await TryReleaseSplitTransitLocationsAsync(unoad1, TaskStatuEnum.Unloading, nameof(HandleUnloadHostSyncronisationEvent));
                 var doneHeight = unoad1.UnloadHeight == 0 ? 0 : unoad1.UnloadHeight;
                 var upDepth = 0;
                 _aciAppManager.SendHostAcknowledge(null, ev.Index, (int)ReplyTaskState.Unloading, doneHeight, upDepth);
@@ -702,12 +800,14 @@ namespace AciModule.Applicaion.EventHandle
             {
                 unloadDone0.SetStatus(TaskStatuEnum.UnloadDown);
                 await _ndcTask.UpdateAsync(unloadDone0);
+                await TryReleaseSplitTransitLocationsAsync(unloadDone0, TaskStatuEnum.UnloadDown, nameof(HandleUnloadingHostSyncronisationEvent));
                 return;
             }
 
             var unloadDone1 = await _ndcTask.FirstOrDefaultAsync(x => x.NdcTaskId == ev.Parameter2 && x.TaskStatus == TaskStatuEnum.UnloadDown);
             if (unloadDone1 != null)
             {
+                await TryReleaseSplitTransitLocationsAsync(unloadDone1, TaskStatuEnum.UnloadDown, nameof(HandleUnloadingHostSyncronisationEvent));
                 _aciAppManager.SendHostAcknowledge(null, ev.Index, (int)ReplyTaskState.UnloadDown, 0, 0);
                 return;
             }
@@ -745,6 +845,7 @@ namespace AciModule.Applicaion.EventHandle
             var finish0 = await _ndcTask.FirstOrDefaultAsync(x => x.NdcTaskId == ev.Parameter2 && x.TaskStatus == TaskStatuEnum.UnloadDown);
             if (finish0 != null)
             {
+                await TryReleaseSplitTransitLocationsAsync(finish0, TaskStatuEnum.TaskFinish, nameof(HandleOrderFinishEvent));
                 finish0.SetStatus(TaskStatuEnum.TaskFinish);
                 _ndcTask.UpdateAsync(finish0, true).Wait();
                 return;

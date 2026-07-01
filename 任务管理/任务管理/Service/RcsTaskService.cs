@@ -1,4 +1,4 @@
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -988,6 +988,29 @@ namespace WarehouseManagementSystem.Service
                                                 Id = task.ID
                                             },
                                             transaction);
+
+                                        // 解锁对应的起点和终点储位
+                                        if (!string.IsNullOrEmpty(task.sourcePosition))
+                                        {
+                                            await connection.ExecuteAsync(@"
+                                                UPDATE RCS_Locations 
+                                                SET [Lock] = 0 
+                                                WHERE NodeRemark = @NodeRemark",
+                                                new { NodeRemark = task.sourcePosition },
+                                                transaction);
+                                            _logger.LogInformation("API cancelled task {TaskId}, unlocked source: {Position}", task.ID, task.sourcePosition);
+                                        }
+
+                                        if (!string.IsNullOrEmpty(task.targetPosition))
+                                        {
+                                            await connection.ExecuteAsync(@"
+                                                UPDATE RCS_Locations 
+                                                SET [Lock] = 0 
+                                                WHERE NodeRemark = @NodeRemark",
+                                                new { NodeRemark = task.targetPosition },
+                                                transaction);
+                                            _logger.LogInformation("API cancelled task {TaskId}, unlocked target: {Position}", task.ID, task.targetPosition);
+                                        }
                                     }
                                     else
                                     {
@@ -1852,8 +1875,7 @@ namespace WarehouseManagementSystem.Service
                 return new List<RCS_UserTasks>();
             }
 
-            // [Hotfix] 防止人工解锁后，中转点仍被执行中的任务重复占用
-            if (await IsLocationOccupiedByActiveTaskAsync(smallAgvLocation.NodeRemark, connection, transaction))
+            if (await IsTransitPointOccupiedByTaskAsync(smallAgvLocation.NodeRemark, connection, transaction))
             {
                 await CacheTaskAsync(request, connection, transaction, $"中转点 {smallAgvLocation.NodeRemark} 已被执行中任务占用");
                 return new List<RCS_UserTasks>();
@@ -1876,8 +1898,7 @@ namespace WarehouseManagementSystem.Service
                 throw new ArgumentException($"三向车中转点 {threeWayTransferPoint} 已被锁定，不可以生成任务");
             }
 
-            // [Hotfix] 防止人工解锁后，中转点仍被执行中的任务重复占用
-            if (await IsLocationOccupiedByActiveTaskAsync(threeWayLocation.NodeRemark, connection, transaction))
+            if (await IsTransitPointOccupiedByTaskAsync(threeWayLocation.NodeRemark, connection, transaction))
             {
                 await CacheTaskAsync(request, connection, transaction, $"中转点 {threeWayLocation.NodeRemark} 已被执行中任务占用");
                 return new List<RCS_UserTasks>();
@@ -1932,16 +1953,8 @@ namespace WarehouseManagementSystem.Service
             // [Hotfix] 使用条件更新抢占库位，避免并发下多个任务占用同一个中转位
             var lockedNodeRemarks = new List<string>();
 
-            if (!await TryLockLocationByNodeRemarkAsync(request.sourceBin, connection, transaction))
-            {
-                await CacheTaskAsync(request, connection, transaction, $"起点 {request.sourceBin} 已被锁定");
-                return new List<RCS_UserTasks>();
-            }
-            lockedNodeRemarks.Add(request.sourceBin);
-
             if (!await TryLockLocationByNodeRemarkAsync(smallAgvLocation.NodeRemark, connection, transaction))
             {
-                await UnlockLocationsByNodeRemarkAsync(lockedNodeRemarks, connection, transaction);
                 await CacheTaskAsync(request, connection, transaction, $"中转点 {smallAgvLocation.NodeRemark} 已被锁定");
                 return new List<RCS_UserTasks>();
             }
@@ -1963,7 +1976,7 @@ namespace WarehouseManagementSystem.Service
                 return new List<RCS_UserTasks>();
             }
 
-            _logger.LogInformation("已锁定任务起点储位: {Name}", request.sourceBin);
+            _logger.LogInformation("无需锁定任务起点储位: {Name}", request.sourceBin);
             _logger.LogInformation("已锁定小地牛中转点储位: {Name}", smallAgvLocation.NodeRemark);
             _logger.LogInformation("已锁定三向车中转点储位: {Name}", threeWayLocation.NodeRemark);
             _logger.LogInformation("已锁定任务终点储位: {Name}", request.destBin);
@@ -2309,8 +2322,7 @@ namespace WarehouseManagementSystem.Service
                 return new List<RCS_UserTasks>();
             }
 
-            // [Hotfix] 防止人工解锁后，中转点仍被执行中的任务重复占用
-            if (await IsLocationOccupiedByActiveTaskAsync(threeWayLocation.NodeRemark, connection, transaction))
+            if (await IsTransitPointOccupiedByTaskAsync(threeWayLocation.NodeRemark, connection, transaction))
             {
                 await CacheTaskAsync(request, connection, transaction, $"中转点 {threeWayLocation.NodeRemark} 已被执行中任务占用");
                 return new List<RCS_UserTasks>();
@@ -2339,8 +2351,7 @@ namespace WarehouseManagementSystem.Service
                 throw new ArgumentException($"小地牛中转点 {smallAgvTransferPoint} 已被锁定，不可以生成任务");
             }
 
-            // [Hotfix] 防止人工解锁后，中转点仍被执行中的任务重复占用
-            if (await IsLocationOccupiedByActiveTaskAsync(smallAgvLocation.NodeRemark, connection, transaction))
+            if (await IsTransitPointOccupiedByTaskAsync(smallAgvLocation.NodeRemark, connection, transaction))
             {
                 await CacheTaskAsync(request, connection, transaction, $"中转点 {smallAgvLocation.NodeRemark} 已被执行中任务占用");
                 return new List<RCS_UserTasks>();
@@ -2460,14 +2471,6 @@ namespace WarehouseManagementSystem.Service
                 lockedNodeRemarks.Add(secondTaskDest);
             }
 
-            if (!await TryLockLocationByNodeRemarkAsync(request.sourceBin, connection, transaction))
-            {
-                await UnlockLocationsByNodeRemarkAsync(lockedNodeRemarks, connection, transaction);
-                await CacheTaskAsync(request, connection, transaction, $"起点 {request.sourceBin} 已被锁定");
-                return new List<RCS_UserTasks>();
-            }
-            lockedNodeRemarks.Add(request.sourceBin);
-
             if (!await TryLockLocationByNodeRemarkAsync(smallAgvLocation.NodeRemark, connection, transaction))
             {
                 await UnlockLocationsByNodeRemarkAsync(lockedNodeRemarks, connection, transaction);
@@ -2494,7 +2497,7 @@ namespace WarehouseManagementSystem.Service
                 }
             }
 
-            _logger.LogInformation("已锁定任务起点储位: {Name}", request.sourceBin);
+            _logger.LogInformation("无需锁定任务起点储位: {Name}", request.sourceBin);
             _logger.LogInformation("已锁定小地牛中转点储位: {Name}", smallAgvLocation.NodeRemark);
             _logger.LogInformation("已锁定三向车中转点储位: {Name}", threeWayLocation.NodeRemark);
             _logger.LogInformation("已锁定任务终点储位: {Name}", secondTaskDest);
@@ -2587,24 +2590,118 @@ namespace WarehouseManagementSystem.Service
                 transaction);
         }
 
-        // [Hotfix] 防止人工解锁库位后，执行中的任务仍重复占用中转点
-        private async Task<bool> IsLocationOccupiedByActiveTaskAsync(string nodeRemark, System.Data.IDbConnection connection, System.Data.IDbTransaction transaction)
+        /// <summary>
+        /// 判断中转位是否仍被执行中的正式任务占用。
+        /// Why: 拆分任务第一段完成后，第一段终点可能已经不再出现在“未完成任务”的直接点位引用中，
+        /// 但同一任务组的货物仍可能停留在整条中转链上，因此这里需要按拆分任务组整体判断，而不是只看单条任务。
+        /// Boundary: 当拆分任务第二段已经到达 PickDown 及之后时，视为中转位上的货物已经被取走，允许继续复用。
+        /// </summary>
+        /// <param name="nodeRemark">待校验的中转位 NodeRemark。</param>
+        /// <param name="connection">当前数据库连接。</param>
+        /// <param name="transaction">当前数据库事务。</param>
+        /// <returns>若中转位仍被执行中任务占用则返回 <c>true</c>；否则返回 <c>false</c>。</returns>
+        private async Task<bool> IsTransitPointOccupiedByTaskAsync(
+            string nodeRemark,
+            System.Data.IDbConnection connection,
+            System.Data.IDbTransaction transaction)
         {
-            var occupiedCount = await connection.ExecuteScalarAsync<int>(
-                @"SELECT COUNT(1)
+            if (string.IsNullOrWhiteSpace(nodeRemark))
+            {
+                return false;
+            }
+
+            var activeDirectTasks = (await connection.QueryAsync<RCS_UserTasks>(
+                @"SELECT
+                    requestCode,
+                    sourcePosition,
+                    targetPosition,
+                    taskStatus,
+                    TaskGroupId,
+                    TaskSequence,
+                    IsSplitTask,
+                    IsCancelled
                   FROM RCS_UserTasks
                   WHERE (sourcePosition = @NodeRemark OR targetPosition = @NodeRemark)
-                    AND taskStatus < @TaskFinish",
+                    AND taskStatus < @TaskFinish
+                    AND (IsCancelled IS NULL OR IsCancelled = 0)",
                 new
                 {
                     NodeRemark = nodeRemark,
                     TaskFinish = (int)TaskStatuEnum.TaskFinish
                 },
-                transaction);
+                transaction)).ToList();
 
-            return occupiedCount > 0;
+            if (activeDirectTasks.Any(task => !task.IsSplitTask || string.IsNullOrWhiteSpace(task.TaskGroupId)))
+            {
+                return true;
+            }
+
+            var relatedSplitTaskGroupIds = (await connection.QueryAsync<string>(
+                @"SELECT DISTINCT TaskGroupId
+                  FROM RCS_UserTasks
+                  WHERE IsSplitTask = 1
+                    AND TaskGroupId IS NOT NULL
+                    AND (sourcePosition = @NodeRemark OR targetPosition = @NodeRemark)
+                    AND taskStatus < @TaskFinish
+                    AND (IsCancelled IS NULL OR IsCancelled = 0)",
+                new { NodeRemark = nodeRemark, TaskFinish = (int)TaskStatuEnum.TaskFinish },
+                transaction))
+                .Where(groupId => !string.IsNullOrWhiteSpace(groupId))
+                .Distinct(StringComparer.OrdinalIgnoreCase)
+                .ToList();
+
+            foreach (var taskGroupId in relatedSplitTaskGroupIds)
+            {
+                var splitTaskGroup = (await connection.QueryAsync<RCS_UserTasks>(
+                    @"SELECT
+                        requestCode,
+                        sourcePosition,
+                        targetPosition,
+                        taskStatus,
+                        TaskGroupId,
+                        TaskSequence,
+                        IsSplitTask,
+                        IsCancelled
+                      FROM RCS_UserTasks
+                      WHERE TaskGroupId = @TaskGroupId
+                      ORDER BY TaskSequence",
+                    new { TaskGroupId = taskGroupId },
+                    transaction)).ToList();
+
+                if (!splitTaskGroup.Any())
+                {
+                    continue;
+                }
+
+                var unfinishedTasks = splitTaskGroup
+                    .Where(task => task.taskStatus < TaskStatuEnum.TaskFinish && task.IsCancelled != true)
+                    .ToList();
+
+                if (!unfinishedTasks.Any())
+                {
+                    continue;
+                }
+
+                var secondTask = splitTaskGroup.FirstOrDefault(task => task.TaskSequence > 1);
+                if (secondTask != null &&
+                    secondTask.taskStatus >= TaskStatuEnum.PickDown &&
+                    secondTask.taskStatus < TaskStatuEnum.TaskFinish &&
+                    secondTask.IsCancelled != true)
+                {
+                    _logger.LogInformation(
+                        "中转位占用判断主动放行拆分任务第二段：NodeRemark={NodeRemark}，TaskGroupId={TaskGroupId}，RequestCode={RequestCode}，状态={TaskStatus}",
+                        nodeRemark,
+                        taskGroupId,
+                        secondTask.requestCode,
+                        secondTask.taskStatus);
+                    continue;
+                }
+
+                return true;
+            }
+
+            return false;
         }
-
 
         /// <summary>
         /// 获取当前中国时间字符串
